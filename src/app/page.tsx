@@ -1,69 +1,178 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { Suspense } from "react";
+import { getTopCoins } from "@/lib/coins";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
+import { MarketsTable } from "@/components/MarketsTable";
+import { JsonLd } from "@/components/JsonLd";
+
+const startHere = [
+  { kind: "Guide", title: "Best MiCA-licensed exchanges in Europe", dek: "Ranked by licence, fees and country coverage." },
+  { kind: "Guide", title: "Hardware vs software wallets", dek: "What to use for €100, €10,000 and more." },
+  { kind: "Guide", title: "MiCA explained for crypto users", dek: "What the EU rules protect, and what to check." },
+  { kind: "Tool", title: "DCA calculator", dek: "See what regular buying would have returned." },
+];
+
+const verticals = [
+  { id: "fintech", title: "Fintech", items: ["Revolut vs Wise vs N26 for EU users", "SEPA Instant: what changes for your transfers", "CEE fintech funding tracker"] },
+  { id: "watches", title: "Watches", items: ["Secondary watch market report", "Retail vs resale: which references hold value", "How to check a pre-owned watch before you buy"] },
+  { id: "collectibles", title: "Collectibles", items: ["Trading cards as an asset class", "Fine wine, art, cars: what the indices track", "Tokenised collectibles: real ownership or not?"] },
+];
+
+async function Markets() {
+  const { coins, sample } = await getTopCoins(50);
+  return (
+    <>
+      <MarketsTable coins={coins.slice(0, 10)} caption="Top cryptocurrencies by market cap, prices in euros" />
+      <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }} className="small">
+        <span className="muted">
+          {sample ? (
+            <span className="sample-flag">Sample data: live prices unavailable</span>
+          ) : (
+            "Prices in EUR. Data: CoinGecko."
+          )}
+        </span>
+        <Link href="/coins" style={{ fontWeight: 600, color: "var(--accent)" }}>
+          All coins →
+        </Link>
+      </div>
+    </>
+  );
+}
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="wrap page">
+      <JsonLd data={organizationJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
+      <h1 className="sr-only">Holdwire: crypto prices, fintech and hard assets for Europe</h1>
+
+      <section className="row" aria-label="Featured">
+        <article className="col-main stack" style={{ gap: 16 }}>
+          <div
+            aria-hidden="true"
+            style={{ height: 320, borderRadius: "var(--radius)", background: "var(--ink)", position: "relative", overflow: "hidden" }}
+          >
+            <svg width="100%" height="100%" viewBox="0 0 600 340" preserveAspectRatio="none" style={{ position: "absolute", inset: 0 }}>
+              <path d="M0 250 L80 230 L160 240 L240 190 L320 200 L400 140 L480 150 L600 90" stroke="#F5B301" strokeWidth="3" fill="none" />
+              <path d="M0 290 L100 280 L200 285 L300 260 L400 255 L500 230 L600 220" stroke="#3B6CF0" strokeWidth="2" fill="none" />
+            </svg>
+          </div>
+          <span className="eyebrow">Holdwire data · Coming soon</span>
+          <h2 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.08 }}>
+            Which crypto exchanges are licensed under MiCA? Our live tracker
+          </h2>
+          <p style={{ margin: 0, fontSize: 18, color: "#374151" }}>
+            Every authorised crypto-asset service provider in the EU, by country and service, updated daily from ESMA&apos;s public register.
           </p>
+        </article>
+        <aside className="col-side stack">
+          <h2 style={{ margin: "0 0 8px", fontSize: 20 }}>Live prices</h2>
+          <div className="headline-list">
+            <Link href="/coins/bitcoin">
+              <span className="tiny muted">Price page</span>
+              <strong>Bitcoin price today, in euros</strong>
+            </Link>
+            <Link href="/coins/ethereum">
+              <span className="tiny muted">Price page</span>
+              <strong>Ethereum price today, in euros</strong>
+            </Link>
+            <Link href="/coins/solana">
+              <span className="tiny muted">Price page</span>
+              <strong>Solana price today, in euros</strong>
+            </Link>
+            <Link href="/coins">
+              <span className="tiny muted">Markets</span>
+              <strong>Top 50 cryptocurrencies by market cap</strong>
+            </Link>
+          </div>
+        </aside>
+      </section>
+
+      <section className="stack" style={{ gap: 16 }} aria-labelledby="markets-h">
+        <h2 id="markets-h" className="section-title">
+          Markets
+        </h2>
+        <Suspense fallback={<p className="muted">Loading markets…</p>}>
+          <Markets />
+        </Suspense>
+      </section>
+
+      <section className="band" aria-labelledby="mica-h">
+        <div className="stack" style={{ flex: "1 1 420px", gap: 14 }}>
+          <span className="eyebrow">Holdwire data</span>
+          <h2 id="mica-h" style={{ margin: 0, fontSize: 36 }}>
+            MiCA licence tracker
+          </h2>
+          <p style={{ margin: 0, fontSize: 17 }}>Check whether an exchange can legally serve you in your EU country before you sign up.</p>
+          <div>
+            <span className="soon" style={{ background: "var(--night-2)", color: "var(--night-text)" }}>
+              Launching soon
+            </span>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="band-stats">
+          <div className="band-stat">
+            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>EU-wide</div>
+            <div className="tiny" style={{ color: "var(--night-text)" }}>all member states</div>
+          </div>
+          <div className="band-stat">
+            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>Daily</div>
+            <div className="tiny" style={{ color: "var(--night-text)" }}>ESMA register sync</div>
+          </div>
+          <div className="band-stat">
+            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>Free</div>
+            <div className="tiny" style={{ color: "var(--night-text)" }}>to use and cite</div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="start-here" className="stack" style={{ gap: 20 }} aria-labelledby="start-h">
+        <h2 id="start-h" className="section-title">
+          Start here
+        </h2>
+        <div className="cards">
+          {startHere.map((c) => (
+            <div key={c.title} className="card stack" style={{ gap: 10 }}>
+              <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                <span className="eyebrow">{c.kind}</span>
+                <span className="soon">Soon</span>
+              </span>
+              <strong style={{ fontSize: 18, lineHeight: 1.3 }}>{c.title}</strong>
+              <span className="small muted">{c.dek}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="row" aria-label="Coverage areas">
+        {verticals.map((v) => (
+          <div key={v.id} id={v.id} className="stack" style={{ flex: "1 1 300px" }}>
+            <h2 style={{ margin: "0 0 8px", fontSize: 22 }}>{v.title}</h2>
+            <div className="link-list">
+              {v.items.map((t) => (
+                <div key={t}>
+                  {t} <span className="soon">Soon</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section id="newsletter" className="row" style={{ gap: 24 }}>
+        <form className="stack" style={{ flex: "1 1 420px", gap: 12, background: "var(--accent-soft)", borderRadius: "var(--radius)", padding: 24 }}>
+          <h2 style={{ margin: 0, fontSize: 22 }}>The Holdwire Brief</h2>
+          <p style={{ margin: 0, color: "#374151" }}>Markets, crypto and hard assets in five minutes. Weekdays, 7:00 CET.</p>
+          <label htmlFor="nl-email">Email address</label>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            <input id="nl-email" type="email" placeholder="you@example.com" style={{ flex: "1 1 220px", width: "auto" }} disabled />
+            <button type="submit" className="btn btn-primary" disabled>
+              Subscribe
+            </button>
+          </div>
+          <span className="tiny muted">Sign-ups open at launch.</span>
+        </form>
+      </section>
+    </main>
   );
 }

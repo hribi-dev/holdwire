@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Holdwire
 
-## Getting Started
+Finance and hard assets, with an EU lens: crypto prices, fintech, watches and collectibles. Working name; see `docs/plan/` for the full business and SEO plan.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm test           # unit tests (sponsored-link rules)
+npm run build      # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local`. All are optional for local work.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | What it does |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Public URL, used for canonicals, sitemap and JSON-LD |
+| `SITE_INDEXABLE` | `true` only on the live production domain. Anything else = `noindex` + `robots.txt` blocks all crawlers |
+| `COINGECKO_API_KEY` | CoinGecko key. Without it, the free public API is used (rate-limited) |
+| `COINGECKO_API_TIER` | `pro` for a paid plan, otherwise demo/free |
 
-## Learn More
+If the price API can't be reached, pages fall back to clearly labelled **sample data**.
 
-To learn more about Next.js, take a look at the following resources:
+## What's here
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/` — homepage, `/coins`, `/coins/[id]`, trust pages (`/about`, `/editorial-policy`, …), `sitemap.xml`, `robots.txt`
+- `src/lib/coins.ts` — CoinGecko data layer (EUR, cached ~1 min)
+- `src/lib/sponsored.ts` — enforces `rel="sponsored noopener"` on every paid link (tested)
+- `src/content/coin-profiles.ts` — human-written coin summaries; **only coins with a profile are indexable** (quality gate)
+- `content/pages/` — trust pages in Markdown (drafts pending legal review)
+- `docs/plan/` — strategy, SEO playbook, roadmap, briefs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Rules
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `CLAUDE.md`. Short version: never sell ranking power, label every paid piece, no thin pages, a human reviews everything before it's published.

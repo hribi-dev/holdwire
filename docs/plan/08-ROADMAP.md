@@ -1,0 +1,102 @@
+# 08 — Roadmap & execution checklist
+
+Owner tags: **[CLAUDE]** · **[HRIBI]** · **[BOTH]**. Mark blocked items with `⛔ waiting on HRIBI`.
+Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
+
+---
+
+## Phase 0 — Decisions & foundations (Week 0–2)
+**Exit criteria:** name + domain owned, entity path chosen, accounts created, repo exists.
+
+- [x] [CLAUDE] Brand name shortlist round 1 (→ `10`); working name **Holdwire**, final pick open
+- [ ] [HRIBI] Choose name; buy domain (+ common typos/.io/.co if cheap); decide new vs aged domain
+- [ ] [CLAUDE] If aged domain: audit candidates (Wayback history, backlink profile, past spam)
+- [ ] [HRIBI] Decide entity, budget tier, language (EN-first recommended)
+- [ ] [HRIBI] Create: GitHub org/repo, Vercel team, Cloudflare, Neon/Supabase, email (Google Workspace), Beehiiv; share access
+- [ ] [HRIBI] Book lawyer intro call (entity, media register, MiCA marketing, contracts)
+- [x] [CLAUDE] Competitor teardown (→ `11`): CMC, CoinGecko, CoinDesk, The Block, Decrypt, Finextra, Hodinkee, WatchCharts, Bitcoinist/NewsBTC-style PR sites (structure, page types, rate cards)
+- [x] [CLAUDE] Topical maps for Crypto + Fintech (→ `12`; seed queries, volumes pending SEO tool/GSC)
+- [ ] [CLAUDE] Brand starter kit: logo concepts, color/type system (Hribi picks)
+- [ ] [CLAUDE] Set up `/seo-system/` (business context, competitor files, 15-prompt library), see `09`
+- [ ] [HRIBI] Paste the @bloggersarvesh article text into `/seo-system/source-article.md` ⛔
+
+## Phase 1 — Build the MVP (Week 2–6)
+**Exit criteria:** site live on the domain, Lighthouse ≥95 mobile, all legal pages, GSC verified, 100+ quality pages.
+
+- [ ] [CLAUDE] Scaffold Next.js + Payload + Postgres; CI with lint, typecheck, Lighthouse CI ⛔ npm registry blocked in Claude's workspace; Hribi to allow `registry.npmjs.org` (claude.ai Settings → Capabilities)
+- [x] [CLAUDE] Design mockup: homepage + coin page (Design canvas "Holdwire — website mockup")
+- [ ] [CLAUDE] CMS collections (Article, Author, Entity types, Topic, Sponsor, Glossary, Redirect) with publish guards
+- [ ] [CLAUDE] Templates: home, vertical hub, topic hub, article, sponsored, press release, coin, exchange, company, glossary, author, tool, report, static pages
+- [ ] [CLAUDE] SEO layer: metadata, JSON-LD builders, sitemaps (incl. news), robots, IndexNow, redirects, breadcrumbs, OG images, RSS
+- [ ] [CLAUDE] Sponsored enforcement (labels, `rel="sponsored"` rewrite, module exclusion, noindex PRs) + tests
+- [ ] [HRIBI] Buy data API plan (CoinGecko Analyst or equivalent); add keys to Vercel ⛔
+- [ ] [CLAUDE] Crypto data pipeline + price ticker + coin pages (top 500, quality-gated)
+- [ ] [CLAUDE] Tools v1: crypto converter, DCA calculator, staking yield calculator
+- [x] [CLAUDE] Draft legal/policy pages (→ `content-pipeline/pages/`) · [ ] [HRIBI] lawyer review → publish
+- [ ] [HRIBI] Author identities: your editor-in-chief bio/photo; recruit 1–2 contributors
+- [x] [CLAUDE] Briefs for first 15 launch guides (→ `content-pipeline/briefs/launch-guides-p1.md`)
+- [ ] [CLAUDE] Write 30 launch pieces (pillars + cluster guides) → [HRIBI]/editor review
+- [ ] [CLAUDE] 150 glossary terms
+- [ ] [HRIBI] Verify GSC, Bing Webmaster, GA4/Plausible; submit sitemaps
+- [ ] [BOTH] Launch: soft launch → fix → public launch (X thread, network)
+
+## Phase 2 — Content engine & indexation (Month 2–4)
+**Exit criteria:** 600+ indexed pages, 5–10k organic sessions/mo, Google News applied, newsletter 500+.
+
+- [ ] [CLAUDE] Scheduled news-monitoring task → daily story shortlist
+- [ ] [HRIBI] Hire 1 freelance editor/writer (crypto/fintech); onboard to the style guide
+- [ ] [BOTH] Output: 5 guides/week, 2–5 news/day, 100 entity pages/week (batched), 30 glossary/week
+- [ ] [CLAUDE] Exchanges (100) + fintech companies (200) entity pages
+- [ ] [HRIBI] Google News Publisher Center application
+- [ ] [CLAUDE] Newsletter templates (daily brief, weekly) + signup flows; [HRIBI] connects Beehiiv
+- [ ] [BOTH] Social: brand X/TG/LinkedIn; Claude drafts daily posts, Hribi posts/approves
+- [ ] [CLAUDE] Weekly SEO report (scheduled task) running the `09` priority order: fixes → page-2 goldmine → CTR → decay → new content
+- [ ] [HRIBI] Give Claude GSC access (or weekly CSV exports) ⛔
+- [ ] [CLAUDE] AI-search visibility tracking: 50 target prompts, bi-weekly check
+- [ ] [CLAUDE] First data report (e.g., "EU crypto exchange licensing tracker" or "Remittance cost index Balkans", with disclosure)
+- [ ] [BOTH] Digital PR: pitch the report; Hribi joins expert-source platforms
+
+## Phase 3 — Authority & expansion (Month 4–8)
+**Exit criteria:** 30–50k sessions/mo, 50+ referring domains from real sites, watches/collectibles vertical live.
+
+- [ ] [CLAUDE] Watches + Collectibles topical maps; reference DB schema; first 200 watch reference pages
+- [ ] [HRIBI] Recruit a watch/collectibles contributor with real credibility
+- [ ] [CLAUDE] Tools v2: watch ROI tracker, collectibles index, remittance cost calculator, embeddable widgets
+- [ ] [CLAUDE] Monthly data reports (rotate verticals)
+- [ ] [CLAUDE] Content refresh system (stale-page detection from GSC decay)
+- [ ] [CLAUDE] Internal-linking engine v2 (auto-suggest from entities/topics)
+
+## Phase 4 — Monetization on (Month 5–9)
+**Exit criteria:** first 10 paid placements, media kit public, €3–8k/mo.
+
+- [ ] [CLAUDE] Media kit (page + PDF), rate card, packages, `/advertise` with order form, sponsor CRM
+- [ ] [CLAUDE] Advertiser contract + sponsored guidelines drafts → [HRIBI] lawyer review
+- [ ] [HRIBI] Close first sponsors from your network (launch pricing)
+- [ ] [CLAUDE] Prospect lists + outreach sequences (recent raises, EU-licensed CASPs, fintech launches, watch dealers) → [HRIBI] sends
+- [ ] [HRIBI] Agency reseller deals (crypto PR agencies)
+- [ ] [BOTH] Ad network application at threshold; CMP (TCF) setup
+- [ ] [CLAUDE] Post-campaign reporting template (7/30-day metrics)
+- [ ] [CLAUDE] Quarterly audit: sponsored share ≤ 15%, labels, link attributes, GSC manual actions
+
+## Phase 5 — Scale (Month 9–18)
+- [ ] [BOTH] Markets + personal-finance verticals
+- [ ] [BOTH] Localized editions (SL/HR/SR or DE) with hreflang
+- [ ] [CLAUDE] Data API / premium reports exploration
+- [ ] [HRIBI] Team: editor-in-chief or managing editor, sales lead (commission)
+- [ ] [BOTH] Events / X Spaces series / podcast
+
+---
+
+## Weekly operating rhythm (from Phase 2)
+| Day | Claude | Hribi |
+|---|---|---|
+| Mon | SEO report + week's content plan | Approve plan (15 min) |
+| Daily | News shortlist + drafts, social drafts | Pick/approve, post, 30–60 min |
+| Wed | Entity batch + glossary batch | Spot-check 5 pages |
+| Fri | Refresh list, outreach drafts, sponsor pipeline update | Sales calls / sends |
+
+## Status log
+- 2026-11-02 — Plan created. Next: Phase 0 decisions (name/domain, entity, budget).
+- 2026-11-02 — Hribi confirmed starting from zero. Name shortlist round 1 + setup checklist in `10-PHASE0-START.md`. ⛔ Waiting on: name pick + .com check, budget tier.
+- 2026-11-02 — Working name Holdwire (Hribi can change later). Competitor teardown `11` + topical map `12` + `seo-system/business-context.md` done. ⛔ Waiting on: holdwire.com check/purchase, budget tier (can decide along the way).
+- 2026-11-02 — Mockup done (homepage + Bitcoin page). Site build blocked: npm registry not allowed in workspace. Trust pages drafted, 15 launch briefs written. ⛔ Waiting on: registry access, holdwire.com, GitHub repo, mockup feedback.

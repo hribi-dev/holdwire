@@ -38,6 +38,27 @@ const upgrades = [
   { code: "HIP-4", title: "Outcome markets", body: "Brings prediction-style contracts, such as markets on economic data releases, to the chain." },
 ];
 
+const timeline = [
+  {
+    date: "May 2026",
+    text: "Bitwise (BHYP, NYSE) and 21Shares (THYP, Nasdaq) launch the first US-listed Hyperliquid ETFs.",
+    source: "https://www.theblock.co/post/403234/grayscale-sets-0-29-fee-hyperliquid-etf-undercutting-bitwise-21shares",
+    sourceName: "The Block",
+  },
+  {
+    date: "3 Jun 2026",
+    text: "Grayscale lists the Hyperliquid Staking ETF (HYPG) on Nasdaq with a 0.29% fee, the lowest among US Hyperliquid products.",
+    source: "https://www.theblock.co/post/403428/grayscale-behind-hype-launc",
+    sourceName: "The Block",
+  },
+  {
+    date: "29 Oct 2026",
+    text: "ICE, owner of the New York Stock Exchange, takes a minority stake in trade.xyz, the largest market builder on Hyperliquid, and plans a US market for Hyperliquid-based perpetuals, subject to CFTC approval.",
+    source: "https://www.bankless.com/read/news/nyse-owner-druckenmiller-back-trade-xyz-hyperliquid-perps-us",
+    sourceName: "Bankless",
+  },
+];
+
 const guides = [
   "How to use Hyperliquid from the EU, step by step",
   "HYPE staking explained: validators, rewards and risks",
@@ -151,6 +172,33 @@ export default async function HyperliquidHub() {
           {sample ? "Sample figures." : "Token data: CoinGecko, in EUR."} Exchange-level data (trading volume, open interest, fees, buybacks) will come
           from Hyperliquid&apos;s public API.
         </p>
+      </section>
+
+      <section className="stack" style={{ gap: 16 }} aria-labelledby="why-h">
+        <div className="stack" style={{ gap: 6 }}>
+          <h2 id="why-h" className="section-title">
+            Why Wall Street is paying attention
+          </h2>
+          <p className="muted" style={{ margin: 0, maxWidth: 760 }}>
+            US institutions have moved fast on Hyperliquid this year. Hyperliquid&apos;s own app is still closed to US users; the new US access
+            comes through ETFs and regulated partners.
+          </p>
+        </div>
+        <ol className="stack" style={{ listStyle: "none", margin: 0, padding: 0, gap: 0 }}>
+          {timeline.map((t) => (
+            <li key={t.date} style={{ display: "flex", flexWrap: "wrap", gap: "4px 20px", padding: "14px 0", borderTop: "1px solid var(--line)" }}>
+              <span className="mono" style={{ flex: "0 0 120px", fontWeight: 600, color: MINT }}>
+                {t.date}
+              </span>
+              <span style={{ flex: "1 1 420px" }}>
+                {t.text}{" "}
+                <a href={t.source} className="small" style={{ color: "var(--accent)" }} target="_blank" rel="noopener">
+                  {t.sourceName}
+                </a>
+              </span>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="stack" style={{ gap: 16 }} aria-labelledby="how-h">

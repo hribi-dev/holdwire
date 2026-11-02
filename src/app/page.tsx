@@ -84,7 +84,7 @@ export default function Home() {
             <Link href="/hyperliquid">Hyperliquid, explained and tracked: the on-chain exchange everyone trades on</Link>
           </h2>
           <p style={{ margin: 0, fontSize: 18, color: "#374151" }}>
-            Live HYPE data, how HyperCore and HyperEVM work, HIP-3 markets, and what using it means for you in Europe.
+            US ETFs, the NYSE owner&apos;s plans and live HYPE data: why the on-chain exchange is crypto&apos;s hottest story, and what it means for you in Europe.
           </p>
           <div>
             <Link href="/hyperliquid" className="btn btn-primary">

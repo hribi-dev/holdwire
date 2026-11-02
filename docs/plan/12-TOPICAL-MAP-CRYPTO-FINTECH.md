@@ -10,6 +10,9 @@ Queries are seeds. Volumes and difficulty are to be filled from Ahrefs/Semrush o
 
 ### ★ Pillar 0: Hyperliquid (top priority, set by Hribi 2026-11-02)
 Hub: `/hyperliquid` (live). Gets the homepage lead slot and first position in ticker and nav.
+
+**Coverage balance (Hribi, 2026-11-02):** Holdwire stays a finance-wide site. Hyperliquid is the single biggest topic, not the only one: it holds the homepage lead and first nav slot, and gets roughly a quarter to a third of crypto output (guides, news, data). Everything else in the plan (markets, MiCA, fintech, watches, collectibles) continues at full priority. Report US institutional interest factually (ETFs, ICE/trade.xyz, CFTC process); never claim official endorsement, and note that Hyperliquid's own app is closed to US users.
+
 | Cluster | Pages | Type | Prio |
 |---|---|---|---|
 | Hub + HYPE coin page | `/hyperliquid`, `/coins/hyperliquid` | H/E | P1 ✅ built |

@@ -12,7 +12,8 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - [ ] [HRIBI] Choose name; buy domain (+ common typos/.io/.co if cheap); decide new vs aged domain
 - [ ] [CLAUDE] If aged domain: audit candidates (Wayback history, backlink profile, past spam)
 - [ ] [HRIBI] Decide entity, budget tier, language (EN-first recommended)
-- [ ] [HRIBI] Create: GitHub org/repo, Vercel team, Cloudflare, Neon/Supabase, email (Google Workspace), Beehiiv; share access
+- [x] [HRIBI] GitHub repo `hribi-dev/holdwire` (private) created
+- [ ] [HRIBI] Create: Vercel team, Cloudflare, Neon/Supabase, email (Google Workspace), Beehiiv; share access
 - [ ] [HRIBI] Book lawyer intro call (entity, media register, MiCA marketing, contracts)
 - [x] [CLAUDE] Competitor teardown (→ `11`): CMC, CoinGecko, CoinDesk, The Block, Decrypt, Finextra, Hodinkee, WatchCharts, Bitcoinist/NewsBTC-style PR sites (structure, page types, rate cards)
 - [x] [CLAUDE] Topical maps for Crypto + Fintech (→ `12`; seed queries, volumes pending SEO tool/GSC)
@@ -23,7 +24,9 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 ## Phase 1 — Build the MVP (Week 2–6)
 **Exit criteria:** site live on the domain, Lighthouse ≥95 mobile, all legal pages, GSC verified, 100+ quality pages.
 
-- [ ] [CLAUDE] Scaffold Next.js + Payload + Postgres; CI with lint, typecheck, Lighthouse CI ⛔ npm registry blocked in Claude's workspace; Hribi to allow `registry.npmjs.org` (claude.ai Settings → Capabilities)
+- [x] [CLAUDE] Scaffold Next.js 16 site (pushed to `hribi-dev/holdwire`): homepage, /coins, /coins/[id], trust pages, sitemap/robots, JSON-LD, sponsored-link enforcement + tests
+- [ ] [CLAUDE] Add Payload CMS + Postgres (needs Neon account) and CI (lint, typecheck, tests, Lighthouse)
+- [ ] [HRIBI] Connect repo to Vercel for a preview link ⛔
 - [x] [CLAUDE] Design mockup: homepage + coin page (Design canvas "Holdwire — website mockup")
 - [ ] [CLAUDE] CMS collections (Article, Author, Entity types, Topic, Sponsor, Glossary, Redirect) with publish guards
 - [ ] [CLAUDE] Templates: home, vertical hub, topic hub, article, sponsored, press release, coin, exchange, company, glossary, author, tool, report, static pages
@@ -100,3 +103,4 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - 2026-11-02 — Hribi confirmed starting from zero. Name shortlist round 1 + setup checklist in `10-PHASE0-START.md`. ⛔ Waiting on: name pick + .com check, budget tier.
 - 2026-11-02 — Working name Holdwire (Hribi can change later). Competitor teardown `11` + topical map `12` + `seo-system/business-context.md` done. ⛔ Waiting on: holdwire.com check/purchase, budget tier (can decide along the way).
 - 2026-11-02 — Mockup done (homepage + Bitcoin page). Site build blocked: npm registry not allowed in workspace. Trust pages drafted, 15 launch briefs written. ⛔ Waiting on: registry access, holdwire.com, GitHub repo, mockup feedback.
+- 2026-11-02 — MVP site built and pushed to github.com/hribi-dev/holdwire (private). Domain deferred by Hribi. ⛔ Next: Hribi connects the repo to Vercel for a preview link.

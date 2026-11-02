@@ -59,7 +59,6 @@ Disclosure: Hribi's own Hyperliquid holdings/trading must be listed on /disclosu
 | Cluster | Pages | Type | Prio |
 |---|---|---|---|
 | MiCA | MiCA explained (draft ✅), CASP licensing, **MiCA licence data** built into exchange pages and country how-to-buy guides | G/R/T | P1 |
-
 | Crypto tax by country | Slovenia, Croatia, Germany, Austria, Italy, France, Spain, NL, Poland, Portugal | G | P2 |
 | AML / Travel rule | what users need to know | G | P3 |
 

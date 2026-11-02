@@ -27,7 +27,7 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - [x] [CLAUDE] Scaffold Next.js 16 site (pushed to `hribi-dev/holdwire`): homepage, /coins, /coins/[id], trust pages, sitemap/robots, JSON-LD, sponsored-link enforcement + tests
 - [x] [CLAUDE] CI on GitHub Actions (test, lint, typecheck, build)
 - [ ] [CLAUDE] Add Payload CMS + Postgres (needs Neon account; until then content is Markdown in the repo with a reviewer gate)
-- [ ] [HRIBI] Connect repo to Vercel for a preview link ⛔
+- [x] [HRIBI] Repo connected to Vercel (project `hribis-projects/holdwire`); auto-deploys on every push to main
 - [x] [CLAUDE] Design mockup: homepage + coin page (Design canvas "Holdwire — website mockup")
 - [ ] [CLAUDE] CMS collections (Article, Author, Entity types, Topic, Sponsor, Glossary, Redirect) with publish guards
 - [x] [CLAUDE] Templates built: home, Hyperliquid hub, coins list, coin, guide (/learn), glossary, sponsored, press release, trust pages
@@ -110,3 +110,4 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - 2026-11-02 — Hribi: Hyperliquid gets top priority. Built /hyperliquid hub, homepage lead, HYPE pinned in ticker/nav, written HYPE profile. Next: Hyperliquid guides + exchange stats from Hyperliquid's public API.
 - 2026-11-02 — Clarified: Hyperliquid = most attention, site stays finance-wide (balance rule in `12`). Added 'Why Wall Street is paying attention' timeline (US ETFs, ICE/trade.xyz) to the hub.
 - 2026-11-02 — Built: CI, content system (guides/glossary/sponsored/PR with reviewer gate), 3 guide drafts, 33 glossary terms, live Hyperliquid stats, SEO prompt library. Finding: free MiCA trackers already exist (casptracker.eu, MiCA Crypto Alliance) → our MiCA data must be embedded in exchange pages + country how-to-buy guides, not a standalone list. ⛔ Hribi: Vercel, reviewer for guides.
+- 2026-11-02 — Live on Vercel; CI green (fixed typecheck ordering). ⛔ Hribi: review 3 guides, disclosure line.

@@ -7,6 +7,8 @@ import { COIN_PROFILES } from "@/content/coin-profiles";
 import { Converter } from "@/components/Converter";
 import { JsonLd } from "@/components/JsonLd";
 import { Sparkline } from "@/components/Sparkline";
+import { HyperliquidStats } from "@/components/HyperliquidStats";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Hyperliquid hub: HYPE price, how it works, HIP-3 and guides",
@@ -162,16 +164,22 @@ export default async function HyperliquidHub() {
             <div className="value">Nov 2024</div>
           </div>
           <div className="stat">
-            <div className="label">Exchange stats</div>
-            <div className="value" style={{ fontSize: 13 }}>
-              <span className="soon">Coming: volume, OI, fees</span>
-            </div>
+            <div className="label">Network role</div>
+            <div className="value">Staking · gas</div>
           </div>
         </div>
         <p className="tiny muted" style={{ margin: 0 }}>
-          {sample ? "Sample figures." : "Token data: CoinGecko, in EUR."} Exchange-level data (trading volume, open interest, fees, buybacks) will come
-          from Hyperliquid&apos;s public API.
+          {sample ? "Sample figures." : "Token data: CoinGecko, in EUR."}
         </p>
+      </section>
+
+      <section className="stack" style={{ gap: 14 }} aria-labelledby="live-h">
+        <h2 id="live-h" className="section-title">
+          The exchange, live
+        </h2>
+        <Suspense fallback={<p className="muted">Loading exchange data…</p>}>
+          <HyperliquidStats />
+        </Suspense>
       </section>
 
       <section className="stack" style={{ gap: 16 }} aria-labelledby="why-h">

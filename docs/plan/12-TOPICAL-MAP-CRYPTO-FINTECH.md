@@ -58,7 +58,9 @@ Disclosure: Hribi's own Hyperliquid holdings/trading must be listed on /disclosu
 ### Pillar D — Regulation & tax (EU focus, YMYL: needs expert review)
 | Cluster | Pages | Type | Prio |
 |---|---|---|---|
-| MiCA | MiCA explained, CASP licensing, **MiCA licensed exchanges tracker (from ESMA register)** | G/R/T | P1 (tracker = flagship link magnet) |
+| MiCA | MiCA explained (draft ✅), CASP licensing, **MiCA licence data** built into exchange pages and country how-to-buy guides | G/R/T | P1 |
+
+> Note (2026-11-02): standalone MiCA trackers already exist (casptracker.eu, MiCA Crypto Alliance, Aug 2026). Ours only wins if it is combined with things they lack: fees, EU country availability, Hyperliquid/DEX context, and plain-English guidance on every exchange page.
 | Crypto tax by country | Slovenia, Croatia, Germany, Austria, Italy, France, Spain, NL, Poland, Portugal | G | P2 |
 | AML / Travel rule | what users need to know | G | P3 |
 

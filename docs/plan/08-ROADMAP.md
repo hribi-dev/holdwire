@@ -18,28 +18,31 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - [x] [CLAUDE] Competitor teardown (→ `11`): CMC, CoinGecko, CoinDesk, The Block, Decrypt, Finextra, Hodinkee, WatchCharts, Bitcoinist/NewsBTC-style PR sites (structure, page types, rate cards)
 - [x] [CLAUDE] Topical maps for Crypto + Fintech (→ `12`; seed queries, volumes pending SEO tool/GSC)
 - [ ] [CLAUDE] Brand starter kit: logo concepts, color/type system (Hribi picks)
-- [ ] [CLAUDE] Set up `/seo-system/` (business context, competitor files, 15-prompt library), see `09`
+- [x] [CLAUDE] Set up `/seo-system/`: business context, 15-prompt library (`seo-system/prompts/`), AI-search prompt list (competitor files: next)
 - [ ] [HRIBI] Paste the @bloggersarvesh article text into `/seo-system/source-article.md` ⛔
 
 ## Phase 1 — Build the MVP (Week 2–6)
 **Exit criteria:** site live on the domain, Lighthouse ≥95 mobile, all legal pages, GSC verified, 100+ quality pages.
 
 - [x] [CLAUDE] Scaffold Next.js 16 site (pushed to `hribi-dev/holdwire`): homepage, /coins, /coins/[id], trust pages, sitemap/robots, JSON-LD, sponsored-link enforcement + tests
-- [ ] [CLAUDE] Add Payload CMS + Postgres (needs Neon account) and CI (lint, typecheck, tests, Lighthouse)
+- [x] [CLAUDE] CI on GitHub Actions (test, lint, typecheck, build)
+- [ ] [CLAUDE] Add Payload CMS + Postgres (needs Neon account; until then content is Markdown in the repo with a reviewer gate)
 - [ ] [HRIBI] Connect repo to Vercel for a preview link ⛔
 - [x] [CLAUDE] Design mockup: homepage + coin page (Design canvas "Holdwire — website mockup")
 - [ ] [CLAUDE] CMS collections (Article, Author, Entity types, Topic, Sponsor, Glossary, Redirect) with publish guards
-- [ ] [CLAUDE] Templates: home, vertical hub, topic hub, article, sponsored, press release, coin, exchange, company, glossary, author, tool, report, static pages
+- [x] [CLAUDE] Templates built: home, Hyperliquid hub, coins list, coin, guide (/learn), glossary, sponsored, press release, trust pages
+- [ ] [CLAUDE] Templates still to build: vertical hubs, topic hubs, exchange, company, author, tool, report
 - [ ] [CLAUDE] SEO layer: metadata, JSON-LD builders, sitemaps (incl. news), robots, IndexNow, redirects, breadcrumbs, OG images, RSS
-- [ ] [CLAUDE] Sponsored enforcement (labels, `rel="sponsored"` rewrite, module exclusion, noindex PRs) + tests
+- [x] [CLAUDE] Sponsored enforcement (labels in code, `rel="sponsored"` rewrite, noindex PRs, sponsor name required) + tests
 - [ ] [HRIBI] Buy data API plan (CoinGecko Analyst or equivalent); add keys to Vercel ⛔
-- [ ] [CLAUDE] Crypto data pipeline + price ticker + coin pages (top 500, quality-gated)
+- [x] [CLAUDE] Hyperliquid live exchange stats (volume, OI, funding) on the hub
+- [ ] [CLAUDE] Crypto data pipeline + price ticker + coin pages (top 500, quality-gated): top 50 live, 4 profiles written
 - [ ] [CLAUDE] Tools v1: crypto converter, DCA calculator, staking yield calculator
 - [x] [CLAUDE] Draft legal/policy pages (→ `content-pipeline/pages/`) · [ ] [HRIBI] lawyer review → publish
 - [ ] [HRIBI] Author identities: your editor-in-chief bio/photo; recruit 1–2 contributors
 - [x] [CLAUDE] Briefs for first 15 launch guides (→ `content-pipeline/briefs/launch-guides-p1.md`)
-- [ ] [CLAUDE] Write 30 launch pieces (pillars + cluster guides) → [HRIBI]/editor review
-- [ ] [CLAUDE] 150 glossary terms
+- [ ] [CLAUDE] Write 30 launch pieces: 3/30 drafted (What is Bitcoin, MiCA explained, HIP-3 explained) → [HRIBI]/editor review
+- [ ] [CLAUDE] 150 glossary terms: 33/150 drafted
 - [ ] [HRIBI] Verify GSC, Bing Webmaster, GA4/Plausible; submit sitemaps
 - [ ] [BOTH] Launch: soft launch → fix → public launch (X thread, network)
 
@@ -106,3 +109,4 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - 2026-11-02 — MVP site built and pushed to github.com/hribi-dev/holdwire (private). Domain deferred by Hribi. ⛔ Next: Hribi connects the repo to Vercel for a preview link.
 - 2026-11-02 — Hribi: Hyperliquid gets top priority. Built /hyperliquid hub, homepage lead, HYPE pinned in ticker/nav, written HYPE profile. Next: Hyperliquid guides + exchange stats from Hyperliquid's public API.
 - 2026-11-02 — Clarified: Hyperliquid = most attention, site stays finance-wide (balance rule in `12`). Added 'Why Wall Street is paying attention' timeline (US ETFs, ICE/trade.xyz) to the hub.
+- 2026-11-02 — Built: CI, content system (guides/glossary/sponsored/PR with reviewer gate), 3 guide drafts, 33 glossary terms, live Hyperliquid stats, SEO prompt library. Finding: free MiCA trackers already exist (casptracker.eu, MiCA Crypto Alliance) → our MiCA data must be embedded in exchange pages + country how-to-buy guides, not a standalone list. ⛔ Hribi: Vercel, reviewer for guides.

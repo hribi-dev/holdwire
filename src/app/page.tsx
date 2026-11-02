@@ -167,6 +167,7 @@ async function Markets() {
 
 const explore = [
   { tint: "tint-cyan", color: "#0e7490", label: "Regulation", title: "MiCA licence check", body: "Is your exchange allowed to serve you? Four checks, two minutes.", href: "/learn/mica-explained" },
+  { tint: "tint-mint", color: "#4d7c0f", label: "Memes", title: "What's moving in memecoins", body: "Live trending pools on Solana, Base and BNB Chain, plus pump.fun graduates.", href: "/memes" },
   { tint: "tint-pink", color: "#be185d", label: "Fintech", title: "Neobanks & payments", body: "Crypto-friendly neobanks compared: Bitpanda, Revolut, Gnosis Pay, Tria and more.", href: "/fintech" },
   { tint: "tint-amber", color: "#b45309", label: "Watches", title: "Watches as assets", body: "Which references hold value, and how the secondary market really moves.", href: "/watches" },
   { tint: "tint-violet", color: "#6d28d9", label: "Collectibles", title: "Hard assets beyond crypto", body: "Cards, wine, art and cars: what the indices track, in plain English.", href: "/collectibles" },

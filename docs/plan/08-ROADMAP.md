@@ -104,3 +104,4 @@ Timeline assumes ~10 h/week from Hribi plus 1 freelance editor from phase 2.
 - 2026-11-02 — Working name Holdwire (Hribi can change later). Competitor teardown `11` + topical map `12` + `seo-system/business-context.md` done. ⛔ Waiting on: holdwire.com check/purchase, budget tier (can decide along the way).
 - 2026-11-02 — Mockup done (homepage + Bitcoin page). Site build blocked: npm registry not allowed in workspace. Trust pages drafted, 15 launch briefs written. ⛔ Waiting on: registry access, holdwire.com, GitHub repo, mockup feedback.
 - 2026-11-02 — MVP site built and pushed to github.com/hribi-dev/holdwire (private). Domain deferred by Hribi. ⛔ Next: Hribi connects the repo to Vercel for a preview link.
+- 2026-11-02 — Hribi: Hyperliquid gets top priority. Built /hyperliquid hub, homepage lead, HYPE pinned in ticker/nav, written HYPE profile. Next: Hyperliquid guides + exchange stats from Hyperliquid's public API.

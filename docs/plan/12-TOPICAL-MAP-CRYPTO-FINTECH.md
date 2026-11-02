@@ -8,6 +8,21 @@ Queries are seeds. Volumes and difficulty are to be filled from Ahrefs/Semrush o
 
 ## CRYPTO
 
+### ★ Pillar 0: Hyperliquid (top priority, set by Hribi 2026-11-02)
+Hub: `/hyperliquid` (live). Gets the homepage lead slot and first position in ticker and nav.
+| Cluster | Pages | Type | Prio |
+|---|---|---|---|
+| Hub + HYPE coin page | `/hyperliquid`, `/coins/hyperliquid` | H/E | P1 ✅ built |
+| How-to | Use Hyperliquid from the EU; bridging/depositing; HyperCore↔HyperEVM transfers | G | P1 |
+| Token | HYPE staking, buybacks/Assistance Fund, unlock schedule | G | P1 |
+| Upgrades | HIP-3 builder perps, HIP-4 outcome markets, vaults | G | P1 |
+| Comparisons | Hyperliquid vs Binance/Bybit/dYdX/other perp DEXs | C | P1 |
+| Risk | Liquidations, leverage, regulatory status (MiCA, regulator alerts) | G | P1 |
+| Data | Live exchange stats (volume, OI, funding, fees, buybacks) from Hyperliquid public API; weekly Hyperliquid report | T/R | P1→P2 |
+| Ecosystem | HyperEVM apps directory, entity pages for major HyperEVM protocols | E | P2 |
+| News | Hyperliquid topic hub, daily coverage | news | P1 |
+Disclosure: Hribi's own Hyperliquid holdings/trading must be listed on /disclosures.
+
 ### Pillar A — Crypto prices & markets (traffic engine)
 | Cluster | Pages | Type | Prio | Seed queries |
 |---|---|---|---|---|

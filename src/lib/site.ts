@@ -21,6 +21,7 @@ export const nav = [
   { label: "News", href: "/news" },
   { label: "Hyperliquid", href: "/hyperliquid" },
   { label: "Markets", href: "/coins" },
+  { label: "Fintech", href: "/fintech" },
   { label: "Learn", href: "/learn" },
   { label: "Glossary", href: "/glossary" },
 ];

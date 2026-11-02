@@ -7,11 +7,11 @@ import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { MarketsTable } from "@/components/MarketsTable";
 import { JsonLd } from "@/components/JsonLd";
 
-const startHere = [
-  { kind: "Guide", title: "Best MiCA-licensed exchanges in Europe", dek: "Ranked by licence, fees and country coverage." },
-  { kind: "Guide", title: "Hardware vs software wallets", dek: "What to use for €100, €10,000 and more." },
-  { kind: "Guide", title: "MiCA explained for crypto users", dek: "What the EU rules protect, and what to check." },
-  { kind: "Tool", title: "DCA calculator", dek: "See what regular buying would have returned." },
+const startHere: { kind: string; title: string; dek: string; href?: string }[] = [
+  { kind: "Guide", title: "What is Bitcoin? A plain-English guide", dek: "How it works, the real risks, and how to buy it safely in the EU.", href: "/learn/what-is-bitcoin" },
+  { kind: "Guide", title: "MiCA explained: what the EU's crypto rules mean for you", dek: "What changed on 1 July 2026 and how to check your exchange.", href: "/learn/mica-explained" },
+  { kind: "Hyperliquid", title: "HIP-3 explained: anyone can launch markets", dek: "Builder-deployed perps, the 500,000 HYPE stake and stock perps.", href: "/learn/hyperliquid-hip-3-explained" },
+  { kind: "Glossary", title: "Crypto and finance glossary", dek: "Funding rates, liquidations, MiCA and more, in a sentence or two.", href: "/glossary" },
 ];
 
 const verticals = [
@@ -163,14 +163,11 @@ export default function Home() {
         </h2>
         <div className="cards">
           {startHere.map((c) => (
-            <div key={c.title} className="card stack" style={{ gap: 10 }}>
-              <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                <span className="eyebrow">{c.kind}</span>
-                <span className="soon">Soon</span>
-              </span>
+            <Link key={c.title} href={c.href ?? "/learn"} className="card stack" style={{ gap: 10 }}>
+              <span className="eyebrow">{c.kind}</span>
               <strong style={{ fontSize: 18, lineHeight: 1.3 }}>{c.title}</strong>
               <span className="small muted">{c.dek}</span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

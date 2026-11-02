@@ -59,13 +59,13 @@ const timeline = [
   },
 ];
 
-const guides = [
-  "How to use Hyperliquid from the EU, step by step",
-  "HYPE staking explained: validators, rewards and risks",
-  "HIP-3 explained: who can launch markets and why it matters",
-  "Hyperliquid vs centralised exchanges: fees, speed and custody",
-  "Liquidations on Hyperliquid: how they work and how to avoid them",
-  "Hyperliquid vaults explained",
+const guides: { title: string; href?: string }[] = [
+  { title: "HIP-3 explained: how anyone can launch markets on Hyperliquid", href: "/learn/hyperliquid-hip-3-explained" },
+  { title: "How to use Hyperliquid from the EU, step by step" },
+  { title: "HYPE staking explained: validators, rewards and risks" },
+  { title: "Hyperliquid vs centralised exchanges: fees, speed and custody" },
+  { title: "Liquidations on Hyperliquid: how they work and how to avoid them" },
+  { title: "Hyperliquid vaults explained" },
 ];
 
 export default async function HyperliquidHub() {
@@ -251,11 +251,17 @@ export default async function HyperliquidHub() {
               Hyperliquid guides
             </h2>
             <div className="link-list">
-              {guides.map((g) => (
-                <div key={g}>
-                  {g} <span className="soon">Soon</span>
-                </div>
-              ))}
+              {guides.map((g) =>
+                g.href ? (
+                  <Link key={g.title} href={g.href} style={{ display: "block" }}>
+                    {g.title} →
+                  </Link>
+                ) : (
+                  <div key={g.title}>
+                    {g.title} <span className="soon">Soon</span>
+                  </div>
+                ),
+              )}
             </div>
           </section>
 

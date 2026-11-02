@@ -18,7 +18,7 @@ export const nav = [
   { label: "Fintech", href: "/#fintech" },
   { label: "Watches", href: "/#watches" },
   { label: "Collectibles", href: "/#collectibles" },
-  { label: "Learn", href: "/#start-here" },
+  { label: "Learn", href: "/learn" },
 ];
 
 export function absoluteUrl(path = "/") {

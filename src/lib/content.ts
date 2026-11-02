@@ -6,9 +6,10 @@ import { cacheLife } from "next/cache";
 import { site } from "./site";
 import { enforceSponsoredLinks, requiresSponsoredLinks, robotsFor, type ContentKind } from "./sponsored";
 
-export type Collection = "guides" | "glossary" | "sponsored" | "press-releases";
+export type Collection = "news" | "guides" | "glossary" | "sponsored" | "press-releases";
 
 const KIND: Record<Collection, ContentKind> = {
+  news: "editorial",
   guides: "editorial",
   glossary: "editorial",
   sponsored: "sponsored",
@@ -37,6 +38,8 @@ export type Entry = {
   short: string | null;
   /** Template/example entries render at their URL but never appear in lists or sitemaps */
   template: boolean;
+  /** Estimated minutes to read */
+  readMinutes: number;
 };
 
 const dirFor = (c: Collection) => path.join(process.cwd(), "content", c);
@@ -93,6 +96,7 @@ async function parse(collection: Collection, slug: string): Promise<Entry | null
     indexable: site.indexable && !draft && robots.index && data.template !== true,
     short: str(data.short),
     template: data.template === true,
+    readMinutes: Math.max(1, Math.round(content.split(/\s+/).filter(Boolean).length / 220)),
   };
 }
 

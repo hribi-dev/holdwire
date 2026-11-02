@@ -1,48 +1,152 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { getCoin, getTopCoins } from "@/lib/coins";
+import { getCoin, getTopCoins, type CoinMarket } from "@/lib/coins";
+import { listEntries } from "@/lib/content";
 import { direction, formatChange, formatPrice } from "@/lib/format";
-import { Sparkline } from "@/components/Sparkline";
+import { getHyperliquidStats } from "@/lib/hyperliquid";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
-import { MarketsTable } from "@/components/MarketsTable";
+import { CoinBadge } from "@/components/CoinBadge";
 import { JsonLd } from "@/components/JsonLd";
+import { MarketsTable } from "@/components/MarketsTable";
+import { Sparkline } from "@/components/Sparkline";
+import { StoryCard } from "@/components/StoryCard";
 
-const startHere: { kind: string; title: string; dek: string; href?: string }[] = [
-  { kind: "Guide", title: "What is Bitcoin? A plain-English guide", dek: "How it works, the real risks, and how to buy it safely in the EU.", href: "/learn/what-is-bitcoin" },
-  { kind: "Guide", title: "MiCA explained: what the EU's crypto rules mean for you", dek: "What changed on 1 July 2026 and how to check your exchange.", href: "/learn/mica-explained" },
-  { kind: "Hyperliquid", title: "HIP-3 explained: anyone can launch markets", dek: "Builder-deployed perps, the 500,000 HYPE stake and stock perps.", href: "/learn/hyperliquid-hip-3-explained" },
-  { kind: "Glossary", title: "Crypto and finance glossary", dek: "Funding rates, liquidations, MiCA and more, in a sentence or two.", href: "/glossary" },
-];
+const usdCompact = (v: number) =>
+  new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(v);
 
-const verticals = [
-  { id: "fintech", title: "Fintech", items: ["Revolut vs Wise vs N26 for EU users", "SEPA Instant: what changes for your transfers", "CEE fintech funding tracker"] },
-  { id: "watches", title: "Watches", items: ["Secondary watch market report", "Retail vs resale: which references hold value", "How to check a pre-owned watch before you buy"] },
-  { id: "collectibles", title: "Collectibles", items: ["Trading cards as an asset class", "Fine wine, art, cars: what the indices track", "Tokenised collectibles: real ownership or not?"] },
-];
+/* ───────────── Hero: market pulse card ───────────── */
+async function MarketPulse() {
+  const [{ coins, sample }, hl] = await Promise.all([getTopCoins(50), getHyperliquidStats()]);
+  const pick = ["hyperliquid", "bitcoin", "ethereum", "solana"]
+    .map((id) => coins.find((c) => c.id === id))
+    .filter((c): c is CoinMarket => !!c);
+  return (
+    <div className="glass stack" style={{ padding: 22, gap: 4 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 600 }}>
+          <span className="live-dot" /> Market pulse
+        </span>
+        <span className="tiny" style={{ color: "rgba(255,255,255,0.6)" }}>
+          {sample ? "Sample data" : "EUR · 24h"}
+        </span>
+      </div>
+      {pick.map((c) => {
+        const d = direction(c.change24h);
+        return (
+          <Link
+            key={c.id}
+            href={c.id === "hyperliquid" ? "/hyperliquid" : `/coins/${c.id}`}
+            style={{ display: "grid", gridTemplateColumns: "auto 1fr 90px auto", alignItems: "center", gap: 12, padding: "10px 0", borderTop: "1px solid rgba(255,255,255,0.1)", color: "#fff" }}
+          >
+            <CoinBadge id={c.id} name={c.name} image={c.image} size={30} />
+            <span className="stack">
+              <strong style={{ fontSize: 15 }}>{c.name}</strong>
+              <span className="mono tiny" style={{ color: "rgba(255,255,255,0.6)" }}>
+                {c.symbol.toUpperCase()}
+              </span>
+            </span>
+            <span style={{ color: d === "down" ? "#fb923c" : "#34d399" }}>
+              <Sparkline data={c.sparkline} width={90} height={28} />
+            </span>
+            <span className="stack" style={{ alignItems: "flex-end" }}>
+              <span className="mono" style={{ fontWeight: 600 }}>{formatPrice(c.price)}</span>
+              <span className="mono tiny" style={{ color: d === "down" ? "#fb923c" : "#34d399" }}>
+                {formatChange(c.change24h)}
+              </span>
+            </span>
+          </Link>
+        );
+      })}
+      {hl && (
+        <Link href="/hyperliquid" className="tiny" style={{ marginTop: 8, padding: "10px 12px", borderRadius: 12, background: "rgba(20,184,166,0.16)", color: "#99f6e4", display: "flex", justifyContent: "space-between" }}>
+          <span>Hyperliquid 24h volume</span>
+          <strong className="mono">{usdCompact(hl.stats.totalVolume24hUsd)}</strong>
+        </Link>
+      )}
+    </div>
+  );
+}
 
-async function HypeSpotlight() {
-  const data = await getCoin("hyperliquid");
+/* ───────────── Top movers ───────────── */
+async function Movers() {
+  const { coins } = await getTopCoins(50);
+  const valid = coins.filter((c) => c.change24h != null && !["tether", "usd-coin"].includes(c.id));
+  const sorted = [...valid].sort((a, b) => (b.change24h ?? 0) - (a.change24h ?? 0));
+  const gainers = sorted.filter((c) => (c.change24h ?? 0) > 0).slice(0, 4);
+  const losers = [...sorted].reverse().filter((c) => (c.change24h ?? 0) < 0).slice(0, 4);
+  const col = (title: string, list: CoinMarket[], up: boolean) => (
+    <div className="stack" style={{ gap: 10 }}>
+      <span className="cat" style={{ color: up ? "var(--up)" : "var(--down)" }}>
+        {up ? "▲ Biggest gainers" : "▼ Biggest fallers"}
+      </span>
+      {list.length === 0 && <span className="small muted">Nothing to show right now.</span>}
+      {list.map((c) => (
+        <Link key={c.id} href={`/coins/${c.id}`} className="mover">
+          <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <CoinBadge id={c.id} name={c.name} image={c.image} />
+            <strong>{c.name}</strong>
+          </span>
+          <span className={`mono ${direction(c.change24h)}`} style={{ fontWeight: 600 }}>
+            {formatChange(c.change24h)}
+          </span>
+        </Link>
+      ))}
+      <span className="sr-only">{title}</span>
+    </div>
+  );
+  return (
+    <div className="movers">
+      {col("Gainers", gainers, true)}
+      {col("Fallers", losers, false)}
+    </div>
+  );
+}
+
+/* ───────────── Hyperliquid spotlight ───────────── */
+async function HypeBand() {
+  const [data, hl] = await Promise.all([getCoin("hyperliquid"), getHyperliquidStats()]);
   const coin = data?.coin;
   return (
-    <Link
-      href="/hyperliquid"
-      aria-label="Hyperliquid hub"
-      style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 16, minHeight: 320, borderRadius: "var(--radius)", background: "var(--ink)", color: "#fff", padding: 28 }}
+    <section
+      className="reveal"
+      style={{ borderRadius: 24, padding: "36px 36px 28px", color: "#fff", background: "radial-gradient(circle at 85% 10%, rgba(94,234,212,0.35), transparent 45%), linear-gradient(135deg, #042f2e, #0f172a 60%, #1e1b4b)" }}
+      aria-labelledby="hl-h"
     >
-      <span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12, alignItems: "baseline" }}>
-        <span className="mono" style={{ color: "#7EE8C9", fontWeight: 600 }}>HYPE / EUR</span>
-        {data?.sample && <span className="sample-flag">Sample data</span>}
-      </span>
-      <span style={{ color: "#7EE8C9" }}>
-        <Sparkline data={coin?.sparkline ?? []} width={600} height={150} strokeWidth={3} />
-      </span>
-      <span style={{ display: "flex", alignItems: "baseline", gap: 14, flexWrap: "wrap" }}>
-        <span className="mono" style={{ fontSize: 40, fontWeight: 600 }}>{formatPrice(coin?.price)}</span>
-        <span className="mono" style={{ fontWeight: 600, color: direction(coin?.change24h) === "down" ? "var(--down-on-dark)" : "var(--up-on-dark)" }}>
-          {formatChange(coin?.change24h)} 24h · {formatChange(coin?.change7d)} 7d
-        </span>
-      </span>
-    </Link>
+      <div className="row" style={{ gap: 28, alignItems: "flex-end" }}>
+        <div className="stack" style={{ flex: "2 1 420px", gap: 12 }}>
+          <span className="cat" style={{ color: "#5eead4" }}>Spotlight · Hyperliquid</span>
+          <h2 id="hl-h" style={{ margin: 0, fontSize: "clamp(28px, 4vw, 42px)", lineHeight: 1.08 }}>
+            The on-chain exchange Wall Street is now chasing
+          </h2>
+          <p style={{ margin: 0, color: "#cbd5e1", fontSize: 17, maxWidth: 560 }}>
+            US ETFs, the NYSE owner and Kraken&apos;s parent are all building on it. Live exchange data, how it works and what it means for you in Europe.
+          </p>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 4 }}>
+            <Link href="/hyperliquid" className="btn" style={{ background: "#5eead4", color: "#042f2e" }}>
+              Open the Hyperliquid hub
+            </Link>
+            <Link href="/learn/hyperliquid-hip-3-explained" className="btn" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff" }}>
+              HIP-3 explained
+            </Link>
+          </div>
+        </div>
+        <div className="stack" style={{ flex: "1 1 260px", gap: 4 }}>
+          <span className="tiny" style={{ color: "#94a3b8" }}>HYPE / EUR {data?.sample ? "· sample" : ""}</span>
+          <span className="mono" style={{ fontSize: 38, fontWeight: 600 }}>{formatPrice(coin?.price)}</span>
+          <span className="mono" style={{ color: direction(coin?.change7d) === "down" ? "#fb923c" : "#34d399", fontWeight: 600 }}>
+            {formatChange(coin?.change7d)} 7d
+          </span>
+          {hl && (
+            <span className="tiny" style={{ color: "#99f6e4", marginTop: 6 }}>
+              Exchange: {usdCompact(hl.stats.totalVolume24hUsd)} 24h volume · {usdCompact(hl.stats.totalOpenInterestUsd)} open interest
+            </span>
+          )}
+        </div>
+      </div>
+      <div style={{ color: "#5eead4", marginTop: 18 }}>
+        <Sparkline data={coin?.sparkline ?? []} width={1000} height={90} strokeWidth={2.5} />
+      </div>
+    </section>
   );
 }
 
@@ -52,13 +156,7 @@ async function Markets() {
     <>
       <MarketsTable coins={coins.slice(0, 10)} caption="Top cryptocurrencies by market cap, prices in euros" />
       <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }} className="small">
-        <span className="muted">
-          {sample ? (
-            <span className="sample-flag">Sample data: live prices unavailable</span>
-          ) : (
-            "Prices in EUR. Data: CoinGecko."
-          )}
-        </span>
+        <span className="muted">{sample ? <span className="sample-flag">Sample data: live prices unavailable</span> : "Prices in EUR. Data: CoinGecko."}</span>
         <Link href="/coins" style={{ fontWeight: 600, color: "var(--accent)" }}>
           All coins →
         </Link>
@@ -67,140 +165,190 @@ async function Markets() {
   );
 }
 
-export default function Home() {
+const explore = [
+  { tint: "tint-cyan", color: "#0e7490", label: "Regulation", title: "MiCA licence check", body: "Is your exchange allowed to serve you? Four checks, two minutes.", href: "/learn/mica-explained" },
+  { tint: "tint-pink", color: "#be185d", label: "Fintech", title: "Neobanks & payments", body: "Revolut vs Wise vs N26, SEPA Instant and the real cost of sending money home.", href: null },
+  { tint: "tint-amber", color: "#b45309", label: "Watches", title: "Watches as assets", body: "Which references hold value, and how the secondary market really moves.", href: null },
+  { tint: "tint-violet", color: "#6d28d9", label: "Collectibles", title: "Hard assets beyond crypto", body: "Cards, wine, art and cars: what the indices track, in plain English.", href: null },
+];
+
+export default async function Home() {
+  const [news, guides] = await Promise.all([listEntries("news"), listEntries("guides")]);
+  const [lead, ...moreNews] = news;
+
   return (
-    <main className="wrap page">
+    <>
       <JsonLd data={organizationJsonLd()} />
       <JsonLd data={websiteJsonLd()} />
-      <h1 className="sr-only">Holdwire: crypto prices, fintech and hard assets for Europe</h1>
 
-      <section className="row" aria-label="Featured">
-        <article className="col-main stack" style={{ gap: 16 }}>
-          <Suspense fallback={<div style={{ height: 320, borderRadius: "var(--radius)", background: "var(--ink)" }} />}>
-            <HypeSpotlight />
-          </Suspense>
-          <span className="eyebrow">Spotlight · Hyperliquid</span>
-          <h2 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.08 }}>
-            <Link href="/hyperliquid">Hyperliquid, explained and tracked: the on-chain exchange everyone trades on</Link>
-          </h2>
-          <p style={{ margin: 0, fontSize: 18, color: "#374151" }}>
-            US ETFs, the NYSE owner&apos;s plans and live HYPE data: why the on-chain exchange is crypto&apos;s hottest story, and what it means for you in Europe.
-          </p>
-          <div>
-            <Link href="/hyperliquid" className="btn btn-primary">
-              Open the Hyperliquid hub
-            </Link>
-          </div>
-        </article>
-        <aside className="col-side stack">
-          <h2 style={{ margin: "0 0 8px", fontSize: 20 }}>Live prices</h2>
-          <div className="headline-list">
-            <Link href="/coins/hyperliquid">
-              <span className="tiny muted">Price page</span>
-              <strong>Hyperliquid (HYPE) price today, in euros</strong>
-            </Link>
-            <Link href="/coins/bitcoin">
-              <span className="tiny muted">Price page</span>
-              <strong>Bitcoin price today, in euros</strong>
-            </Link>
-            <Link href="/coins/ethereum">
-              <span className="tiny muted">Price page</span>
-              <strong>Ethereum price today, in euros</strong>
-            </Link>
-            <Link href="/coins/solana">
-              <span className="tiny muted">Price page</span>
-              <strong>Solana price today, in euros</strong>
-            </Link>
-            <Link href="/coins">
-              <span className="tiny muted">Markets</span>
-              <strong>Top 50 cryptocurrencies by market cap</strong>
-            </Link>
-          </div>
-        </aside>
-      </section>
-
-      <section className="stack" style={{ gap: 16 }} aria-labelledby="markets-h">
-        <h2 id="markets-h" className="section-title">
-          Markets
-        </h2>
-        <Suspense fallback={<p className="muted">Loading markets…</p>}>
-          <Markets />
-        </Suspense>
-      </section>
-
-      <section className="band" aria-labelledby="mica-h">
-        <div className="stack" style={{ flex: "1 1 420px", gap: 14 }}>
-          <span className="eyebrow">Holdwire data</span>
-          <h2 id="mica-h" style={{ margin: 0, fontSize: 36 }}>
-            MiCA licence tracker
-          </h2>
-          <p style={{ margin: 0, fontSize: 17 }}>Check whether an exchange can legally serve you in your EU country before you sign up.</p>
-          <div>
-            <span className="soon" style={{ background: "var(--night-2)", color: "var(--night-text)" }}>
-              Launching soon
+      {/* ── Hero ── */}
+      <section className="hero">
+        <div className="aurora" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="grid-lines" aria-hidden="true" />
+        <div className="wrap row" style={{ padding: "72px 24px 80px", alignItems: "center", gap: 48 }}>
+          <div className="stack" style={{ flex: "3 1 480px", gap: 20 }}>
+            <span className="glass tiny" style={{ alignSelf: "flex-start", padding: "6px 12px", borderRadius: 999, display: "flex", alignItems: "center", gap: 8 }}>
+              <span className="live-dot" /> Live markets · Crypto, fintech &amp; hard assets for Europe
             </span>
-          </div>
-        </div>
-        <div className="band-stats">
-          <div className="band-stat">
-            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>EU-wide</div>
-            <div className="tiny" style={{ color: "var(--night-text)" }}>all member states</div>
-          </div>
-          <div className="band-stat">
-            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>Daily</div>
-            <div className="tiny" style={{ color: "var(--night-text)" }}>ESMA register sync</div>
-          </div>
-          <div className="band-stat">
-            <div className="mono" style={{ fontSize: 26, fontWeight: 600 }}>Free</div>
-            <div className="tiny" style={{ color: "var(--night-text)" }}>to use and cite</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="start-here" className="stack" style={{ gap: 20 }} aria-labelledby="start-h">
-        <h2 id="start-h" className="section-title">
-          Start here
-        </h2>
-        <div className="cards">
-          {startHere.map((c) => (
-            <Link key={c.title} href={c.href ?? "/learn"} className="card stack" style={{ gap: 10 }}>
-              <span className="eyebrow">{c.kind}</span>
-              <strong style={{ fontSize: 18, lineHeight: 1.3 }}>{c.title}</strong>
-              <span className="small muted">{c.dek}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="row" aria-label="Coverage areas">
-        {verticals.map((v) => (
-          <div key={v.id} id={v.id} className="stack" style={{ flex: "1 1 300px" }}>
-            <h2 style={{ margin: "0 0 8px", fontSize: 22 }}>{v.title}</h2>
-            <div className="link-list">
-              {v.items.map((t) => (
-                <div key={t}>
-                  {t} <span className="soon">Soon</span>
-                </div>
-              ))}
+            <h1 style={{ margin: 0, fontSize: "clamp(40px, 6.4vw, 76px)", lineHeight: 1.02, letterSpacing: "-0.03em" }}>
+              Money is moving on-chain.
+              <br />
+              <span className="grad-text">Follow it here.</span>
+            </h1>
+            <p style={{ margin: 0, fontSize: 19, color: "#cbd5e1", maxWidth: 560 }}>
+              Sourced news, live data and plain-English guides, from Hyperliquid and Bitcoin to MiCA, neobanks and watches.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Link href="/news" className="btn" style={{ background: "#fff", color: "var(--ink)", minHeight: 50, padding: "0 22px" }}>
+                Read the latest
+              </Link>
+              <Link href="/hyperliquid" className="btn" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", minHeight: 50, padding: "0 22px" }}>
+                Hyperliquid hub →
+              </Link>
             </div>
           </div>
-        ))}
+          <div style={{ flex: "2 1 340px", minWidth: 0 }}>
+            <Suspense fallback={<div className="glass" style={{ height: 320 }} />}>
+              <MarketPulse />
+            </Suspense>
+          </div>
+        </div>
       </section>
 
-      <section id="newsletter" className="row" style={{ gap: 24 }}>
-        <form className="stack" style={{ flex: "1 1 420px", gap: 12, background: "var(--accent-soft)", borderRadius: "var(--radius)", padding: 24 }}>
-          <h2 style={{ margin: 0, fontSize: 22 }}>The Holdwire Brief</h2>
-          <p style={{ margin: 0, color: "#374151" }}>Markets, crypto and hard assets in five minutes. Weekdays, 7:00 CET.</p>
-          <label htmlFor="nl-email">Email address</label>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            <input id="nl-email" type="email" placeholder="you@example.com" style={{ flex: "1 1 220px", width: "auto" }} disabled />
-            <button type="submit" className="btn btn-primary" disabled>
-              Subscribe
-            </button>
+      <main className="wrap page" style={{ paddingTop: 56 }}>
+        {/* ── Latest ── */}
+        {lead && (
+          <section className="stack" style={{ gap: 24 }} aria-labelledby="latest-h">
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8 }}>
+              <h2 id="latest-h" className="section-title" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <span className="live-dot" /> Latest
+              </h2>
+              <Link href="/news" style={{ fontWeight: 600, color: "var(--accent)" }}>
+                All news →
+              </Link>
+            </div>
+            <div className="row" style={{ gap: 36, alignItems: "flex-start" }}>
+              <div style={{ flex: "3 1 520px", minWidth: 0 }}>
+                <StoryCard entry={lead} size="lg" />
+              </div>
+              <div className="stack" style={{ flex: "2 1 320px", gap: 28, minWidth: 0 }}>
+                {moreNews.slice(0, 3).map((e) => (
+                  <StoryCard key={e.slug} entry={e} size="sm" />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── Movers ── */}
+        <section className="stack reveal" style={{ gap: 18 }} aria-labelledby="movers-h">
+          <h2 id="movers-h" className="section-title">
+            Today&apos;s movers
+          </h2>
+          <Suspense fallback={<p className="muted">Loading…</p>}>
+            <Movers />
+          </Suspense>
+        </section>
+
+        {/* ── Hyperliquid ── */}
+        <Suspense fallback={<div style={{ height: 320, borderRadius: 24, background: "#0f172a" }} />}>
+          <HypeBand />
+        </Suspense>
+
+        {/* ── Learn ── */}
+        <section id="start-here" className="stack" style={{ gap: 24 }} aria-labelledby="learn-h">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8 }}>
+            <h2 id="learn-h" className="section-title">
+              Start here
+            </h2>
+            <Link href="/learn" style={{ fontWeight: 600, color: "var(--accent)" }}>
+              All guides →
+            </Link>
           </div>
-          <span className="tiny muted">Sign-ups open at launch.</span>
-        </form>
-      </section>
-    </main>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 28 }}>
+            {guides.slice(0, 3).map((g) => (
+              <StoryCard key={g.slug} entry={g} />
+            ))}
+            <Link href="/glossary" className="tint tint-violet stack reveal" style={{ gap: 10, justifyContent: "flex-end", minHeight: 220 }}>
+              <span className="cat" style={{ color: "#6d28d9" }}>Glossary</span>
+              <strong style={{ fontFamily: "var(--font-display)", fontSize: 24, lineHeight: 1.15 }}>Funding rates, liquidations, MiCA… explained in a sentence.</strong>
+              <span className="small" style={{ color: "#5b21b6" }}>Browse the glossary →</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* ── Markets ── */}
+        <section className="stack reveal" style={{ gap: 16 }} aria-labelledby="markets-h">
+          <h2 id="markets-h" className="section-title">
+            Markets
+          </h2>
+          <Suspense fallback={<p className="muted">Loading markets…</p>}>
+            <Markets />
+          </Suspense>
+        </section>
+
+        {/* ── Explore ── */}
+        <section className="stack" style={{ gap: 20 }} aria-labelledby="explore-h">
+          <h2 id="explore-h" className="section-title">
+            Beyond crypto
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 20 }}>
+            {explore.map((x) => {
+              const inner = (
+                <>
+                  <span className="cat" style={{ color: x.color }}>
+                    {x.label}
+                  </span>
+                  <strong style={{ fontFamily: "var(--font-display)", fontSize: 21, lineHeight: 1.2 }}>{x.title}</strong>
+                  <span className="small" style={{ color: "var(--ink-2)" }}>
+                    {x.body}
+                  </span>
+                  <span className="tiny" style={{ color: x.color, fontWeight: 600 }}>
+                    {x.href ? "Read →" : "Coming soon"}
+                  </span>
+                </>
+              );
+              return x.href ? (
+                <Link key={x.title} href={x.href} className={`tint ${x.tint} stack reveal`} style={{ gap: 10 }}>
+                  {inner}
+                </Link>
+              ) : (
+                <div key={x.title} className={`tint ${x.tint} stack reveal`} style={{ gap: 10 }}>
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── Newsletter ── */}
+        <section id="newsletter" className="gborder reveal" style={{ padding: 32 }}>
+          <form className="row" style={{ gap: 24, alignItems: "center" }}>
+            <div className="stack" style={{ flex: "1 1 360px", gap: 8 }}>
+              <span className="cat grad-text">The Holdwire Brief</span>
+              <h2 style={{ margin: 0, fontSize: 28 }}>Five minutes. Every weekday. 7:00 CET.</h2>
+              <p className="muted" style={{ margin: 0 }}>
+                Markets, crypto and hard assets, with the Hyperliquid numbers that matter.
+              </p>
+            </div>
+            <div className="stack" style={{ flex: "1 1 360px", gap: 8 }}>
+              <label htmlFor="nl-email">Email address</label>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                <input id="nl-email" type="email" placeholder="you@example.com" style={{ flex: "1 1 220px", width: "auto" }} disabled />
+                <button type="submit" className="btn btn-primary" disabled>
+                  Subscribe
+                </button>
+              </div>
+              <span className="tiny muted">Sign-ups open at launch.</span>
+            </div>
+          </form>
+        </section>
+      </main>
+    </>
   );
 }

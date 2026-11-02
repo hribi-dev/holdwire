@@ -18,13 +18,11 @@ export const site = {
 };
 
 export const nav = [
+  { label: "News", href: "/news" },
   { label: "Hyperliquid", href: "/hyperliquid" },
-  { label: "Crypto", href: "/coins" },
   { label: "Markets", href: "/coins" },
-  { label: "Fintech", href: "/#fintech" },
-  { label: "Watches", href: "/#watches" },
-  { label: "Collectibles", href: "/#collectibles" },
   { label: "Learn", href: "/learn" },
+  { label: "Glossary", href: "/glossary" },
 ];
 
 export function absoluteUrl(path = "/") {

@@ -155,3 +155,106 @@ summary { font-weight: 600; cursor: pointer; }
 .site-footer nav strong { color: #fff; }
 .site-footer a:hover { color: #fff; }
 .site-footer .legal { border-top: 1px solid #262c36; padding-top: 20px; padding-bottom: 32px; font-size: 13px; color: var(--night-muted); }
+
+/* ───────────── Colour + motion layer ───────────── */
+:root {
+  --violet: #7c3aed;
+  --cyan: #06b6d4;
+  --mint: #10b981;
+  --amber: #f59e0b;
+  --pink: #ec4899;
+  --ink-deep: #070a12;
+}
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(100deg, #a78bfa 0%, #22d3ee 45%, #34d399 70%, #fbbf24 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: grad-shift 9s ease-in-out infinite alternate;
+}
+@keyframes grad-shift { to { background-position: 100% center; } }
+
+/* Hero with animated aurora */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-deep);
+  color: #fff;
+  isolation: isolate;
+}
+.hero .aurora { position: absolute; inset: -20%; z-index: -2; filter: blur(70px); opacity: 0.75; }
+.hero .aurora span { position: absolute; border-radius: 50%; mix-blend-mode: screen; animation: drift 18s ease-in-out infinite alternate; }
+.hero .aurora span:nth-child(1) { width: 46vw; height: 46vw; left: 4%; top: 6%; background: radial-gradient(circle, #7c3aed 0%, transparent 65%); }
+.hero .aurora span:nth-child(2) { width: 40vw; height: 40vw; right: 2%; top: 0%; background: radial-gradient(circle, #06b6d4 0%, transparent 65%); animation-duration: 22s; animation-delay: -6s; }
+.hero .aurora span:nth-child(3) { width: 38vw; height: 38vw; left: 34%; bottom: -6%; background: radial-gradient(circle, #10b981 0%, transparent 62%); animation-duration: 26s; animation-delay: -12s; }
+.hero .aurora span:nth-child(4) { width: 26vw; height: 26vw; right: 18%; bottom: 4%; background: radial-gradient(circle, #ec4899 0%, transparent 62%); animation-duration: 20s; animation-delay: -3s; opacity: 0.7; }
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6%, 8%) scale(1.12); }
+  100% { transform: translate(-6%, -4%) scale(0.95); }
+}
+.hero .grid-lines {
+  position: absolute; inset: 0; z-index: -1;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 0 rgba(52,211,153,0.7); animation: pulse 2s infinite; display: inline-block; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(52,211,153,0); } 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); } }
+
+/* Marquee ticker */
+.ticker .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.ticker .marquee-track { display: flex; width: max-content; gap: 36px; padding: 10px 0; animation: marquee 50s linear infinite; }
+.ticker .marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Story cards */
+.story { display: flex; flex-direction: column; gap: 12px; border-radius: 18px; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.story:hover { transform: translateY(-4px); }
+.story:hover .cover { box-shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.45); }
+.story:hover .cover-art { transform: scale(1.06); }
+.cover { position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 16 / 9; transition: box-shadow 0.25s ease; }
+.cover-art { position: absolute; inset: 0; transition: transform 0.6s cubic-bezier(.2,.7,.2,1); }
+.cover-label { position: absolute; left: 14px; bottom: 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; padding: 4px 10px; border-radius: 999px; background: rgba(0,0,0,0.28); backdrop-filter: blur(6px); }
+.cat { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Mover chips */
+.movers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.mover { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); transition: transform 0.2s ease, border-color 0.2s ease; }
+.mover:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+@media (max-width: 720px) { .movers { grid-template-columns: repeat(1, minmax(0, 1fr)); } }
+
+/* Colourful cards */
+.tint { border-radius: 18px; padding: 22px; transition: transform 0.25s ease; position: relative; overflow: hidden; }
+.tint:hover { transform: translateY(-4px); }
+.tint-violet { background: linear-gradient(140deg, #f5f3ff, #ede9fe); }
+.tint-cyan { background: linear-gradient(140deg, #ecfeff, #cffafe); }
+.tint-mint { background: linear-gradient(140deg, #ecfdf5, #d1fae5); }
+.tint-amber { background: linear-gradient(140deg, #fffbeb, #fef3c7); }
+.tint-pink { background: linear-gradient(140deg, #fdf2f8, #fce7f3); }
+
+/* Gradient border */
+.gborder { position: relative; border-radius: 20px; background: #fff; }
+.gborder::before { content: ""; position: absolute; inset: 0; padding: 1.5px; border-radius: inherit; background: linear-gradient(120deg, #7c3aed, #06b6d4, #10b981, #f59e0b); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+
+/* Scroll reveal (progressive: only where scroll-driven animations exist; content is always visible otherwise) */
+@supports (animation-timeline: view()) {
+  .reveal { animation: reveal-up linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+}
+
+/* Respect reduced motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .ticker .marquee-track { flex-wrap: wrap; width: auto; }
+}

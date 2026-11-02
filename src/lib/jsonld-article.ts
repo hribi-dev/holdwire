@@ -4,7 +4,7 @@ import { absoluteUrl, site } from "./site";
 export function articleJsonLd(e: Entry, path: string) {
   return {
     "@context": "https://schema.org",
-    "@type": e.kind === "press-release" ? "NewsArticle" : "Article",
+    "@type": e.kind === "press-release" || e.collection === "news" ? "NewsArticle" : "Article",
     headline: e.title,
     description: e.description,
     datePublished: e.published ?? undefined,

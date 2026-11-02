@@ -60,9 +60,10 @@ Disclosure: Hribi's own Hyperliquid holdings/trading must be listed on /disclosu
 |---|---|---|---|
 | MiCA | MiCA explained (draft ✅), CASP licensing, **MiCA licence data** built into exchange pages and country how-to-buy guides | G/R/T | P1 |
 
-> Note (2026-11-02): standalone MiCA trackers already exist (casptracker.eu, MiCA Crypto Alliance, Aug 2026). Ours only wins if it is combined with things they lack: fees, EU country availability, Hyperliquid/DEX context, and plain-English guidance on every exchange page.
 | Crypto tax by country | Slovenia, Croatia, Germany, Austria, Italy, France, Spain, NL, Poland, Portugal | G | P2 |
 | AML / Travel rule | what users need to know | G | P3 |
+
+> Note (2026-11-02): standalone MiCA trackers already exist (casptracker.eu, MiCA Crypto Alliance, Aug 2026). Ours only wins if it is combined with things they lack: fees, EU country availability, Hyperliquid/DEX context, and plain-English guidance on every exchange page.
 
 ### Pillar E — Crypto news & analysis
 Topic hubs: Bitcoin, Ethereum, Solana, DeFi, Regulation, Exchanges, Stablecoins, Markets. News articles attach to entities so coin/exchange pages show related news automatically. P1 from launch, 2–5/day.
@@ -97,7 +98,7 @@ Topic hubs: Bitcoin, Ethereum, Solana, DeFi, Regulation, Exchanges, Stablecoins,
 ## Launch package (P1, first 6 weeks)
 - 500 coin pages + 400 converter pages (quality-gated, rolled out in batches of ~100)
 - 15 pillar/cluster guides (A–D, Solana hub, neobank comparison)
-- MiCA licensed exchanges tracker (flagship)
+- MiCA licence data on exchange pages + country how-to-buy guides (see note in Pillar D)
 - 3 tools: converter, DCA calculator, staking yield calculator
 - 150 glossary terms
 - Daily news from launch

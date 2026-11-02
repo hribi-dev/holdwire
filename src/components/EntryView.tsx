@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link";
 import type { Entry } from "@/lib/content";
 
 const LABEL: Record<string, { text: string; bg: string; fg: string } | null> = {

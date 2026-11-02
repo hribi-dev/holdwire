@@ -18,14 +18,15 @@ export const site = {
 };
 
 export const nav = [
-  { label: "News", href: "/news" },
-  { label: "Hyperliquid", href: "/hyperliquid" },
-  { label: "Markets", href: "/coins" },
-  { label: "Memes", href: "/memes" },
-  { label: "Fintech", href: "/fintech" },
-  { label: "Learn", href: "/learn" },
-  { label: "Glossary", href: "/glossary" },
-];
+  { key: "news", href: "/news" },
+  { key: "hyperliquid", href: "/hyperliquid" },
+  { key: "markets", href: "/coins" },
+  { key: "movers", href: "/movers" },
+  { key: "memes", href: "/memes" },
+  { key: "fintech", href: "/fintech" },
+  { key: "learn", href: "/learn" },
+  { key: "glossary", href: "/glossary" },
+] as const;
 
 export function absoluteUrl(path = "/") {
   return `${site.url}${path.startsWith("/") ? path : `/${path}`}`;

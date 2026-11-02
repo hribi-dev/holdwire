@@ -5,7 +5,7 @@ export const nb: Dict = {
     title: "kryptokurser, fintech og reelle eiendeler",
     description: "Kryptokurser i euro i sanntid, Hyperliquid-data, kildebelagte nyheter og tydelige guider for lesere i Europa.",
   },
-  nav: { news: "Nyheter", hyperliquid: "Hyperliquid", markets: "Markeder", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lær", glossary: "Ordliste" },
+  nav: { news: "Nyheter", blog: "Blogg", hyperliquid: "Hyperliquid", markets: "Markeder", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lær", glossary: "Ordliste" },
   header: { subscribe: "Abonner", trending: "Populært:", allCoins: "Alle mynter", language: "Språk", skip: "Hopp til innhold", home: "forside" },
   footer: {
     tagline: "Finans og reelle eiendeler med et europeisk blikk.",
@@ -71,6 +71,21 @@ export const nb: Dict = {
     newsletterBody: "Markeder, krypto og reelle eiendeler, med Hyperliquid-tallene som betyr noe.",
     email: "E-postadresse",
     signupsOpen: "Påmelding åpner ved lansering.",
+    slides: {
+      blogTag: "Dagens sak",
+      blogCta: "Les saken",
+      hlTitle: "{vol} handlet på Hyperliquid på 24 timer",
+      hlBody: "Volum, åpne posisjoner og funding live fra kjedebørsen Wall Street jager.",
+      moodTitle: "Markedsstemning: {label}",
+      mapCta: "Se markedskartet",
+      moverTitle: "{name} postet. {asset} beveget seg.",
+      moversCta: "Alle markedsbevegere",
+      memeTitle: "{sym} leder memecoin-handelen i dag",
+      memeBody: "{vol} handlet på 24 timer, {chg} i løpet av dagen. De fleste memecoins går til null: les risikoene først.",
+      memesCta: "Åpne meme-sporingen",
+      prev: "Forrige",
+      next: "Neste",
+    },
     explore: {
       movers: { label: "Markedsbevegere", title: "Når ett innlegg flytter markedet", body: "Innlegg fra Musk, Trump og CZ som flyttet prisene, med kilder og hva som skjedde etterpå." },
       mica: { label: "Regulering", title: "Sjekk MiCA-lisens", body: "Har børsen din lov til å betjene deg? Fire sjekker, to minutter." },
@@ -110,6 +125,7 @@ export const nb: Dict = {
     chartHint: "Beveg deg over grafen for å se prisen hver dag.",
   },
   pages: {
+    blog: { tag: "Hver dag", title: "Blogg", lede: "Dagens største krypto- og finanssak, forklart enkelt for lesere i Europa. Med kilder og gjennomgått av redaksjonen." },
     movers: {
       tag: "Markedsbevegere",
       title: "Ett innlegg, og markedet beveger seg",

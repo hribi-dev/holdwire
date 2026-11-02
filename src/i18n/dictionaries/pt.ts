@@ -5,7 +5,7 @@ export const pt: Dict = {
     title: "preços cripto, fintech e ativos reais",
     description: "Preços de criptomoedas em euros em tempo real, dados da Hyperliquid, notícias com fontes e guias claros para leitores na Europa.",
   },
-  nav: { news: "Notícias", hyperliquid: "Hyperliquid", markets: "Mercados", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Aprender", glossary: "Glossário" },
+  nav: { news: "Notícias", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Mercados", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Aprender", glossary: "Glossário" },
   header: { subscribe: "Subscrever", trending: "Em alta:", allCoins: "Todas as moedas", language: "Idioma", skip: "Saltar para o conteúdo", home: "início" },
   footer: {
     tagline: "Finanças e ativos reais com olhar europeu.",
@@ -71,6 +71,21 @@ export const pt: Dict = {
     newsletterBody: "Mercados, cripto e ativos reais, com os números da Hyperliquid que importam.",
     email: "Endereço de email",
     signupsOpen: "As inscrições abrem no lançamento.",
+    slides: {
+      blogTag: "A história do dia",
+      blogCta: "Ler a história",
+      hlTitle: "{vol} negociados na Hyperliquid em 24 horas",
+      hlBody: "Volume, posições abertas e financiamento ao vivo da bolsa on-chain que Wall Street persegue.",
+      moodTitle: "Humor do mercado: {label}",
+      mapCta: "Ver o mapa do mercado",
+      moverTitle: "{name} publicou. {asset} mexeu.",
+      moversCta: "Todos os market movers",
+      memeTitle: "{sym} lidera hoje a negociação de memecoins",
+      memeBody: "{vol} negociados em 24 horas, {chg} no dia. A maioria das memecoins vai a zero: leia primeiro os riscos.",
+      memesCta: "Abrir o tracker de memes",
+      prev: "Anterior",
+      next: "Seguinte",
+    },
     explore: {
       movers: { label: "Quem move o mercado", title: "Quando um post mexe com o mercado", body: "Posts de Musk, Trump e CZ que mexeram com os preços, com fontes e o que aconteceu a seguir." },
       mica: { label: "Regulação", title: "Verificação de licença MiCA", body: "A sua bolsa pode servi-lo? Quatro verificações, dois minutos." },
@@ -110,6 +125,7 @@ export const pt: Dict = {
     chartHint: "Percorra o gráfico para ver o preço de cada dia.",
   },
   pages: {
+    blog: { tag: "Diário", title: "Blog", lede: "A maior história do dia em cripto e finanças, explicada de forma simples para leitores na Europa. Com fontes e revisão editorial." },
     movers: {
       tag: "Quem move o mercado",
       title: "Um post, e o mercado mexe",

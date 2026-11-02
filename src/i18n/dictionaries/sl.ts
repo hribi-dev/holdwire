@@ -5,7 +5,7 @@ export const sl: Dict = {
     title: "cene kriptovalut, fintech in realna sredstva",
     description: "Cene kriptovalut v evrih v živo, podatki Hyperliquid, preverjene novice in razumljivi vodiči za bralce v Evropi.",
   },
-  nav: { news: "Novice", hyperliquid: "Hyperliquid", markets: "Trgi", memes: "Memi", movers: "Premikalci", fintech: "Fintech", learn: "Učenje", glossary: "Slovar" },
+  nav: { news: "Novice", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Trgi", memes: "Memi", movers: "Premikalci", fintech: "Fintech", learn: "Učenje", glossary: "Slovar" },
   header: { subscribe: "Naroči se", trending: "V trendu:", allCoins: "Vsi kovanci", language: "Jezik", skip: "Na vsebino", home: "domov" },
   footer: {
     tagline: "Finance in realna sredstva z evropskim pogledom.",
@@ -71,6 +71,21 @@ export const sl: Dict = {
     newsletterBody: "Trgi, kripto in realna sredstva, s številkami Hyperliquida, ki štejejo.",
     email: "E-poštni naslov",
     signupsOpen: "Prijave se odprejo ob zagonu.",
+    slides: {
+      blogTag: "Zgodba dneva",
+      blogCta: "Preberi zgodbo",
+      hlTitle: "{vol} prometa na Hyperliquidu v 24 urah",
+      hlBody: "Promet, odprte pozicije in financiranje v živo z borze na verigi, ki jo lovi Wall Street.",
+      moodTitle: "Razpoloženje trga: {label}",
+      mapCta: "Odpri zemljevid trga",
+      moverTitle: "{name} je objavil. {asset} se je premaknil.",
+      moversCta: "Vsi premikalci trga",
+      memeTitle: "{sym} danes vodi trgovanje z memecoini",
+      memeBody: "{vol} prometa v 24 urah, {chg} v dnevu. Večina memecoinov pade na nič: najprej preberite tveganja.",
+      memesCta: "Odpri sledilnik memov",
+      prev: "Prejšnja",
+      next: "Naslednja",
+    },
     explore: {
       movers: { label: "Premikalci trga", title: "Ko ena objava premakne trg", body: "Objave Muska, Trumpa in CZ, ki so premaknile cene, z viri in tem, kaj je sledilo." },
       mica: { label: "Regulacija", title: "Preverjanje licence MiCA", body: "Ali vas vaša borza sme servisirati? Štirje koraki, dve minuti." },
@@ -110,6 +125,7 @@ export const sl: Dict = {
     chartHint: "Premikajte se po grafu, da vidite ceno za vsak dan.",
   },
   pages: {
+    blog: { tag: "Vsak dan", title: "Blog", lede: "Največja zgodba dneva iz sveta kripta in financ, preprosto razložena za bralce v Evropi. Z viri in uredniškim pregledom." },
     movers: {
       tag: "Premikalci trga",
       title: "Ena objava in trg se premakne",

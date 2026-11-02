@@ -5,7 +5,7 @@ export const fr: Dict = {
     title: "cours crypto, fintech et actifs réels",
     description: "Cours des cryptomonnaies en euros en direct, données Hyperliquid, actualités sourcées et guides clairs pour les lecteurs en Europe.",
   },
-  nav: { news: "Actualités", hyperliquid: "Hyperliquid", markets: "Marchés", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Apprendre", glossary: "Glossaire" },
+  nav: { news: "Actualités", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Marchés", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Apprendre", glossary: "Glossaire" },
   header: { subscribe: "S'abonner", trending: "Tendances :", allCoins: "Toutes les cryptos", language: "Langue", skip: "Aller au contenu", home: "accueil" },
   footer: {
     tagline: "Finance et actifs réels, avec un regard européen.",
@@ -71,6 +71,21 @@ export const fr: Dict = {
     newsletterBody: "Marchés, crypto et actifs réels, avec les chiffres d'Hyperliquid qui comptent.",
     email: "Adresse e-mail",
     signupsOpen: "Les inscriptions ouvrent au lancement.",
+    slides: {
+      blogTag: "L'histoire du jour",
+      blogCta: "Lire l'article",
+      hlTitle: "{vol} échangés sur Hyperliquid en 24 heures",
+      hlBody: "Volume, open interest et funding en direct de la bourse on-chain que Wall Street s'arrache.",
+      moodTitle: "Humeur du marché : {label}",
+      mapCta: "Voir la carte du marché",
+      moverTitle: "{name} a posté. {asset} a bougé.",
+      moversCta: "Tous les market movers",
+      memeTitle: "{sym} mène les échanges de memecoins aujourd'hui",
+      memeBody: "{vol} échangés en 24 heures, {chg} sur la journée. La plupart des memecoins tombent à zéro : lisez d'abord les risques.",
+      memesCta: "Ouvrir le suivi des memes",
+      prev: "Précédent",
+      next: "Suivant",
+    },
     explore: {
       movers: { label: "Ceux qui font bouger", title: "Quand un post fait bouger le marché", body: "Les posts de Musk, Trump et CZ qui ont fait bouger les cours, avec sources et suites." },
       mica: { label: "Réglementation", title: "Vérifier une licence MiCA", body: "Votre plateforme a-t-elle le droit de vous servir ? Quatre vérifications, deux minutes." },
@@ -110,6 +125,7 @@ export const fr: Dict = {
     chartHint: "Parcourez le graphique pour voir le prix de chaque jour.",
   },
   pages: {
+    blog: { tag: "Chaque jour", title: "Blog", lede: "La plus grande histoire crypto et finance du jour, expliquée simplement pour les lecteurs en Europe. Sourcée et relue par la rédaction." },
     movers: {
       tag: "Ceux qui font bouger les marchés",
       title: "Un post, et le marché bouge",

@@ -16,6 +16,10 @@ import { fmt } from "@/i18n/dictionaries";
 import { MarketHeatmap } from "@/components/viz/MarketHeatmap";
 import { MoodGauge } from "@/components/viz/MoodGauge";
 import { moodBucket, moodScore } from "@/lib/treemap";
+import { HeroRotator, type HeroSlide } from "@/components/HeroRotator";
+import { HeroSpotlight } from "@/components/HeroSpotlight";
+import { getMemeFeed } from "@/lib/memes";
+import { EVENTS, PEOPLE } from "@/content/movers";
 
 const usdCompact = (v: number) =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(v);
@@ -207,6 +211,60 @@ async function MarketMap() {
   );
 }
 
+/* ───────────── Hero slides ───────────── */
+type HomeDict = Awaited<ReturnType<typeof getDict>>["t"]["home"];
+
+function brandSlide(h: HomeDict): HeroSlide {
+  return { key: "brand", tag: h.badge, title: h.h1a, accent: h.h1b, body: h.lede, cta: h.ctaRead, href: "/news", color: "#a78bfa" };
+}
+
+async function HeroSlides() {
+  const [{ t }, blog, hl, { coins }, memes] = await Promise.all([getDict(), listEntries("blog"), getHyperliquidStats(), getTopCoins(50), getMemeFeed()]);
+  const h = t.home;
+  const sl = h.slides;
+  const slides: HeroSlide[] = [brandSlide(h)];
+  const post = blog[0];
+  if (post) slides.push({ key: "blog", tag: sl.blogTag, title: post.title, body: post.description, cta: sl.blogCta, href: `/blog/${post.slug}`, color: "#f472b6" });
+  if (hl) slides.push({ key: "hl", tag: "Hyperliquid", title: fmt(sl.hlTitle, { vol: usdCompact(hl.stats.totalVolume24hUsd) }), body: sl.hlBody, cta: h.openHub, href: "/hyperliquid", color: "#5eead4" });
+  const top = coins.filter((c) => !["tether", "usd-coin"].includes(c.id)).slice(0, 30);
+  const mood = moodScore(top.map((c) => c.change24h));
+  if (mood.total > 0)
+    slides.push({
+      key: "mood",
+      tag: t.viz.mood,
+      title: `${fmt(sl.moodTitle, { label: t.viz.moodLabels[moodBucket(mood.score)] })} (${mood.score}/100)`,
+      body: fmt(t.viz.moodNote, { up: mood.up, total: mood.total }),
+      cta: sl.mapCta,
+      href: "/coins",
+      color: "#fbbf24",
+    });
+  const latestMover = [...EVENTS].sort((a, b) => Date.parse(b.postedAt) - Date.parse(a.postedAt))[0];
+  if (latestMover)
+    slides.push({
+      key: "movers",
+      tag: t.pages.movers.tag,
+      title: fmt(sl.moverTitle, { name: PEOPLE[latestMover.person].name, asset: latestMover.assets[0] }),
+      body: latestMover.reported,
+      cta: sl.moversCta,
+      href: "/movers",
+      color: "#f87171",
+    });
+  if (!memes.sample) {
+    const lead = [...memes.pools].sort((a, b) => b.volume24hUsd - a.volume24hUsd)[0];
+    if (lead)
+      slides.push({
+        key: "memes",
+        tag: t.pages.memes.tag,
+        title: fmt(sl.memeTitle, { sym: lead.symbol }),
+        body: fmt(sl.memeBody, { vol: usdCompact(lead.volume24hUsd), chg: lead.change24h == null ? "–" : `${lead.change24h >= 0 ? "+" : ""}${lead.change24h.toFixed(1)}%` }),
+        cta: sl.memesCta,
+        href: "/memes",
+        color: "#a3e635",
+      });
+  }
+  return <HeroRotator slides={slides} labels={{ prev: sl.prev, next: sl.next }} />;
+}
+
 export default async function Home() {
   const [news, guides, { t }] = await Promise.all([listEntries("news"), listEntries("guides"), getDict()]);
   const h = t.home;
@@ -218,7 +276,7 @@ export default async function Home() {
       <JsonLd data={websiteJsonLd()} />
 
       {/* ── Hero ── */}
-      <section className="hero">
+      <HeroSpotlight className="hero">
         <div className="aurora" aria-hidden="true">
           <span />
           <span />
@@ -226,27 +284,11 @@ export default async function Home() {
           <span />
         </div>
         <div className="grid-lines" aria-hidden="true" />
-        <div className="wrap row" style={{ padding: "72px 24px 80px", alignItems: "center", gap: 48 }}>
-          <div className="stack" style={{ flex: "3 1 480px", gap: 20 }}>
-            <span className="glass tiny" style={{ alignSelf: "flex-start", padding: "6px 12px", borderRadius: 999, display: "flex", alignItems: "center", gap: 8 }}>
-              <span className="live-dot" /> {h.badge}
-            </span>
-            <h1 style={{ margin: 0, fontSize: "clamp(40px, 6.4vw, 76px)", lineHeight: 1.02, letterSpacing: "-0.03em" }}>
-              {h.h1a}
-              <br />
-              <span className="grad-text">{h.h1b}</span>
-            </h1>
-            <p style={{ margin: 0, fontSize: 19, color: "#cbd5e1", maxWidth: 560 }}>
-              {h.lede}
-            </p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/news" className="btn" style={{ background: "#fff", color: "var(--ink)", minHeight: 50, padding: "0 22px" }}>
-                {h.ctaRead}
-              </Link>
-              <Link href="/hyperliquid" className="btn" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", minHeight: 50, padding: "0 22px" }}>
-                {h.ctaHub}
-              </Link>
-            </div>
+        <div className="wrap row" style={{ padding: "64px 24px 72px", alignItems: "center", gap: 48 }}>
+          <div className="stack" style={{ flex: "3 1 480px", gap: 20, minWidth: 0 }}>
+            <Suspense fallback={<HeroRotator slides={[brandSlide(h)]} labels={{ prev: h.slides.prev, next: h.slides.next }} />}>
+              <HeroSlides />
+            </Suspense>
           </div>
           <div style={{ flex: "2 1 340px", minWidth: 0 }}>
             <Suspense fallback={<div className="glass" style={{ height: 320 }} />}>
@@ -254,7 +296,7 @@ export default async function Home() {
             </Suspense>
           </div>
         </div>
-      </section>
+      </HeroSpotlight>
 
       <main className="wrap page" style={{ paddingTop: 56 }}>
         {/* ── Latest ── */}

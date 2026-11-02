@@ -5,7 +5,7 @@ export const cs: Dict = {
     title: "ceny kryptoměn, fintech a reálná aktiva",
     description: "Ceny kryptoměn v eurech živě, data Hyperliquid, ověřené zprávy a srozumitelné návody pro čtenáře v Evropě.",
   },
-  nav: { news: "Zprávy", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Memy", movers: "Hybatelé", fintech: "Fintech", learn: "Vzdělávání", glossary: "Slovník" },
+  nav: { news: "Zprávy", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Memy", movers: "Hybatelé", fintech: "Fintech", learn: "Vzdělávání", glossary: "Slovník" },
   header: { subscribe: "Odebírat", trending: "Trendy:", allCoins: "Všechny coiny", language: "Jazyk", skip: "Přejít na obsah", home: "domů" },
   footer: {
     tagline: "Finance a reálná aktiva z evropského pohledu.",
@@ -71,6 +71,21 @@ export const cs: Dict = {
     newsletterBody: "Trhy, krypto a reálná aktiva s čísly z Hyperliquidu, na kterých záleží.",
     email: "E-mailová adresa",
     signupsOpen: "Registrace se otevře při spuštění.",
+    slides: {
+      blogTag: "Příběh dne",
+      blogCta: "Číst příběh",
+      hlTitle: "{vol} zobchodováno na Hyperliquidu za 24 hodin",
+      hlBody: "Objem, otevřené pozice a funding živě z on-chain burzy, o kterou stojí Wall Street.",
+      moodTitle: "Nálada na trhu: {label}",
+      mapCta: "Otevřít mapu trhu",
+      moverTitle: "{name} postnul. {asset} se pohnul.",
+      moversCta: "Všichni hybatelé trhu",
+      memeTitle: "{sym} dnes vede obchodování s memecoiny",
+      memeBody: "{vol} objem za 24 hodin, {chg} za den. Většina memecoinů skončí na nule: nejdřív si přečtěte rizika.",
+      memesCta: "Otevřít sledovač memů",
+      prev: "Předchozí",
+      next: "Další",
+    },
     explore: {
       movers: { label: "Hybatelé trhu", title: "Když jeden příspěvek pohne trhem", body: "Příspěvky Muska, Trumpa a CZ, které pohnuly cenami, se zdroji a tím, co následovalo." },
       mica: { label: "Regulace", title: "Kontrola licence MiCA", body: "Smí vás vaše burza obsluhovat? Čtyři kontroly, dvě minuty." },
@@ -110,6 +125,7 @@ export const cs: Dict = {
     chartHint: "Přejeďte po grafu a uvidíte cenu za každý den.",
   },
   pages: {
+    blog: { tag: "Denně", title: "Blog", lede: "Největší krypto a finanční příběh dne, srozumitelně vysvětlený pro čtenáře v Evropě. Se zdroji a redakční kontrolou." },
     movers: {
       tag: "Hybatelé trhu",
       title: "Jeden příspěvek a trh se pohne",

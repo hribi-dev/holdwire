@@ -5,7 +5,7 @@ export const sr: Dict = {
     title: "cene kriptovaluta, fintek i realna imovina",
     description: "Cene kriptovaluta u evrima uživo, podaci o Hyperliquidu, proverene vesti i jasni vodiči za čitaoce u Evropi.",
   },
-  nav: { news: "Vesti", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memovi", movers: "Pokretači", fintech: "Fintek", learn: "Učenje", glossary: "Rečnik" },
+  nav: { news: "Vesti", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memovi", movers: "Pokretači", fintech: "Fintek", learn: "Učenje", glossary: "Rečnik" },
   header: { subscribe: "Pretplati se", trending: "U trendu:", allCoins: "Svi koini", language: "Jezik", skip: "Na sadržaj", home: "početna" },
   footer: {
     tagline: "Finansije i realna imovina iz evropske perspektive.",
@@ -71,6 +71,21 @@ export const sr: Dict = {
     newsletterBody: "Tržišta, kripto i realna imovina, uz brojke sa Hyperliquida koje su bitne.",
     email: "Imejl adresa",
     signupsOpen: "Prijave se otvaraju na startu.",
+    slides: {
+      blogTag: "Priča dana",
+      blogCta: "Pročitaj priču",
+      hlTitle: "{vol} prometa na Hyperliquidu za 24 sata",
+      hlBody: "Promet, otvorene pozicije i finansiranje uživo sa berze na lancu za kojom juri Wall Street.",
+      moodTitle: "Raspoloženje tržišta: {label}",
+      mapCta: "Otvori mapu tržišta",
+      moverTitle: "{name} je objavio. {asset} se pomerio.",
+      moversCta: "Svi pokretači tržišta",
+      memeTitle: "{sym} danas vodi trgovanje memkoinima",
+      memeBody: "{vol} prometa za 24 sata, {chg} u danu. Većina memkoina padne na nulu: prvo pročitajte rizike.",
+      memesCta: "Otvori praćenje memova",
+      prev: "Prethodna",
+      next: "Sledeća",
+    },
     explore: {
       movers: { label: "Pokretači tržišta", title: "Kada jedna objava pomeri tržište", body: "Objave Maska, Trampa i CZ-a koje su pomerile cene, sa izvorima i onim što je usledilo." },
       mica: { label: "Regulativa", title: "Provera MiCA licence", body: "Da li vaša berza sme da vas uslužuje? Četiri provere, dva minuta." },
@@ -110,6 +125,7 @@ export const sr: Dict = {
     chartHint: "Prelazite preko grafikona da vidite cenu za svaki dan.",
   },
   pages: {
+    blog: { tag: "Svakog dana", title: "Blog", lede: "Najveća priča dana iz sveta kripta i finansija, jednostavno objašnjena za čitaoce u Evropi. Sa izvorima i uredničkim pregledom." },
     movers: {
       tag: "Pokretači tržišta",
       title: "Jedna objava i tržište se pomeri",

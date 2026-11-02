@@ -5,7 +5,7 @@ export const sv: Dict = {
     title: "kryptokurser, fintech och reala tillgångar",
     description: "Kryptokurser i euro i realtid, Hyperliquid-data, källhänvisade nyheter och tydliga guider för läsare i Europa.",
   },
-  nav: { news: "Nyheter", hyperliquid: "Hyperliquid", markets: "Marknader", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lär dig", glossary: "Ordlista" },
+  nav: { news: "Nyheter", blog: "Blogg", hyperliquid: "Hyperliquid", markets: "Marknader", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lär dig", glossary: "Ordlista" },
   header: { subscribe: "Prenumerera", trending: "Trendar:", allCoins: "Alla mynt", language: "Språk", skip: "Hoppa till innehåll", home: "startsida" },
   footer: {
     tagline: "Finans och reala tillgångar med europeiskt perspektiv.",
@@ -71,6 +71,21 @@ export const sv: Dict = {
     newsletterBody: "Marknader, krypto och reala tillgångar, med Hyperliquid-siffrorna som spelar roll.",
     email: "E-postadress",
     signupsOpen: "Anmälan öppnar vid lansering.",
+    slides: {
+      blogTag: "Dagens story",
+      blogCta: "Läs storyn",
+      hlTitle: "{vol} handlat på Hyperliquid på 24 timmar",
+      hlBody: "Volym, öppna positioner och funding live från kedjebörsen Wall Street jagar.",
+      moodTitle: "Marknadsstämning: {label}",
+      mapCta: "Se marknadskartan",
+      moverTitle: "{name} postade. {asset} rörde sig.",
+      moversCta: "Alla marknadsrörare",
+      memeTitle: "{sym} leder memecoin-handeln i dag",
+      memeBody: "{vol} handlat på 24 timmar, {chg} under dagen. De flesta memecoins går till noll: läs riskerna först.",
+      memesCta: "Öppna memes-spårningen",
+      prev: "Föregående",
+      next: "Nästa",
+    },
     explore: {
       movers: { label: "Marknadsrörare", title: "När ett inlägg flyttar marknaden", body: "Inlägg av Musk, Trump och CZ som flyttade priser, med källor och vad som hände sedan." },
       mica: { label: "Reglering", title: "Kontrollera MiCA-licens", body: "Får din börs betjäna dig? Fyra kontroller, två minuter." },
@@ -110,6 +125,7 @@ export const sv: Dict = {
     chartHint: "För markören över diagrammet för att se priset varje dag.",
   },
   pages: {
+    blog: { tag: "Varje dag", title: "Blogg", lede: "Dagens största krypto- och finansnyhet, förklarad enkelt för läsare i Europa. Med källor och granskad av redaktionen." },
     movers: {
       tag: "Marknadsrörare",
       title: "Ett inlägg, och marknaden rör sig",

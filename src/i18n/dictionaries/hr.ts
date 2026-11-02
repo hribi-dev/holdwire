@@ -5,7 +5,7 @@ export const hr: Dict = {
     title: "cijene kriptovaluta, fintech i stvarna imovina",
     description: "Cijene kriptovaluta u eurima uživo, podaci o Hyperliquidu, provjerene vijesti i jasni vodiči za čitatelje u Europi.",
   },
-  nav: { news: "Vijesti", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memeovi", movers: "Pokretači", fintech: "Fintech", learn: "Učenje", glossary: "Pojmovnik" },
+  nav: { news: "Vijesti", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memeovi", movers: "Pokretači", fintech: "Fintech", learn: "Učenje", glossary: "Pojmovnik" },
   header: { subscribe: "Pretplati se", trending: "U trendu:", allCoins: "Svi coinovi", language: "Jezik", skip: "Na sadržaj", home: "početna" },
   footer: {
     tagline: "Financije i stvarna imovina iz europske perspektive.",
@@ -71,6 +71,21 @@ export const hr: Dict = {
     newsletterBody: "Tržišta, kripto i stvarna imovina, uz brojke s Hyperliquida koje su važne.",
     email: "Adresa e-pošte",
     signupsOpen: "Prijave se otvaraju pri pokretanju.",
+    slides: {
+      blogTag: "Priča dana",
+      blogCta: "Pročitaj priču",
+      hlTitle: "{vol} prometa na Hyperliquidu u 24 sata",
+      hlBody: "Promet, otvorene pozicije i financiranje uživo s burze na lancu za kojom juri Wall Street.",
+      moodTitle: "Raspoloženje tržišta: {label}",
+      mapCta: "Otvori kartu tržišta",
+      moverTitle: "{name} je objavio. {asset} se pomaknuo.",
+      moversCta: "Svi pokretači tržišta",
+      memeTitle: "{sym} danas vodi trgovanje memecoinima",
+      memeBody: "{vol} prometa u 24 sata, {chg} u danu. Većina memecoina padne na nulu: prvo pročitajte rizike.",
+      memesCta: "Otvori praćenje memeova",
+      prev: "Prethodna",
+      next: "Sljedeća",
+    },
     explore: {
       movers: { label: "Pokretači tržišta", title: "Kad jedna objava pomakne tržište", body: "Objave Muska, Trumpa i CZ-a koje su pomaknule cijene, s izvorima i onim što je uslijedilo." },
       mica: { label: "Regulacija", title: "Provjera MiCA licence", body: "Smije li vas vaša burza uslužiti? Četiri provjere, dvije minute." },
@@ -110,6 +125,7 @@ export const hr: Dict = {
     chartHint: "Prelazite preko grafikona da vidite cijenu za svaki dan.",
   },
   pages: {
+    blog: { tag: "Svaki dan", title: "Blog", lede: "Najveća priča dana iz svijeta kripta i financija, jednostavno objašnjena za čitatelje u Europi. S izvorima i uredničkim pregledom." },
     movers: {
       tag: "Pokretači tržišta",
       title: "Jedna objava i tržište se pomakne",

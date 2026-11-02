@@ -6,10 +6,11 @@ import { cacheLife } from "next/cache";
 import { site } from "./site";
 import { enforceSponsoredLinks, requiresSponsoredLinks, robotsFor, type ContentKind } from "./sponsored";
 
-export type Collection = "news" | "guides" | "glossary" | "sponsored" | "press-releases";
+export type Collection = "news" | "blog" | "guides" | "glossary" | "sponsored" | "press-releases";
 
 const KIND: Record<Collection, ContentKind> = {
   news: "editorial",
+  blog: "editorial",
   guides: "editorial",
   glossary: "editorial",
   sponsored: "sponsored",

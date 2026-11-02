@@ -5,7 +5,7 @@ export const hu: Dict = {
     title: "kriptoárfolyamok, fintech és reáleszközök",
     description: "Élő kriptoárfolyamok euróban, Hyperliquid-adatok, forrásolt hírek és érthető útmutatók európai olvasóknak.",
   },
-  nav: { news: "Hírek", hyperliquid: "Hyperliquid", markets: "Piacok", memes: "Mémek", movers: "Piacmozgatók", fintech: "Fintech", learn: "Tudástár", glossary: "Szótár" },
+  nav: { news: "Hírek", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Piacok", memes: "Mémek", movers: "Piacmozgatók", fintech: "Fintech", learn: "Tudástár", glossary: "Szótár" },
   header: { subscribe: "Feliratkozás", trending: "Felkapott:", allCoins: "Összes coin", language: "Nyelv", skip: "Ugrás a tartalomra", home: "kezdőlap" },
   footer: {
     tagline: "Pénzügyek és reáleszközök európai szemmel.",
@@ -71,6 +71,21 @@ export const hu: Dict = {
     newsletterBody: "Piacok, kripto és reáleszközök, a fontos Hyperliquid-számokkal.",
     email: "E-mail-cím",
     signupsOpen: "A feliratkozás az induláskor nyílik.",
+    slides: {
+      blogTag: "A nap története",
+      blogCta: "Tovább a cikkre",
+      hlTitle: "{vol} forgalom a Hyperliquiden 24 óra alatt",
+      hlBody: "Élő forgalom, nyitott kamat és finanszírozás a láncon futó tőzsdéről, amelyért a Wall Street is versenyez.",
+      moodTitle: "Piaci hangulat: {label}",
+      mapCta: "Piactérkép megnyitása",
+      moverTitle: "{name} posztolt. A(z) {asset} megmozdult.",
+      moversCta: "Összes piacmozgató",
+      memeTitle: "Ma a(z) {sym} vezeti a mémcoin-kereskedést",
+      memeBody: "{vol} forgalom 24 óra alatt, {chg} a napon. A legtöbb mémcoin nullára esik: előbb olvassa el a kockázatokat.",
+      memesCta: "Mémkövető megnyitása",
+      prev: "Előző",
+      next: "Következő",
+    },
     explore: {
       movers: { label: "Piacmozgatók", title: "Amikor egy poszt megmozdítja a piacot", body: "Musk, Trump és CZ árakat mozgató posztjai, forrásokkal és azzal, mi jött utána." },
       mica: { label: "Szabályozás", title: "MiCA-engedély ellenőrzése", body: "Kiszolgálhatja Önt a tőzsdéje? Négy ellenőrzés, két perc." },
@@ -110,6 +125,7 @@ export const hu: Dict = {
     chartHint: "Mozogjon a grafikonon, hogy lássa az egyes napok árát.",
   },
   pages: {
+    blog: { tag: "Naponta", title: "Blog", lede: "A nap legfontosabb kripto- és pénzügyi története, érthetően elmagyarázva európai olvasóknak. Forrásokkal, szerkesztői ellenőrzéssel." },
     movers: {
       tag: "Piacmozgatók",
       title: "Egy poszt, és mozdul a piac",

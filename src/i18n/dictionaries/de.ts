@@ -5,7 +5,7 @@ export const de: Dict = {
     title: "Kryptokurse, Fintech und Sachwerte",
     description: "Kryptokurse in Euro live, Hyperliquid-Daten, belegte Nachrichten und verständliche Ratgeber für Leser in Europa.",
   },
-  nav: { news: "News", hyperliquid: "Hyperliquid", markets: "Märkte", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Wissen", glossary: "Glossar" },
+  nav: { news: "News", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Märkte", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Wissen", glossary: "Glossar" },
   header: { subscribe: "Abonnieren", trending: "Im Trend:", allCoins: "Alle Coins", language: "Sprache", skip: "Zum Inhalt", home: "Startseite" },
   footer: {
     tagline: "Finanzen und Sachwerte mit europäischem Blick.",
@@ -71,6 +71,21 @@ export const de: Dict = {
     newsletterBody: "Märkte, Krypto und Sachwerte, mit den Hyperliquid-Zahlen, die zählen.",
     email: "E-Mail-Adresse",
     signupsOpen: "Anmeldungen öffnen zum Start.",
+    slides: {
+      blogTag: "Geschichte des Tages",
+      blogCta: "Zur Geschichte",
+      hlTitle: "{vol} Handelsvolumen auf Hyperliquid in 24 Stunden",
+      hlBody: "Live-Volumen, Open Interest und Funding der On-Chain-Börse, um die sich die Wall Street bemüht.",
+      moodTitle: "Marktstimmung: {label}",
+      mapCta: "Zur Marktkarte",
+      moverTitle: "{name} postete. {asset} bewegte sich.",
+      moversCta: "Alle Marktbeweger",
+      memeTitle: "{sym} führt heute den Memecoin-Handel an",
+      memeBody: "{vol} Volumen in 24 Stunden, {chg} am Tag. Die meisten Memecoins fallen auf null: erst die Risiken lesen.",
+      memesCta: "Zum Memes-Tracker",
+      prev: "Zurück",
+      next: "Weiter",
+    },
     explore: {
       movers: { label: "Marktbeweger", title: "Wenn ein Post den Markt bewegt", body: "Posts von Musk, Trump und CZ, die Kurse bewegt haben, mit Quellen und dem, was danach kam." },
       mica: { label: "Regulierung", title: "MiCA-Lizenz-Check", body: "Darf Ihre Börse Sie bedienen? Vier Prüfungen, zwei Minuten." },
@@ -110,6 +125,7 @@ export const de: Dict = {
     chartHint: "Fahren Sie über das Diagramm, um den Kurs für jeden Tag zu sehen.",
   },
   pages: {
+    blog: { tag: "Täglich", title: "Blog", lede: "Die wichtigste Krypto- und Finanzgeschichte des Tages, verständlich erklärt für Leser in Europa. Mit Quellen, von der Redaktion geprüft." },
     movers: {
       tag: "Marktbeweger",
       title: "Ein Post, und der Markt bewegt sich",

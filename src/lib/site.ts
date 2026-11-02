@@ -19,11 +19,12 @@ export const site = {
 
 export const nav = [
   { key: "news", href: "/news" },
-  { key: "hyperliquid", href: "/hyperliquid" },
+  { key: "blog", href: "/blog" },
   { key: "markets", href: "/coins" },
   { key: "movers", href: "/movers" },
   { key: "memes", href: "/memes" },
   { key: "fintech", href: "/fintech" },
+  { key: "hyperliquid", href: "/hyperliquid" },
   { key: "learn", href: "/learn" },
   { key: "glossary", href: "/glossary" },
 ] as const;

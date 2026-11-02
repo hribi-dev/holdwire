@@ -5,7 +5,7 @@ export const sk: Dict = {
     title: "ceny kryptomien, fintech a reálne aktíva",
     description: "Ceny kryptomien v eurách naživo, dáta Hyperliquid, overené správy a zrozumiteľné návody pre čitateľov v Európe.",
   },
-  nav: { news: "Správy", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Mémy", movers: "Hýbatelia", fintech: "Fintech", learn: "Vzdelávanie", glossary: "Slovník" },
+  nav: { news: "Správy", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Mémy", movers: "Hýbatelia", fintech: "Fintech", learn: "Vzdelávanie", glossary: "Slovník" },
   header: { subscribe: "Odoberať", trending: "Trendy:", allCoins: "Všetky coiny", language: "Jazyk", skip: "Na obsah", home: "domov" },
   footer: {
     tagline: "Financie a reálne aktíva z európskeho pohľadu.",
@@ -71,6 +71,21 @@ export const sk: Dict = {
     newsletterBody: "Trhy, krypto a reálne aktíva s číslami z Hyperliquidu, na ktorých záleží.",
     email: "E-mailová adresa",
     signupsOpen: "Registrácia sa otvorí pri spustení.",
+    slides: {
+      blogTag: "Príbeh dňa",
+      blogCta: "Čítať príbeh",
+      hlTitle: "{vol} zobchodovaných na Hyperliquide za 24 hodín",
+      hlBody: "Objem, otvorené pozície a funding naživo z on-chain burzy, o ktorú sa uchádza Wall Street.",
+      moodTitle: "Nálada na trhu: {label}",
+      mapCta: "Otvoriť mapu trhu",
+      moverTitle: "{name} postol. {asset} sa pohol.",
+      moversCta: "Všetci hýbatelia trhu",
+      memeTitle: "{sym} dnes vedie obchodovanie s memecoinmi",
+      memeBody: "{vol} objem za 24 hodín, {chg} za deň. Väčšina memecoinov skončí na nule: najprv si prečítajte riziká.",
+      memesCta: "Otvoriť sledovač mémov",
+      prev: "Predchádzajúci",
+      next: "Ďalší",
+    },
     explore: {
       movers: { label: "Hýbatelia trhu", title: "Keď jeden príspevok pohne trhom", body: "Príspevky Muska, Trumpa a CZ, ktoré pohli cenami, so zdrojmi a tým, čo nasledovalo." },
       mica: { label: "Regulácia", title: "Kontrola licencie MiCA", body: "Smie vás vaša burza obsluhovať? Štyri kontroly, dve minúty." },
@@ -110,6 +125,7 @@ export const sk: Dict = {
     chartHint: "Prejdite po grafe a uvidíte cenu za každý deň.",
   },
   pages: {
+    blog: { tag: "Denne", title: "Blog", lede: "Najväčší krypto a finančný príbeh dňa, zrozumiteľne vysvetlený pre čitateľov v Európe. So zdrojmi a redakčnou kontrolou." },
     movers: {
       tag: "Hýbatelia trhu",
       title: "Jeden príspevok a trh sa pohne",

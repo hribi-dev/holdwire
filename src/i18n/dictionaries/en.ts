@@ -3,7 +3,7 @@ export const en = {
     title: "crypto prices, fintech and hard assets",
     description: "Live crypto prices in euros, Hyperliquid data, sourced news and plain-English guides for readers in Europe.",
   },
-  nav: { news: "News", hyperliquid: "Hyperliquid", markets: "Markets", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Learn", glossary: "Glossary" },
+  nav: { news: "News", blog: "Blog", hyperliquid: "Hyperliquid", markets: "Markets", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Learn", glossary: "Glossary" },
   header: { subscribe: "Subscribe", trending: "Trending:", allCoins: "All coins", language: "Language", skip: "Skip to content", home: "home" },
   footer: {
     tagline: "Finance and hard assets, with an EU lens.",
@@ -69,6 +69,21 @@ export const en = {
     newsletterBody: "Markets, crypto and hard assets, with the Hyperliquid numbers that matter.",
     email: "Email address",
     signupsOpen: "Sign-ups open at launch.",
+    slides: {
+      blogTag: "Today's story",
+      blogCta: "Read the story",
+      hlTitle: "{vol} traded on Hyperliquid in 24 hours",
+      hlBody: "Live volume, open interest and funding from the on-chain exchange Wall Street is chasing.",
+      moodTitle: "Market mood: {label}",
+      mapCta: "See the market map",
+      moverTitle: "{name} posted. {asset} moved.",
+      moversCta: "See all market movers",
+      memeTitle: "{sym} leads memecoin trading today",
+      memeBody: "{vol} traded in 24 hours, {chg} on the day. Most memecoins go to zero: read the risks first.",
+      memesCta: "Open the memes tracker",
+      prev: "Previous",
+      next: "Next",
+    },
     explore: {
       movers: { label: "Market movers", title: "When one post moves the market", body: "Musk, Trump and CZ posts that moved prices, with sources and what happened next." },
       mica: { label: "Regulation", title: "MiCA licence check", body: "Is your exchange allowed to serve you? Four checks, two minutes." },
@@ -108,6 +123,7 @@ export const en = {
     chartHint: "Move across the chart to see the price on each day.",
   },
   pages: {
+    blog: { tag: "Daily", title: "Blog", lede: "The day's biggest crypto and finance story, explained in plain English for readers in Europe. Sourced, and reviewed by an editor." },
     movers: {
       tag: "Market movers",
       title: "One post, and the market moves",

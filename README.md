@@ -11,13 +11,17 @@ npm test           # unit tests (sponsored-link rules)
 npm run build      # production build
 ```
 
+## Deploy to Vercel
+
+Import the repo at vercel.com/new. No environment variables are required: the site stays hidden from search engines and uses Vercel's own domain. Optional: `COINGECKO_API_KEY` for reliable live prices.
+
 ## Environment variables
 
 Copy `.env.example` to `.env.local`. All are optional for local work.
 
 | Variable | What it does |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Public URL, used for canonicals, sitemap and JSON-LD |
+| `NEXT_PUBLIC_SITE_URL` | Public URL, used for canonicals, sitemap and JSON-LD. Optional on Vercel (falls back to the Vercel domain) |
 | `SITE_INDEXABLE` | `true` only on the live production domain. Anything else = `noindex` + `robots.txt` blocks all crawlers |
 | `COINGECKO_API_KEY` | CoinGecko key. Without it, the free public API is used (rate-limited) |
 | `COINGECKO_API_TIER` | `pro` for a paid plan, otherwise demo/free |

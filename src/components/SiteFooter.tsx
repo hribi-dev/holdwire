@@ -11,6 +11,7 @@ export function SiteFooter() {
         </div>
         <nav aria-label="Data and tools">
           <strong>Data &amp; tools</strong>
+          <Link href="/hyperliquid">Hyperliquid hub</Link>
           <Link href="/coins">Coin prices</Link>
           <Link href="/coins/bitcoin">Bitcoin price</Link>
           <Link href="/coins/ethereum">Ethereum price</Link>

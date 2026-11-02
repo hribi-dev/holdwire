@@ -12,6 +12,7 @@ export const site = {
 };
 
 export const nav = [
+  { label: "Hyperliquid", href: "/hyperliquid" },
   { label: "Crypto", href: "/coins" },
   { label: "Markets", href: "/coins" },
   { label: "Fintech", href: "/#fintech" },

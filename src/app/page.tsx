@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { getTopCoins } from "@/lib/coins";
+import { getCoin, getTopCoins } from "@/lib/coins";
+import { direction, formatChange, formatPrice } from "@/lib/format";
+import { Sparkline } from "@/components/Sparkline";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { MarketsTable } from "@/components/MarketsTable";
 import { JsonLd } from "@/components/JsonLd";
@@ -17,6 +19,32 @@ const verticals = [
   { id: "watches", title: "Watches", items: ["Secondary watch market report", "Retail vs resale: which references hold value", "How to check a pre-owned watch before you buy"] },
   { id: "collectibles", title: "Collectibles", items: ["Trading cards as an asset class", "Fine wine, art, cars: what the indices track", "Tokenised collectibles: real ownership or not?"] },
 ];
+
+async function HypeSpotlight() {
+  const data = await getCoin("hyperliquid");
+  const coin = data?.coin;
+  return (
+    <Link
+      href="/hyperliquid"
+      aria-label="Hyperliquid hub"
+      style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 16, minHeight: 320, borderRadius: "var(--radius)", background: "var(--ink)", color: "#fff", padding: 28 }}
+    >
+      <span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12, alignItems: "baseline" }}>
+        <span className="mono" style={{ color: "#7EE8C9", fontWeight: 600 }}>HYPE / EUR</span>
+        {data?.sample && <span className="sample-flag">Sample data</span>}
+      </span>
+      <span style={{ color: "#7EE8C9" }}>
+        <Sparkline data={coin?.sparkline ?? []} width={600} height={150} strokeWidth={3} />
+      </span>
+      <span style={{ display: "flex", alignItems: "baseline", gap: 14, flexWrap: "wrap" }}>
+        <span className="mono" style={{ fontSize: 40, fontWeight: 600 }}>{formatPrice(coin?.price)}</span>
+        <span className="mono" style={{ fontWeight: 600, color: direction(coin?.change24h) === "down" ? "var(--down-on-dark)" : "var(--up-on-dark)" }}>
+          {formatChange(coin?.change24h)} 24h · {formatChange(coin?.change7d)} 7d
+        </span>
+      </span>
+    </Link>
+  );
+}
 
 async function Markets() {
   const { coins, sample } = await getTopCoins(50);
@@ -48,26 +76,29 @@ export default function Home() {
 
       <section className="row" aria-label="Featured">
         <article className="col-main stack" style={{ gap: 16 }}>
-          <div
-            aria-hidden="true"
-            style={{ height: 320, borderRadius: "var(--radius)", background: "var(--ink)", position: "relative", overflow: "hidden" }}
-          >
-            <svg width="100%" height="100%" viewBox="0 0 600 340" preserveAspectRatio="none" style={{ position: "absolute", inset: 0 }}>
-              <path d="M0 250 L80 230 L160 240 L240 190 L320 200 L400 140 L480 150 L600 90" stroke="#F5B301" strokeWidth="3" fill="none" />
-              <path d="M0 290 L100 280 L200 285 L300 260 L400 255 L500 230 L600 220" stroke="#3B6CF0" strokeWidth="2" fill="none" />
-            </svg>
-          </div>
-          <span className="eyebrow">Holdwire data · Coming soon</span>
+          <Suspense fallback={<div style={{ height: 320, borderRadius: "var(--radius)", background: "var(--ink)" }} />}>
+            <HypeSpotlight />
+          </Suspense>
+          <span className="eyebrow">Spotlight · Hyperliquid</span>
           <h2 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.08 }}>
-            Which crypto exchanges are licensed under MiCA? Our live tracker
+            <Link href="/hyperliquid">Hyperliquid, explained and tracked: the on-chain exchange everyone trades on</Link>
           </h2>
           <p style={{ margin: 0, fontSize: 18, color: "#374151" }}>
-            Every authorised crypto-asset service provider in the EU, by country and service, updated daily from ESMA&apos;s public register.
+            Live HYPE data, how HyperCore and HyperEVM work, HIP-3 markets, and what using it means for you in Europe.
           </p>
+          <div>
+            <Link href="/hyperliquid" className="btn btn-primary">
+              Open the Hyperliquid hub
+            </Link>
+          </div>
         </article>
         <aside className="col-side stack">
           <h2 style={{ margin: "0 0 8px", fontSize: 20 }}>Live prices</h2>
           <div className="headline-list">
+            <Link href="/coins/hyperliquid">
+              <span className="tiny muted">Price page</span>
+              <strong>Hyperliquid (HYPE) price today, in euros</strong>
+            </Link>
             <Link href="/coins/bitcoin">
               <span className="tiny muted">Price page</span>
               <strong>Bitcoin price today, in euros</strong>

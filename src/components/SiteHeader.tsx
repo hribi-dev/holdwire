@@ -27,6 +27,9 @@ export function SiteHeader() {
         <span className="muted" style={{ padding: "6px 0", marginRight: 4 }}>
           Trending:
         </span>
+        <Link className="chip" href="/hyperliquid" style={{ background: "#E4F7F1", color: "#0A5C46", fontWeight: 600 }}>
+          Hyperliquid
+        </Link>
         <Link className="chip" href="/coins/bitcoin">Bitcoin</Link>
         <Link className="chip" href="/coins/solana">Solana</Link>
         <Link className="chip" href="/coins/ethereum">Ethereum</Link>

@@ -100,6 +100,13 @@ export default async function CoinPage({ params }: PageProps<"/coins/[id]">) {
         </div>
       </section>
 
+      {id === "hyperliquid" && (
+        <Link href="/hyperliquid" className="card" style={{ background: "#E4F7F1", borderColor: "#9EE6CF", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <strong style={{ color: "#0A5C46" }}>Go deeper: the Holdwire Hyperliquid hub</strong>
+          <span className="small" style={{ color: "#0A5C46" }}>How it works, HIP-3, risks and guides →</span>
+        </Link>
+      )}
+
       <div className="row" style={{ alignItems: "flex-start" }}>
         <div className="col-main stack" style={{ gap: 28, flexBasis: 600 }}>
           <section className="card stack" style={{ gap: 12 }} aria-labelledby="chart-h">

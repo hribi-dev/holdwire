@@ -3,7 +3,10 @@ import { direction, formatChange, formatPrice } from "@/lib/format";
 
 export async function Ticker() {
   const { coins, sample } = await getTopCoins(50);
-  const shown = coins.filter((c) => !["tether", "usd-coin"].includes(c.id)).slice(0, 6);
+  // Hyperliquid is our spotlight asset: always pinned first.
+  const others = coins.filter((c) => !["tether", "usd-coin", "hyperliquid"].includes(c.id));
+  const hype = coins.find((c) => c.id === "hyperliquid");
+  const shown = [...(hype ? [hype] : []), ...others].slice(0, 6);
   return (
     <div className="ticker" aria-label="Market prices">
       <div className="wrap">

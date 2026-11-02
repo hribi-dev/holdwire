@@ -7,6 +7,7 @@ const COLORS: Record<string, string> = {
   "usd-coin": "#2775CA",
   cardano: "#0033AD",
   dogecoin: "#BA9F33",
+  hyperliquid: "#0A5C46",
 };
 
 export function CoinBadge({ id, name, image, size = 28 }: { id: string; name: string; image?: string | null; size?: number }) {

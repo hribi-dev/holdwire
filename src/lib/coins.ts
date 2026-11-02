@@ -101,7 +101,8 @@ export async function getTopCoins(limit = 50): Promise<MarketsResult> {
   if (live && live.length) {
     return { coins: live, sample: false, fetchedAt: new Date().toISOString() };
   }
-  return { coins: SAMPLE_MARKETS.slice(0, limit), sample: true, fetchedAt: new Date().toISOString() };
+  const sorted = [...SAMPLE_MARKETS].sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+  return { coins: sorted.slice(0, limit), sample: true, fetchedAt: new Date().toISOString() };
 }
 
 /** One coin by CoinGecko id. Returns null if the coin is unknown. */

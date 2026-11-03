@@ -25,6 +25,7 @@ export const nav = [
   { key: "memes", href: "/memes" },
   { key: "fintech", href: "/fintech" },
   { key: "hyperliquid", href: "/hyperliquid" },
+  { key: "school", href: "/school" },
   { key: "learn", href: "/learn" },
   { key: "glossary", href: "/glossary" },
 ] as const;

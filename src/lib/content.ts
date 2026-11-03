@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import { cacheLife } from "next/cache";
 import { site } from "./site";
+import { parseCover, type Cover } from "./cover";
 import { enforceSponsoredLinks, requiresSponsoredLinks, robotsFor, type ContentKind } from "./sponsored";
 
 export type Collection = "news" | "blog" | "guides" | "glossary" | "sponsored" | "press-releases";
@@ -41,6 +42,8 @@ export type Entry = {
   template: boolean;
   /** Estimated minutes to read */
   readMinutes: number;
+  /** Freely licensed cover photo with credit; null falls back to generated cover art */
+  cover: Cover | null;
 };
 
 const dirFor = (c: Collection) => path.join(process.cwd(), "content", c);
@@ -98,6 +101,7 @@ async function parse(collection: Collection, slug: string): Promise<Entry | null
     short: str(data.short),
     template: data.template === true,
     readMinutes: Math.max(1, Math.round(content.split(/\s+/).filter(Boolean).length / 220)),
+    cover: parseCover(data.cover, `content/${collection}/${slug}.md`),
   };
 }
 

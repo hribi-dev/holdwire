@@ -17,6 +17,12 @@ sources:
     url: https://news.bitcoin.com/exchanges/binance-sheds-15-7b-proof-of-reserves-tuesday/
   - title: "Forex Crunch: Binance routes withdrawals through new wallets"
     url: https://www.forexcrunch.com/blog/2026/11/03/binance-routes-withdrawals-through-new-wallets-but-a-tenth-of-the-breach-remains-uncovered/
+cover:
+  src: https://images.unsplash.com/photo-1582139329536-e7284fece509
+  alt: "A heavy steel bank vault door with a circular locking wheel"
+  credit: "Jason Dent"
+  sourceUrl: https://unsplash.com/photos/steel-bank-vault-door-locking-wheel-3wPJxh-piRw
+  license: unsplash
 ---
 
 **Short version:** Binance has published a zero-knowledge proof of reserves for 10 major coins, based on a snapshot taken on 31 October, two days after its $6.3 billion hack. It says all 10 are backed at least 1:1, and that it has replaced about 95% of the stolen assets. The proof is a useful check, but it is a picture of one moment, it covers only part of what Binance holds, and it is not an audit.

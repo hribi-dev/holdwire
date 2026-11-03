@@ -17,6 +17,12 @@ sources:
     url: https://bitquery.io/investigations/mercado-bitcoin-hack
   - title: "Seu Dinheiro: Mercado Bitcoin (MB) sofre ataque hacker de US$ 40 milhões e bloqueia movimentações"
     url: https://seudinheiro.com/2026/criptomoedas/mercado-bitcoin-mb-sofre-ataque-hacker-de-us-40-milhoes-e-bloqueia-movimentacoes
+cover:
+  src: https://images.unsplash.com/photo-1768839722988-91767bb82b10
+  alt: "A padlock and keys resting on a computer keyboard"
+  credit: "Sasun Bughdaryan"
+  sourceUrl: https://unsplash.com/photos/padlock-and-keys-resting-on-a-computer-keyboard-cX8kNl8X0Ys
+  license: unsplash
 ---
 
 **Short version:** Mercado Bitcoin, Brazil's largest crypto exchange, says it detected and contained a "security incident" early on Monday 2 November and paused deposits and withdrawals. On-chain researchers estimate that between $40 million and $48.5 million left its hot wallets. The exchange says no customer lost money and no data leaked. It has not said when withdrawals will reopen.

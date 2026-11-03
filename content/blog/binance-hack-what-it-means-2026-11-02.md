@@ -17,6 +17,12 @@ sources:
     url: https://gulfnews.com/videos/business-video/binance-hack-lazarus-group-suspected-as-63b-rattles-traders-1.500729615
   - title: "TheStreet: Stock Market Today, Nov. 2, 2026 (Binance outflows, Bloomberg report)"
     url: https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026
+cover:
+  src: https://images.unsplash.com/photo-1774898989484-0b9becf69efb
+  alt: "A locked padlock resting on a computer keyboard"
+  credit: "Sasun Bughdaryan"
+  sourceUrl: https://unsplash.com/photos/a-padlock-rests-on-a-computer-keyboard-QP7RBa5r8HM
+  license: unsplash
 ---
 
 **Short version:** Binance lost about $6.3 billion in the largest crypto theft on record. It says it will cover all customer losses, has frozen about $3 billion of the stolen funds, and reopened withdrawals on Sunday. Customers pulled out a net $3.64 billion on the first day, which is a lot of money but a small share of what Binance holds. Bitcoin is steady near $78,000.

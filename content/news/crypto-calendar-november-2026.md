@@ -13,6 +13,12 @@ sources:
     url: https://solanacompass.com/news/solana-breakpoint-2026-comes-to-london-for-the-first-time-november-15-17-at-olympia
   - title: "CoinGabbar: November 2026 catalyst calendar"
     url: https://www.coingabbar.com/en/best-crypto-to-watch-november-2026-catalysts
+cover:
+  src: https://images.unsplash.com/photo-1435527173128-983b87201f4d
+  alt: "An open monthly planner on a wooden desk"
+  credit: "Eric Rothermel"
+  sourceUrl: https://unsplash.com/photos/open-monthly-planner-on-wooden-desk-FoKO4DpXamQ
+  license: unsplash
 ---
 
 **November is busier than usual for crypto.** Here are the scheduled dates worth knowing, and why each could matter. Dates are as scheduled at the time of writing.

@@ -13,6 +13,12 @@ sources:
     url: https://ground.news/article/bny-mellon-unit-enters-mica-register-as-esma-adds-15-providers
   - title: "LegalBison: what the end of the MiCA transition means"
     url: https://legalbison.com/blog/casp-license-adaptation/
+cover:
+  src: https://images.unsplash.com/photo-1594810205183-18a8b0ce6c13
+  alt: "A row of European Union flags outside the European Commission in Brussels"
+  credit: "Guillaume Périgois"
+  sourceUrl: https://unsplash.com/photos/row-of-european-union-flags-0NRkVddA2fw
+  license: unsplash
 ---
 
 **The grace period is over.** Since 1 July 2026, any company offering crypto services to people in the EU must be authorised under MiCA. Firms that were still operating under older national rules had to wind down or get licensed.

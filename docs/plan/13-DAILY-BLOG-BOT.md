@@ -32,13 +32,30 @@ Count **major stories** from the last 24 hours. A story is major if any of these
 - Link to our own pages where it helps: `/learn/mica-explained`, `/hyperliquid`, `/fintech`, `/memes`, `/movers`, `/glossary`.
 - Conflicts: if the story involves BalkanPay, HumidiFi or Harmonic, add a disclosure line at the top.
 
+### Cover photo (every post gets its own)
+Each new post gets a **related, freely licensed photo**. Don't reuse a photo another post already uses (`grep -r "src: https://images" content/`).
+1. Search with WebSearch limited to `unsplash.com` (first choice) or `pexels.com`, using 2–4 concrete words for the story (e.g. "padlock keyboard", "EU flags Brussels", "trading charts screens", "calendar planner").
+2. WebFetch the photo's own page (`unsplash.com/photos/...` or `pexels.com/photo/...`) and confirm: it says **free to use under the Unsplash License** (or the Pexels License), it is **not Unsplash+** (`plus.unsplash.com`) and not a sponsored iStock/Getty result. Take the CDN URL (`https://images.unsplash.com/photo-...` or `https://images.pexels.com/photos/...`) without query parameters, and the photographer's name.
+3. Wikimedia Commons is allowed for things stock sites lack (a specific building or object): use only CC0, public domain, CC BY or CC BY-SA files, and for CC BY / BY-SA set `licenseUrl` to the exact licence version.
+4. **Never:** photos of identifiable real people (no Musk, Trump, CZ, executives, or crowds where faces are the subject); company logos, exchange or app branding, or screenshots of a company's product; politically charged imagery; anything from Google Images, news sites or social media. Generic crypto coin props (a ₿ coin) are fine.
+5. Add to the frontmatter, then `npm test` validates it (wrong host, missing credit or licence fails the build):
+   ```yaml
+   cover:
+     src: https://images.unsplash.com/photo-1774898989484-0b9becf69efb
+     alt: "A locked padlock resting on a computer keyboard"   # describe what's in the photo
+     credit: "Sasun Bughdaryan"
+     sourceUrl: https://unsplash.com/photos/a-padlock-rests-on-a-computer-keyboard-QP7RBa5r8HM
+     license: unsplash        # unsplash | pexels | cc0 | public-domain | cc-by | cc-by-sa
+   ```
+   The site credits the photographer under the article, hotlinks the CDN (as Unsplash asks) and falls back to generated cover art if a photo ever disappears. If no good photo turns up in a few searches, leave `cover:` out rather than using a poor match.
+
 ## 4. Market movers
 If a post by Musk, Trump, CZ or a similar figure moved a price, add an entry to `src/content/movers.ts` (follow the comment at the top of that file). Use precision "minute" and set `hlCoin` only if you have the exact time from a reliable source.
 
 ## 5. Check and publish as draft
 1. `npm ci && npm test && npm run lint && npm run typecheck && npm run build` must pass.
 2. Commit to `main` with the message `content(blog): <short title> (draft)`, author `Matic Hriberšek <matic.hribersek@gmail.com>`, then push. Vercel deploys automatically.
-3. Report: the post title(s), one line on why each story was picked, how many major stories you counted, and the live URL(s) at `https://holdwire-eta.vercel.app/blog/<slug>`. Remind Hribi that the post is a draft until he approves it.
+3. Report: the post title(s), the cover photo used (photographer + link), one line on why each story was picked, how many major stories you counted, and the live URL(s) at `https://holdwire-eta.vercel.app/blog/<slug>`. Remind Hribi that the post is a draft until he approves it.
 
 ## If something fails
 If the build fails, fix it if it's your file; otherwise don't push and report the error. If there is truly no news worth a post (rare), write nothing and say why.

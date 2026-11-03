@@ -1,5 +1,8 @@
 import Link from "@/components/Link";
 import type { Entry } from "@/lib/content";
+import { CoverArt } from "./CoverArt";
+import { CoverCredit } from "./CoverCredit";
+import { CoverPhoto } from "./CoverPhoto";
 
 const LABEL: Record<string, { text: string; bg: string; fg: string } | null> = {
   editorial: null,
@@ -44,6 +47,14 @@ export function EntryView({ entry, crumbs }: { entry: Entry; crumbs: { name: str
           {entry.reviewedBy ? ` · Reviewed by ${entry.reviewedBy}` : ""}
           {entry.updated ? ` · Updated ${entry.updated}` : ""}
         </p>
+        {entry.cover && (
+          <figure className="article-cover">
+            <CoverArt seed={entry.slug} category={entry.category}>
+              <CoverPhoto cover={entry.cover} widths={[640, 960, 1280, 1600]} sizes="(max-width: 800px) 100vw, 760px" eager />
+            </CoverArt>
+            <CoverCredit cover={entry.cover} />
+          </figure>
+        )}
         {entry.kind === "sponsored" && (
           <p className="notice" style={{ margin: "0 0 8px" }}>
             This article was paid for by {entry.sponsor}. Tickora&apos;s newsroom did not write it and does not endorse the products mentioned.{" "}

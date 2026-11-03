@@ -13,6 +13,12 @@ sources:
     url: https://eur-lex.europa.eu/eli/reg/2023/1114/oj
   - title: "ESMA interim MiCA register"
     url: https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica
+cover:
+  src: https://images.unsplash.com/photo-1640834597350-d67082b381bf
+  alt: "A pile of gold-coloured bitcoin coins in low light"
+  credit: "Traxer"
+  sourceUrl: https://unsplash.com/photos/a-pile-of-gold-bitcoins-sitting-on-top-of-each-other-zU77YP5BgE4
+  license: unsplash
 ---
 
 **Bitcoin is digital money that no company or government issues.** It runs on a public network of computers that anyone can join, its supply is capped at 21 million coins, and you can hold it yourself without a bank. In the EU you can buy it through providers authorised under MiCA, then keep it on the platform or move it to your own wallet.

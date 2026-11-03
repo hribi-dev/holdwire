@@ -17,6 +17,12 @@ sources:
     url: https://crypto.jobs/news/binance-research-links-u-s-midterm-elections-to-bitcoin-market-recovery-patterns
   - title: "crypto.news: Hyperliquid price falls below $85 (November 3)"
     url: https://crypto.news/why-is-hyperliquid-price-down-today-hype-november-3/
+cover:
+  src: https://images.unsplash.com/photo-1767424412548-1a1ac7f4b9bc
+  alt: "Candlestick trading charts on a laptop and a tablet"
+  credit: "Jakub Żerdzicki"
+  sourceUrl: https://unsplash.com/photos/trading-charts-displayed-on-multiple-screens-and-tablet-vKNRKjSNbTo
+  license: unsplash
 ---
 
 **Short version:** Americans vote in the midterm elections today, and crypto is nervous. Bitcoin slipped below $77,000, investors pulled about $1 billion from US Bitcoin ETFs over two sessions, and the Crypto Fear & Greed Index fell to 26. Options traders are paying up to protect themselves against a big move around the results.

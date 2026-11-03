@@ -15,6 +15,12 @@ sources:
     url: https://www.amf-france.org/en/news-publications/news/end-mica-transitional-period-esma-sets-out-its-expectations-professionals-and-warns-retail-investors
   - title: "ESMA: Markets in Crypto-Assets Regulation and interim register"
     url: https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica
+cover:
+  src: https://images.unsplash.com/photo-1608817576203-3c27ed168bd2
+  alt: "The European Union flag flying in Brussels"
+  credit: "Christian Lue"
+  sourceUrl: https://unsplash.com/photos/blue-and-yellow-star-flag-8Yw6tsB8tnc
+  license: unsplash
 ---
 
 **MiCA is the EU's rulebook for crypto companies.** Since 1 July 2026, any company offering crypto services to people in the EU, such as exchanges, brokers and custodians, must be authorised under it. For you, that means one simple check before you sign up anywhere: is this company in ESMA's MiCA register?

@@ -13,6 +13,12 @@ sources:
     url: https://unchainedcrypto.com/?p=50282
   - title: "Bloomberg via Energy Connects: NYSE owner plans market for Hyperliquid perpetual futures in US"
     url: https://www.energyconnects.com/news/utilities/2026/october/nyse-owner-plans-market-for-hyperliquid-perpetual-futures-in-us/
+cover:
+  src: https://images.unsplash.com/photo-1768055105681-7d2096c5165f
+  alt: "A hand pointing at trading charts on several screens"
+  credit: "Jakub Żerdzicki"
+  sourceUrl: https://unsplash.com/photos/trader-analyzing-stock-market-charts-on-multiple-screens-j_hho1mE47s
+  license: unsplash
 ---
 
 **The company that owns the New York Stock Exchange wants a piece of on-chain derivatives.** Intercontinental Exchange (ICE) is taking a minority stake in trade.xyz, the largest builder of markets on Hyperliquid, and plans a US market for perpetual futures built on the same model, subject to approval by the CFTC, the US derivatives regulator.

@@ -23,7 +23,7 @@ function hash(s: string) {
   };
 }
 
-export function CoverArt({ seed, category, label }: { seed: string; category: string | null; label?: string }) {
+export function CoverArt({ seed, category, label, children }: { seed: string; category: string | null; label?: string; children?: React.ReactNode }) {
   const [deep, mid, light] = PALETTES[category ?? ""] ?? FALLBACK;
   const r = hash(seed);
   const x1 = Math.round(r() * 80 + 10);
@@ -37,7 +37,7 @@ export function CoverArt({ seed, category, label }: { seed: string; category: st
     return `M0 ${base} C 120 ${base - a}, 240 ${base + b}, 400 ${base - a / 2}`;
   });
   return (
-    <div className="cover" aria-hidden="true">
+    <div className="cover" aria-hidden={children ? undefined : true}>
       <div
         className="cover-art"
         style={{
@@ -50,6 +50,7 @@ export function CoverArt({ seed, category, label }: { seed: string; category: st
           ))}
         </svg>
       </div>
+      {children}
       {label && <span className="cover-label">{label}</span>}
     </div>
   );

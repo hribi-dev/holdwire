@@ -29,6 +29,7 @@ export const fr: Dict = {
     labelled: "Le contenu sponsorisé est toujours signalé.",
   },
   common: {
+    latestNews: "Dernières actualités",
     sample: "Données d'exemple : cours en direct indisponibles",
     loading: "Chargement…",
     read: "Lire →",

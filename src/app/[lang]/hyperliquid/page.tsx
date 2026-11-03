@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Sparkline } from "@/components/Sparkline";
 import { HyperliquidStats } from "@/components/HyperliquidStats";
 import { Suspense } from "react";
+import { RelatedNews } from "@/components/RelatedNews";
 
 export const metadata: Metadata = {
   title: "Hyperliquid hub: HYPE price, how it works, HIP-3 and guides",
@@ -304,6 +305,8 @@ export default async function HyperliquidHub() {
           </Link>
         </aside>
       </div>
+
+      <RelatedNews categories={["Hyperliquid"]} title="Latest Hyperliquid news" />
 
       <p className="notice">
         Prices are indicative and may be delayed. Nothing on this page is investment advice. <Link href="/disclosures">Disclosures</Link> ·{" "}

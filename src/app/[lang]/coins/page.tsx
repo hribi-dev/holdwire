@@ -5,6 +5,7 @@ import { MarketsTable } from "@/components/MarketsTable";
 import { marketsLabels } from "@/i18n/labels";
 import { getDict } from "@/i18n/server";
 import { MarketHeatmap } from "@/components/viz/MarketHeatmap";
+import { RelatedNews } from "@/components/RelatedNews";
 
 export const metadata: Metadata = {
   title: "Cryptocurrency prices today in euros: top 50 by market cap",
@@ -38,6 +39,7 @@ export default async function CoinsPage() {
       <Suspense fallback={<p className="muted">{t.common.loading}</p>}>
         <Table />
       </Suspense>
+      <RelatedNews categories={["Markets", "Security", "Regulation"]} />
       <p className="notice">Prices are indicative and may be delayed. Nothing on this page is investment advice.</p>
     </main>
   );

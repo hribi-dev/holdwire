@@ -7,6 +7,7 @@ import { fmt } from "@/i18n/dictionaries";
 import { MemeExplorer } from "@/components/viz/MemeExplorer";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedNews } from "@/components/RelatedNews";
 
 const REVIEWED_BY: string | null = null;
 
@@ -92,6 +93,8 @@ export default async function Memes() {
             <Link href="/glossary">{t.home.glossaryCta}</Link>
           </span>
         </section>
+
+        <RelatedNews categories={["Memes"]} />
 
         <p className="notice" style={{ margin: 0 }}>
           Disclosure: Tickora&apos;s founder works with Solana projects HumidiFi and Harmonic. Pools on those venues can appear in this data;

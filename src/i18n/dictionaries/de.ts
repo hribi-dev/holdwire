@@ -29,6 +29,7 @@ export const de: Dict = {
     labelled: "Gesponserte Inhalte sind immer gekennzeichnet.",
   },
   common: {
+    latestNews: "Neueste Nachrichten",
     sample: "Beispieldaten: Live-Kurse nicht verfügbar",
     loading: "Wird geladen …",
     read: "Lesen →",

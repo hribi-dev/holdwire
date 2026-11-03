@@ -29,6 +29,7 @@ export const nb: Dict = {
     labelled: "Sponset innhold er alltid merket.",
   },
   common: {
+    latestNews: "Siste nytt",
     sample: "Eksempeldata: sanntidskurser er utilgjengelige",
     loading: "Laster…",
     read: "Les →",

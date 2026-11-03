@@ -29,6 +29,7 @@ export const sv: Dict = {
     labelled: "Sponsrat innehåll är alltid märkt.",
   },
   common: {
+    latestNews: "Senaste nytt",
     sample: "Exempeldata: realtidskurser saknas",
     loading: "Laddar…",
     read: "Läs →",

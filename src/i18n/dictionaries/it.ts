@@ -29,6 +29,7 @@ export const it: Dict = {
     labelled: "I contenuti sponsorizzati sono sempre segnalati.",
   },
   common: {
+    latestNews: "Ultime notizie",
     sample: "Dati di esempio: prezzi in tempo reale non disponibili",
     loading: "Caricamento…",
     read: "Leggi →",

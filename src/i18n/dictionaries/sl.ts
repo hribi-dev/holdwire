@@ -29,6 +29,7 @@ export const sl: Dict = {
     labelled: "Sponzorirana vsebina je vedno označena.",
   },
   common: {
+    latestNews: "Zadnje novice",
     sample: "Vzorčni podatki: cene v živo niso na voljo",
     loading: "Nalaganje …",
     read: "Preberi →",

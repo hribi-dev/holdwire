@@ -29,6 +29,7 @@ export const sr: Dict = {
     labelled: "Sponzorisani sadržaj je uvek označen.",
   },
   common: {
+    latestNews: "Najnovije vesti",
     sample: "Probni podaci: cene uživo nisu dostupne",
     loading: "Učitavanje…",
     read: "Pročitaj →",

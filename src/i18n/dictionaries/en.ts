@@ -27,6 +27,7 @@ export const en = {
     labelled: "Sponsored content is always labelled.",
   },
   common: {
+    latestNews: "Latest news",
     sample: "Sample data: live prices unavailable",
     loading: "Loading…",
     read: "Read →",

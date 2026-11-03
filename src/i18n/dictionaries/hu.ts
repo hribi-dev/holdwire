@@ -29,6 +29,7 @@ export const hu: Dict = {
     labelled: "A szponzorált tartalom mindig jelölve van.",
   },
   common: {
+    latestNews: "Legfrissebb hírek",
     sample: "Mintaadatok: élő árfolyamok nem érhetők el",
     loading: "Betöltés…",
     read: "Tovább →",

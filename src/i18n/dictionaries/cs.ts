@@ -29,6 +29,7 @@ export const cs: Dict = {
     labelled: "Sponzorovaný obsah je vždy označen.",
   },
   common: {
+    latestNews: "Nejnovější zprávy",
     sample: "Ukázková data: živé ceny nejsou dostupné",
     loading: "Načítání…",
     read: "Číst →",

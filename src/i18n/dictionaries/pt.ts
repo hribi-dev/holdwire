@@ -29,6 +29,7 @@ export const pt: Dict = {
     labelled: "O conteúdo patrocinado é sempre identificado.",
   },
   common: {
+    latestNews: "Últimas notícias",
     sample: "Dados de exemplo: preços em tempo real indisponíveis",
     loading: "A carregar…",
     read: "Ler →",

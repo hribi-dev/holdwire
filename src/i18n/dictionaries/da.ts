@@ -29,6 +29,7 @@ export const da: Dict = {
     labelled: "Sponsoreret indhold er altid mærket.",
   },
   common: {
+    latestNews: "Seneste nyt",
     sample: "Eksempeldata: realtidskurser er ikke tilgængelige",
     loading: "Indlæser…",
     read: "Læs →",

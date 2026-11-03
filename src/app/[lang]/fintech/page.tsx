@@ -4,6 +4,7 @@ import { CRITERIA, NEOBANKS_REVIEWED_BY, NEOBANKS_UPDATED, affiliateHref, ranked
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { getDict } from "@/i18n/server";
+import { RelatedNews } from "@/components/RelatedNews";
 
 const reviewed = Boolean(NEOBANKS_REVIEWED_BY);
 
@@ -134,6 +135,8 @@ export default async function Fintech() {
             })}
           </div>
         </section>
+
+        <RelatedNews categories={["Fintech"]} />
 
         <section className="notice">
           This is general information, not financial advice. Licences and fees change: check the provider&apos;s own terms and the{" "}

@@ -22,7 +22,7 @@ import { getMemeFeed } from "@/lib/memes";
 import { EVENTS, PEOPLE } from "@/content/movers";
 
 const usdCompact = (v: number) =>
-  new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 }).format(v);
+  new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(v);
 
 /* ───────────── Hero: market pulse card ───────────── */
 async function MarketPulse() {
@@ -366,7 +366,7 @@ export default async function Home() {
             <Link href="/glossary" className="tint tint-violet stack reveal" style={{ gap: 10, justifyContent: "flex-end", minHeight: 220 }}>
               <span className="cat" style={{ color: "#6d28d9" }}>{h.glossaryTag}</span>
               <strong style={{ fontFamily: "var(--font-display)", fontSize: 24, lineHeight: 1.15 }}>{h.glossaryTitle}</strong>
-              <span className="small" style={{ color: "#5b21b6" }}>{h.glossaryCta}</span>
+              <span className="small tint-ink" style={{ color: "#5b21b6" }}>{h.glossaryCta}</span>
             </Link>
           </div>
         </section>

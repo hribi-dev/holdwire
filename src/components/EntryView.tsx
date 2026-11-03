@@ -41,7 +41,7 @@ export function EntryView({ entry, crumbs }: { entry: Entry; crumbs: { name: str
         )}
         {entry.category && entry.kind === "editorial" && <span className="eyebrow">{entry.category}</span>}
         <h1 style={{ marginTop: 8 }}>{entry.title}</h1>
-        {entry.description && <p style={{ fontSize: 19, color: "#374151", marginTop: 0 }}>{entry.description}</p>}
+        {entry.description && <p style={{ fontSize: 19, color: "var(--ink-2)", marginTop: 0 }}>{entry.description}</p>}
         <p className="small muted" style={{ marginTop: 0 }}>
           {entry.author ? `By ${entry.author}` : "Tickora"}
           {entry.reviewedBy ? ` · Reviewed by ${entry.reviewedBy}` : ""}

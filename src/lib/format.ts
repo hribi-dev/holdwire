@@ -20,6 +20,8 @@ export function formatCompactEur(value: number | null | undefined): string {
     style: "currency",
     currency: "EUR",
     notation: "compact",
+    // Explicit minimum: Node pads compact currency ("€2.30B") while browsers don't ("€2.3B"), which breaks hydration.
+    minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   }).format(value);
 }

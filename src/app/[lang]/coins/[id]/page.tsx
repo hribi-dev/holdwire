@@ -102,9 +102,9 @@ export default async function CoinPage({ params }: PageProps<"/[lang]/coins/[id]
       </section>
 
       {id === "hyperliquid" && (
-        <Link href="/hyperliquid" className="card" style={{ background: "#E4F7F1", borderColor: "#9EE6CF", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-          <strong style={{ color: "#0A5C46" }}>Go deeper: the Tickora Hyperliquid hub</strong>
-          <span className="small" style={{ color: "#0A5C46" }}>How it works, HIP-3, risks and guides →</span>
+        <Link href="/hyperliquid" className="card" style={{ background: "var(--mint-bg)", borderColor: "var(--mint-line)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <strong style={{ color: "var(--mint-ink)" }}>Go deeper: the Tickora Hyperliquid hub</strong>
+          <span className="small" style={{ color: "var(--mint-ink)" }}>How it works, HIP-3, risks and guides →</span>
         </Link>
       )}
 
@@ -153,7 +153,7 @@ export default async function CoinPage({ params }: PageProps<"/[lang]/coins/[id]
                 {profile.faqs.map((f) => (
                   <details key={f.q}>
                     <summary>{f.q}</summary>
-                    <p style={{ margin: "10px 0 0", color: "#374151" }}>{f.a}</p>
+                    <p style={{ margin: "10px 0 0", color: "var(--ink-2)" }}>{f.a}</p>
                   </details>
                 ))}
               </section>

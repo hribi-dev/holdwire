@@ -6,7 +6,7 @@ export const sv: Dict = {
     description: "Kryptokurser i euro i realtid, Hyperliquid-data, källhänvisade nyheter och tydliga guider för läsare i Europa.",
   },
   nav: { news: "Nyheter", blog: "Blogg", school: "Skola", hyperliquid: "Hyperliquid", markets: "Marknader", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lär dig", glossary: "Ordlista" },
-  header: { subscribe: "Prenumerera", trending: "Trendar:", allCoins: "Alla mynt", language: "Språk", skip: "Hoppa till innehåll", home: "startsida" },
+  header: { subscribe: "Prenumerera", trending: "Trendar:", allCoins: "Alla mynt", language: "Språk", skip: "Hoppa till innehåll", home: "startsida", live: "Live", darkTheme: "Mörkt tema" },
   footer: {
     tagline: "Finans och reala tillgångar med europeiskt perspektiv.",
     dataTools: "Data och verktyg",

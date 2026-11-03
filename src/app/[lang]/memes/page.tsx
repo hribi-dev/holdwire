@@ -48,14 +48,14 @@ export default async function Memes() {
   return (
     <main>
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Memes", path: "/memes" }])} />
-      <section className="tint tint-mint" style={{ borderRadius: 0, padding: 0, background: "linear-gradient(140deg,#f7fee7,#d9f99d)" }}>
+      <section className="tint tint-mint" style={{ borderRadius: 0, padding: 0, background: "var(--lime-hero)" }}>
         <div className="wrap stack" style={{ gap: 14, padding: "56px 24px 44px" }}>
           <span className="cat" style={{ color: LIME }}>{m.tag}</span>
           <h1 style={{ margin: 0, fontSize: "clamp(32px, 5vw, 52px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
             {m.title}
           </h1>
           <p style={{ margin: 0, fontSize: 18, maxWidth: 700, color: "var(--ink-2)" }}>{fmt(m.lede, { min: `$${(MIN_LIQUIDITY_USD / 1000).toFixed(0)}k` })}</p>
-          <p className="notice" role="note" style={{ margin: 0, maxWidth: 700, background: "#fff", color: "var(--ink)" }}>
+          <p className="notice" role="note" style={{ margin: 0, maxWidth: 700, background: "var(--card)", color: "var(--ink)" }}>
             <strong>{m.warnTitle}</strong> {m.warn}
           </p>
           <span className="tiny muted">
@@ -83,7 +83,7 @@ export default async function Memes() {
           </div>
         </section>
 
-        <section className="tint stack" style={{ gap: 10, background: "linear-gradient(140deg,#f7fee7,#ecfccb)" }}>
+        <section className="tint stack" style={{ gap: 10, background: "var(--lime-tint)" }}>
           <span className="cat" style={{ color: LIME }}>{m.before}</span>
           <ul style={{ margin: 0, paddingLeft: 20, display: "grid", gap: 4 }}>
             {m.checklist.map((c) => <li key={c}>{c}</li>)}

@@ -6,7 +6,7 @@ export const es: Dict = {
     description: "Precios de criptomonedas en euros en tiempo real, datos de Hyperliquid, noticias con fuentes y guías claras para lectores en Europa.",
   },
   nav: { news: "Noticias", blog: "Blog", school: "Escuela", hyperliquid: "Hyperliquid", markets: "Mercados", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Aprende", glossary: "Glosario" },
-  header: { subscribe: "Suscribirse", trending: "Tendencias:", allCoins: "Todas las monedas", language: "Idioma", skip: "Ir al contenido", home: "inicio" },
+  header: { subscribe: "Suscribirse", trending: "Tendencias:", allCoins: "Todas las monedas", language: "Idioma", skip: "Ir al contenido", home: "inicio", live: "En vivo", darkTheme: "Tema oscuro" },
   footer: {
     tagline: "Finanzas y activos reales con mirada europea.",
     dataTools: "Datos y herramientas",

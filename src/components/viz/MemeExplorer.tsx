@@ -30,7 +30,7 @@ const NET_COLOR: Record<string, string> = { solana: "#9945ff", base: "#0052ff", 
 
 const usd = (n: number | null) => {
   if (n === null) return "–";
-  if (n >= 1) return n.toLocaleString("en-US", { style: "currency", currency: "USD", notation: n >= 1e5 ? "compact" : "standard", maximumFractionDigits: 2 });
+  if (n >= 1) return n.toLocaleString("en-US", { style: "currency", currency: "USD", notation: n >= 1e5 ? "compact" : "standard", minimumFractionDigits: n >= 1e5 ? 0 : 2, maximumFractionDigits: 2 });
   return "$" + n.toPrecision(3);
 };
 

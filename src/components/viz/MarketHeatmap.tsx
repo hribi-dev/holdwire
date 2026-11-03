@@ -20,7 +20,7 @@ export function MarketHeatmap({
   const [tip, setTip] = useState<{ c: HeatCoin; x: number; y: number } | null>(null);
   const rects = squarify(coins, (c) => c.marketCap, 100, H);
   const eur = new Intl.NumberFormat(intl, { style: "currency", currency: "EUR", maximumSignificantDigits: 6 });
-  const eurC = new Intl.NumberFormat(intl, { style: "currency", currency: "EUR", notation: "compact", maximumFractionDigits: 1 });
+  const eurC = new Intl.NumberFormat(intl, { style: "currency", currency: "EUR", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: 1 });
 
   return (
     <div className="stack" style={{ gap: 8 }}>

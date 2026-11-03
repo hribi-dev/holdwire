@@ -6,7 +6,7 @@ export const ru: Dict = {
     description: "Курсы криптовалют в евро в реальном времени, данные Hyperliquid, новости с источниками и понятные гайды для читателей в Европе.",
   },
   nav: { news: "Новости", blog: "Блог", school: "Школа", hyperliquid: "Hyperliquid", markets: "Рынки", memes: "Мемы", movers: "Движущие силы", fintech: "Финтех", learn: "Обучение", glossary: "Глоссарий" },
-  header: { subscribe: "Подписаться", trending: "В тренде:", allCoins: "Все монеты", language: "Язык", skip: "К содержанию", home: "главная" },
+  header: { subscribe: "Подписаться", trending: "В тренде:", allCoins: "Все монеты", language: "Язык", skip: "К содержанию", home: "главная", live: "Онлайн", darkTheme: "Тёмная тема" },
   footer: {
     tagline: "Финансы и реальные активы с европейским взглядом.",
     dataTools: "Данные и инструменты",

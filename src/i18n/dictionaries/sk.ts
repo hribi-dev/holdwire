@@ -6,7 +6,7 @@ export const sk: Dict = {
     description: "Ceny kryptomien v eurách naživo, dáta Hyperliquid, overené správy a zrozumiteľné návody pre čitateľov v Európe.",
   },
   nav: { news: "Správy", blog: "Blog", school: "Škola", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Mémy", movers: "Hýbatelia", fintech: "Fintech", learn: "Vzdelávanie", glossary: "Slovník" },
-  header: { subscribe: "Odoberať", trending: "Trendy:", allCoins: "Všetky coiny", language: "Jazyk", skip: "Na obsah", home: "domov" },
+  header: { subscribe: "Odoberať", trending: "Trendy:", allCoins: "Všetky coiny", language: "Jazyk", skip: "Na obsah", home: "domov", live: "Naživo", darkTheme: "Tmavý motív" },
   footer: {
     tagline: "Financie a reálne aktíva z európskeho pohľadu.",
     dataTools: "Dáta a nástroje",

@@ -32,7 +32,7 @@ export default async function Fintech() {
             {f.title}
           </h1>
           <p style={{ margin: 0, fontSize: 18, maxWidth: 680, color: "var(--ink-2)" }}>{f.lede}</p>
-          <p className="notice" style={{ margin: 0, maxWidth: 680, background: "#fff" }}>
+          <p className="notice" style={{ margin: 0, maxWidth: 680, background: "var(--card)" }}>
             <strong>Affiliate disclosure:</strong> some links on this page may earn us a commission if you open an account. It costs you
             nothing and doesn&apos;t change the order, which follows the criteria below. We only use paid links for providers authorised
             to serve EU readers. <Link href="/how-we-make-money">How we make money</Link>.

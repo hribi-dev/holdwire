@@ -280,7 +280,7 @@ export default async function HyperliquidHub() {
             {profile.faqs.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
-                <p style={{ margin: "10px 0 0", color: "#374151" }}>{f.a}</p>
+                <p style={{ margin: "10px 0 0", color: "var(--ink-2)" }}>{f.a}</p>
               </details>
             ))}
           </section>
@@ -288,7 +288,7 @@ export default async function HyperliquidHub() {
 
         <aside className="col-side stack" style={{ gap: 20 }}>
           <Converter symbol="hype" priceEur={coin?.price ?? null} />
-          <section className="card stack" style={{ gap: 10, background: "#FFF7ED", borderColor: "#FED7AA" }} aria-labelledby="risk-h">
+          <section className="card stack" style={{ gap: 10, background: "var(--warn-bg)", borderColor: "var(--warn-line)" }} aria-labelledby="risk-h">
             <h2 id="risk-h" style={{ margin: 0, fontSize: 18 }}>
               Know the risks
             </h2>

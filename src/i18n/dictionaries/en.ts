@@ -4,7 +4,7 @@ export const en = {
     description: "Live crypto prices in euros, Hyperliquid data, sourced news and plain-English guides for readers in Europe.",
   },
   nav: { news: "News", blog: "Blog", school: "School", hyperliquid: "Hyperliquid", markets: "Markets", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Learn", glossary: "Glossary" },
-  header: { subscribe: "Subscribe", trending: "Trending:", allCoins: "All coins", language: "Language", skip: "Skip to content", home: "home" },
+  header: { subscribe: "Subscribe", trending: "Trending:", allCoins: "All coins", language: "Language", skip: "Skip to content", home: "home", live: "Live", darkTheme: "Dark theme" },
   footer: {
     tagline: "Finance and hard assets, with an EU lens.",
     dataTools: "Data & tools",

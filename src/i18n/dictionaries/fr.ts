@@ -6,7 +6,7 @@ export const fr: Dict = {
     description: "Cours des cryptomonnaies en euros en direct, données Hyperliquid, actualités sourcées et guides clairs pour les lecteurs en Europe.",
   },
   nav: { news: "Actualités", blog: "Blog", school: "École", hyperliquid: "Hyperliquid", markets: "Marchés", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Apprendre", glossary: "Glossaire" },
-  header: { subscribe: "S'abonner", trending: "Tendances :", allCoins: "Toutes les cryptos", language: "Langue", skip: "Aller au contenu", home: "accueil" },
+  header: { subscribe: "S'abonner", trending: "Tendances :", allCoins: "Toutes les cryptos", language: "Langue", skip: "Aller au contenu", home: "accueil", live: "En direct", darkTheme: "Thème sombre" },
   footer: {
     tagline: "Finance et actifs réels, avec un regard européen.",
     dataTools: "Données et outils",

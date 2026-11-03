@@ -6,7 +6,7 @@ export const hr: Dict = {
     description: "Cijene kriptovaluta u eurima uživo, podaci o Hyperliquidu, provjerene vijesti i jasni vodiči za čitatelje u Europi.",
   },
   nav: { news: "Vijesti", blog: "Blog", school: "Škola", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memeovi", movers: "Pokretači", fintech: "Fintech", learn: "Učenje", glossary: "Pojmovnik" },
-  header: { subscribe: "Pretplati se", trending: "U trendu:", allCoins: "Svi coinovi", language: "Jezik", skip: "Na sadržaj", home: "početna" },
+  header: { subscribe: "Pretplati se", trending: "U trendu:", allCoins: "Svi coinovi", language: "Jezik", skip: "Na sadržaj", home: "početna", live: "Uživo", darkTheme: "Tamna tema" },
   footer: {
     tagline: "Financije i stvarna imovina iz europske perspektive.",
     dataTools: "Podaci i alati",

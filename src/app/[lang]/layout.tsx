@@ -11,6 +11,7 @@ import { DICTIONARIES, fmt } from "@/i18n/dictionaries";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Ticker, TickerFallback } from "@/components/Ticker";
+import { themeInitScript } from "@/components/ThemeToggle";
 
 export async function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -40,7 +41,11 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!hasLocale(lang)) notFound();
   const t = DICTIONARIES[lang];
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
+      <head>
+        {/* Sets data-theme before first paint (saved choice, else the system setting). */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>
         <a href="#content" className="skip">
           {t.header.skip}

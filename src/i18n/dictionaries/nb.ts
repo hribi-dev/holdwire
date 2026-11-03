@@ -6,7 +6,7 @@ export const nb: Dict = {
     description: "Kryptokurser i euro i sanntid, Hyperliquid-data, kildebelagte nyheter og tydelige guider for lesere i Europa.",
   },
   nav: { news: "Nyheter", blog: "Blogg", school: "Skole", hyperliquid: "Hyperliquid", markets: "Markeder", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lær", glossary: "Ordliste" },
-  header: { subscribe: "Abonner", trending: "Populært:", allCoins: "Alle mynter", language: "Språk", skip: "Hopp til innhold", home: "forside" },
+  header: { subscribe: "Abonner", trending: "Populært:", allCoins: "Alle mynter", language: "Språk", skip: "Hopp til innhold", home: "forside", live: "Direkte", darkTheme: "Mørkt tema" },
   footer: {
     tagline: "Finans og reelle eiendeler med et europeisk blikk.",
     dataTools: "Data og verktøy",

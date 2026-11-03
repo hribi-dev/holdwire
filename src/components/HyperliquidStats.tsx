@@ -2,7 +2,7 @@ import { getHyperliquidStats } from "@/lib/hyperliquid";
 import { annualisedFundingPct } from "@/lib/hyperliquid-stats";
 
 const usd = (v: number) =>
-  new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 }).format(v);
+  new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(v);
 const px = (v: number) =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", maximumFractionDigits: v >= 100 ? 2 : v >= 1 ? 3 : 6 }).format(v);
 

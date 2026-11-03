@@ -6,7 +6,7 @@ export const hu: Dict = {
     description: "Élő kriptoárfolyamok euróban, Hyperliquid-adatok, forrásolt hírek és érthető útmutatók európai olvasóknak.",
   },
   nav: { news: "Hírek", blog: "Blog", school: "Iskola", hyperliquid: "Hyperliquid", markets: "Piacok", memes: "Mémek", movers: "Piacmozgatók", fintech: "Fintech", learn: "Tudástár", glossary: "Szótár" },
-  header: { subscribe: "Feliratkozás", trending: "Felkapott:", allCoins: "Összes coin", language: "Nyelv", skip: "Ugrás a tartalomra", home: "kezdőlap" },
+  header: { subscribe: "Feliratkozás", trending: "Felkapott:", allCoins: "Összes coin", language: "Nyelv", skip: "Ugrás a tartalomra", home: "kezdőlap", live: "Élő", darkTheme: "Sötét téma" },
   footer: {
     tagline: "Pénzügyek és reáleszközök európai szemmel.",
     dataTools: "Adatok és eszközök",

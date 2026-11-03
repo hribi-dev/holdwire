@@ -8,7 +8,7 @@ import { useId } from "react";
  */
 export const LOGO_VARIANT: "pulse" | "mono" = "pulse";
 
-export function LogoMark({ size = 32, variant = LOGO_VARIANT }: { size?: number; variant?: "pulse" | "mono" }) {
+export function LogoMark({ size = 32, variant = LOGO_VARIANT, animated = false }: { size?: number; variant?: "pulse" | "mono"; animated?: boolean }) {
   const id = useId().replace(/:/g, "");
   if (variant === "mono") {
     return (
@@ -26,17 +26,17 @@ export function LogoMark({ size = 32, variant = LOGO_VARIANT }: { size?: number;
     );
   }
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden="true">
+    <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden="true" className={animated ? "mark-anim" : undefined}>
       <defs>
         <linearGradient id={`p${id}`} x1="0" y1="0" x2="1" y2="0">
           <stop offset="0" stopColor="#14b8a6" />
           <stop offset="1" stopColor="#a3e635" />
         </linearGradient>
       </defs>
-      <circle cx="24" cy="24" r="23" fill="#0B0E13" />
+      <circle className="mark-bg" cx="24" cy="24" r="23" fill="#0B0E13" />
       <circle cx="24" cy="24" r="19.5" fill="none" stroke={`url(#p${id})`} strokeWidth="1.4" opacity="0.55" />
-      <path d="M8.5 27 H15.5 L19 17.5 L24.5 33 L28.5 20 L31.5 27 H39.5" fill="none" stroke={`url(#p${id})`} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="28.5" cy="20" r="2.6" fill="#ffffff" />
+      <path className="mark-beat" d="M8.5 27 H15.5 L19 17.5 L24.5 33 L28.5 20 L31.5 27 H39.5" fill="none" stroke={`url(#p${id})`} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle className="mark-tip" cx="28.5" cy="20" r="2.6" fill="#ffffff" />
     </svg>
   );
 }

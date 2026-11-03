@@ -562,3 +562,65 @@ summary { font-weight: 600; cursor: pointer; }
 .sponsor-hide { justify-self: center; border: 0; background: none; color: var(--muted); font: 500 12px var(--font-sans); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 560px) { .sponsor-tab { padding: 8px 12px 8px 10px; font-size: 12.5px; } }
 @media (prefers-reduced-motion: reduce) { .sponsor-tab, .sponsor-tab::before, .sponsor-star { animation: none; } }
+
+/* ── Ad slot (house ad / booked ad) ── */
+.adslot { position: relative; overflow: hidden; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; align-items: center; padding: 34px 36px; border-radius: 22px; background: linear-gradient(135deg, #0b0f17 0%, #111827 55%, #1a1408 100%); color: #f8fafc; border: 1px solid rgba(233, 196, 106, 0.22); box-shadow: 0 24px 60px -30px rgba(15, 23, 42, 0.6); }
+.adslot::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(ellipse at 80% 50%, #000 20%, transparent 70%); }
+.adslot-glow { position: absolute; z-index: -1; width: 420px; height: 420px; right: -80px; top: -140px; border-radius: 50%; background: radial-gradient(circle, rgba(233, 196, 106, 0.28), transparent 65%); filter: blur(10px); animation: adslot-float 12s ease-in-out infinite alternate; }
+@keyframes adslot-float { to { transform: translate(-60px, 70px); } }
+.adslot-copy { display: grid; gap: 12px; justify-items: start; }
+.adslot-kicker { display: inline-flex; align-items: center; gap: 8px; font: 700 11.5px var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #e9c46a; }
+.adslot-dot { width: 6px; height: 6px; border-radius: 99px; background: #e9c46a; box-shadow: 0 0 0 4px rgba(233, 196, 106, 0.18); }
+.adslot-title { font: 700 clamp(22px, 2.6vw, 30px) var(--font-display); line-height: 1.12; letter-spacing: -0.02em; color: #fff; max-width: 560px; }
+.adslot-body { margin: 0; font-size: 15.5px; line-height: 1.5; color: #b8c2d0; max-width: 520px; }
+.adslot-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 11px 18px; border-radius: 12px; font: 700 14.5px var(--font-sans); color: #1a1408; background: linear-gradient(120deg, #f3d98b, #e9c46a 50%, #c9a24a); box-shadow: 0 10px 26px -10px rgba(233, 196, 106, 0.7); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.adslot-cta:hover { color: #1a1408; transform: translateY(-2px); box-shadow: 0 14px 32px -10px rgba(233, 196, 106, 0.85); }
+.adslot-cta span { transition: transform 0.2s ease; }
+.adslot-cta:hover span { transform: translateX(3px); }
+.adslot-frame { display: block; aspect-ratio: 16 / 9; border-radius: 16px; padding: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, border-color 0.3s ease; }
+.adslot:hover .adslot-frame { transform: rotate(-1.2deg) scale(1.02); border-color: rgba(233, 196, 106, 0.35); }
+.adslot-frame-inner { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 10px; border: 1.5px dashed rgba(233, 196, 106, 0.4); background: repeating-linear-gradient(135deg, rgba(233,196,106,0.035) 0 10px, transparent 10px 20px); }
+.adslot-mark { font-size: 28px; color: #e9c46a; animation: sponsor-spin 9s linear infinite; }
+.adslot-frame-text { font: 600 12px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(233, 196, 106, 0.8); }
+.adslot-corner { position: absolute; width: 14px; height: 14px; border-color: #e9c46a; border-style: solid; border-width: 0; }
+.adslot-corner.tl { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 10px; }
+.adslot-corner.tr { top: -1px; right: -1px; border-top-width: 2px; border-right-width: 2px; border-top-right-radius: 10px; }
+.adslot-corner.bl { bottom: -1px; left: -1px; border-bottom-width: 2px; border-left-width: 2px; border-bottom-left-radius: 10px; }
+.adslot-corner.br { bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 10px; }
+.adslot.is-booked { display: block; padding: 20px 22px; }
+.adslot-label { display: block; margin-bottom: 10px; font: 700 11px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #9aa4b2; }
+.adslot-booked { display: flex; gap: 18px; align-items: center; color: inherit; }
+.adslot-img { width: 160px; height: 90px; object-fit: cover; border-radius: 10px; flex: none; }
+@media (max-width: 760px) { .adslot { grid-template-columns: 1fr; padding: 26px 22px; } .adslot-frame { display: none; } }
+@media (prefers-reduced-motion: reduce) { .adslot-glow, .adslot-mark { animation: none; } }
+
+/* ── Voices + X embeds ── */
+.voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.voice { display: grid; gap: 10px; align-content: start; padding: 18px; border-radius: 16px; border: 1px solid var(--line); background: var(--card); position: relative; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.voice::before { content: ""; position: absolute; left: 18px; right: 18px; top: 0; height: 3px; border-radius: 0 0 3px 3px; background: var(--vc); opacity: 0.8; }
+.voice:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--vc) 45%, var(--line)); box-shadow: 0 14px 34px -18px color-mix(in srgb, var(--vc) 60%, transparent); }
+.voice-head { display: flex; align-items: center; gap: 10px; }
+.voice-handle { font-family: var(--font-mono); }
+.voice-follow { margin-left: auto; flex: none; font: 600 12.5px var(--font-sans); padding: 5px 10px; border-radius: 99px; border: 1px solid var(--line-strong); color: var(--ink); }
+.voice-follow:hover { border-color: var(--vc); color: var(--ink); }
+.voice-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.voice-tag { font: 600 11.5px var(--font-sans); padding: 3px 8px; border-radius: 6px; background: var(--surface); color: var(--muted); }
+.voice-tag.is-gold { background: color-mix(in srgb, #e9c46a 22%, var(--card)); color: color-mix(in srgb, #8a6a12 80%, var(--ink)); }
+.voice-take { display: grid; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--surface); font-size: 14.5px; line-height: 1.45; }
+.xembed-gate { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 12px; border-radius: 12px; border: 1px dashed var(--line-strong); }
+.xembed-btn { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 10px; border: 0; background: var(--ink); color: var(--bg); font: 600 13.5px var(--font-sans); cursor: pointer; transition: transform 0.15s ease; }
+.xembed-btn:hover { transform: translateY(-1px); }
+.xembed-box { min-height: 120px; max-width: 550px; }
+.xembed-box .twitter-tweet { margin: 0 !important; }
+
+/* ── Gold hub ── */
+.gold-hero { position: relative; overflow: hidden; background: radial-gradient(circle at 85% 0%, rgba(243, 217, 139, 0.35), transparent 45%), radial-gradient(circle at 5% 100%, rgba(201, 162, 39, 0.3), transparent 45%), linear-gradient(135deg, #14100a, #2a1f0a 55%, #0b0f17); }
+.gold-hero-shine { position: absolute; inset: -40% -10%; background: linear-gradient(105deg, transparent 40%, rgba(255, 236, 179, 0.12) 50%, transparent 60%); animation: gold-shine 7s ease-in-out infinite; }
+@keyframes gold-shine { from { transform: translateX(-30%); } to { transform: translateX(30%); } }
+.gold-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.gold-tile { display: grid; gap: 4px; padding: 16px 18px; border-radius: 16px; border: 1px solid color-mix(in srgb, #c9a227 35%, var(--line)); background: linear-gradient(140deg, color-mix(in srgb, #f3d98b 14%, var(--card)), var(--card)); }
+.gold-tile.is-context { background: var(--surface); border-color: var(--line); }
+.gold-price { font-size: 26px; letter-spacing: -0.01em; }
+@media (prefers-reduced-motion: reduce) { .gold-hero-shine { animation: none; } }
+.gold-also a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.notice a { color: var(--accent); }

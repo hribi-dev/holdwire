@@ -20,6 +20,7 @@ import { HeroRotator, type HeroSlide } from "@/components/HeroRotator";
 import { HeroSpotlight } from "@/components/HeroSpotlight";
 import { getMemeFeed } from "@/lib/memes";
 import { EVENTS, PEOPLE } from "@/content/movers";
+import { AdSlot } from "@/components/AdSlot";
 
 const usdCompact = (v: number) =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(v);
@@ -408,6 +409,8 @@ export default async function Home() {
         </section>
 
         {/* ── Newsletter ── */}
+        <AdSlot placement="home" />
+
         <section id="newsletter" className="gborder reveal" style={{ padding: 32 }}>
           <form className="row" style={{ gap: 24, alignItems: "center" }}>
             <div className="stack" style={{ flex: "1 1 360px", gap: 8 }}>

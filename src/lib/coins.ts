@@ -115,3 +115,20 @@ export async function getCoin(id: string): Promise<{ coin: CoinMarket; sample: b
   const fallback = SAMPLE_MARKETS.find((c) => c.id === id);
   return fallback ? { coin: fallback, sample: true } : null;
 }
+
+const GOLD_SAMPLE: CoinMarket[] = [
+  { id: "pax-gold", symbol: "paxg", name: "PAX Gold", image: null, rank: null, price: 3498.2, marketCap: null, volume24h: null, change24h: 0.4, change7d: -1.2, circulatingSupply: null, maxSupply: null, ath: null, sparkline: Array.from({ length: 168 }, (_, i) => 3540 - i * 0.25 + Math.sin(i / 9) * 14) },
+  { id: "tether-gold", symbol: "xaut", name: "Tether Gold", image: null, rank: null, price: 3494.6, marketCap: null, volume24h: null, change24h: 0.3, change7d: -1.3, circulatingSupply: null, maxSupply: null, ath: null, sparkline: Array.from({ length: 168 }, (_, i) => 3536 - i * 0.25 + Math.sin(i / 9) * 14) },
+];
+
+/** Tokenized gold (each token = one troy ounce in a vault) plus bitcoin for comparison, in EUR. */
+export async function getGoldMarkets(): Promise<{ paxg: CoinMarket; xaut: CoinMarket | null; btc: CoinMarket | null; sample: boolean; fetchedAt: string }> {
+  "use cache";
+  cacheLife("minutes");
+  const live = await fetchMarkets({ ids: "pax-gold,tether-gold,bitcoin" });
+  const pick = (list: CoinMarket[], id: string) => list.find((c) => c.id === id) ?? null;
+  if (live && pick(live, "pax-gold")) {
+    return { paxg: pick(live, "pax-gold") as CoinMarket, xaut: pick(live, "tether-gold"), btc: pick(live, "bitcoin"), sample: false, fetchedAt: new Date().toISOString() };
+  }
+  return { paxg: GOLD_SAMPLE[0], xaut: GOLD_SAMPLE[1], btc: SAMPLE_MARKETS.find((c) => c.id === "bitcoin") ?? null, sample: true, fetchedAt: new Date().toISOString() };
+}

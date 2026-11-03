@@ -11,12 +11,143 @@
  * Rules: no "buy" language, no predictions. This is a record of what happened.
  */
 
-export type PersonId = "musk" | "trump" | "cz";
+export type PersonId = "musk" | "trump" | "cz" | "saylor" | "schiff" | "hayes" | "lee" | "alden" | "pal" | "vitalik";
 
-export const PEOPLE: Record<PersonId, { name: string; role: string; color: string; initials: string }> = {
-  musk: { name: "Elon Musk", role: "CEO of Tesla and SpaceX, owner of X", color: "#0f172a", initials: "EM" },
-  trump: { name: "Donald Trump", role: "President of the United States", color: "#b91c1c", initials: "DT" },
-  cz: { name: "Changpeng Zhao (CZ)", role: "Binance co-founder", color: "#ca8a04", initials: "CZ" },
+export type Focus = "Bitcoin" | "Gold" | "Macro" | "Ethereum" | "Memecoins";
+
+export type Person = {
+  name: string;
+  role: string;
+  color: string;
+  initials: string;
+  /** Profile on the platform they post on. */
+  profileUrl: string;
+  handle: string;
+  focus: Focus[];
+  /** Their latest notable take, paraphrased, with the source. Keep it factual: what they said, not whether they're right. */
+  take?: { date: string; text: string; source: { name: string; url: string } };
+};
+
+/**
+ * People whose posts move prices or are worth reading for context. Not endorsements: several of them
+ * disagree with each other on purpose (bitcoin vs gold), and none of this is investment advice.
+ */
+export const PEOPLE: Record<PersonId, Person> = {
+  musk: {
+    name: "Elon Musk",
+    role: "CEO of Tesla and SpaceX, owner of X",
+    color: "#475569",
+    initials: "EM",
+    handle: "@elonmusk",
+    profileUrl: "https://x.com/elonmusk",
+    focus: ["Memecoins", "Bitcoin"],
+    take: {
+      date: "2026-10-30",
+      text: "Warned that superintelligent AI agents could one day exploit crypto systems, while saying there was no evidence AI played a part in the Binance hack.",
+      source: { name: "Crypto Briefing", url: "https://cryptobriefing.com/elon-musk-ai-hacks-crypto-binance/" },
+    },
+  },
+  trump: {
+    name: "Donald Trump",
+    role: "President of the United States",
+    color: "#b91c1c",
+    initials: "DT",
+    handle: "@realDonaldTrump",
+    profileUrl: "https://truthsocial.com/@realDonaldTrump",
+    focus: ["Bitcoin", "Macro"],
+  },
+  cz: {
+    name: "Changpeng Zhao (CZ)",
+    role: "Binance co-founder",
+    color: "#ca8a04",
+    initials: "CZ",
+    handle: "@cz_binance",
+    profileUrl: "https://x.com/cz_binance",
+    focus: ["Bitcoin", "Memecoins"],
+    take: {
+      date: "2026-09-01",
+      text: "Said growth in his own X follower count has been a consistent early signal of new market cycles, and that the harshest crypto winter is behind us.",
+      source: { name: "Coin Alert News", url: "https://coinalertnews.com/news/2026/09/01/cz-crypto-winter-over" },
+    },
+  },
+  saylor: {
+    name: "Michael Saylor",
+    role: "Executive chairman of Strategy, the largest corporate bitcoin holder",
+    color: "#ea580c",
+    initials: "MS",
+    handle: "@saylor",
+    profileUrl: "https://x.com/saylor",
+    focus: ["Bitcoin"],
+    take: {
+      date: "2026-10-26",
+      text: "Strategy bought no bitcoin from 19 to 25 October and spent $204.9 million buying back its own preferred stock instead. Holdings stayed at 848,517 BTC. Saylor usually hints at purchases with a chart on Sundays.",
+      source: { name: "CoinGabbar, citing Strategy's 8-K", url: "https://www.coingabbar.com/en/saylor-bitcoin-purchase-oct-26-2026-strategy-8k-btc-price" },
+    },
+  },
+  schiff: {
+    name: "Peter Schiff",
+    role: "Economist and gold advocate, long-time bitcoin critic",
+    color: "#b45309",
+    initials: "PS",
+    handle: "@PeterSchiff",
+    profileUrl: "https://x.com/PeterSchiff",
+    focus: ["Gold", "Macro", "Bitcoin"],
+    take: {
+      date: "2026-04-13",
+      text: "Told followers to swap bitcoin for gold and silver as bitcoin neared $75,000, close to Strategy's average purchase price.",
+      source: { name: "Benzinga", url: "https://cdn6.benzinga.com/crypto/cryptocurrency/26/04/51795812/peter-schiff-ditch-bitcoin-buy-gold-silver-rally" },
+    },
+  },
+  hayes: {
+    name: "Arthur Hayes",
+    role: "BitMEX co-founder, CIO of Maelstrom; writes long macro essays",
+    color: "#7c3aed",
+    initials: "AH",
+    handle: "@CryptoHayes",
+    profileUrl: "https://x.com/CryptoHayes",
+    focus: ["Macro", "Bitcoin", "Ethereum"],
+    take: {
+      date: "2026-09-02",
+      text: "Said bitcoin should grind higher from here but named Ethereum as his top pick, arguing it could rise three to five times relatively quickly.",
+      source: { name: "Cointelegraph Magazine", url: "https://cointelegraph.com/magazine/btc-will-hit-1m-by-2030-but-arthur-hayes-is-buying-eth-instead" },
+    },
+  },
+  lee: {
+    name: "Tom Lee",
+    role: "Fundstrat co-founder and BitMine chairman; often compares bitcoin with gold",
+    color: "#0e7490",
+    initials: "TL",
+    handle: "@fundstrat",
+    profileUrl: "https://x.com/fundstrat",
+    focus: ["Bitcoin", "Gold", "Ethereum"],
+  },
+  alden: {
+    name: "Lyn Alden",
+    role: "Macro analyst, author of Broken Money; writes on the dollar system, gold and bitcoin",
+    color: "#0f766e",
+    initials: "LA",
+    handle: "@LynAldenContact",
+    profileUrl: "https://x.com/LynAldenContact",
+    focus: ["Macro", "Gold", "Bitcoin"],
+  },
+  pal: {
+    name: "Raoul Pal",
+    role: "Founder of Real Vision and Global Macro Investor",
+    color: "#be185d",
+    initials: "RP",
+    handle: "@RaoulGMI",
+    profileUrl: "https://x.com/RaoulGMI",
+    focus: ["Macro", "Bitcoin"],
+  },
+  vitalik: {
+    name: "Vitalik Buterin",
+    role: "Ethereum co-founder",
+    color: "#4f46e5",
+    initials: "VB",
+    handle: "@VitalikButerin",
+    profileUrl: "https://x.com/VitalikButerin",
+    focus: ["Ethereum"],
+  },
 };
 
 export type MoverEvent = {
@@ -37,6 +168,60 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = null;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "musk-binance-ftx-emoji-2026-10",
+    person: "musk",
+    platform: "X",
+    postedAt: "2026-10-30T04:33:58Z",
+    precision: "minute",
+    postUrl: "https://x.com/elonmusk/status/2116025797400236362",
+    summary: "Hours after the Binance hack, Musk added a grimacing emoji to a post comparing Binance with FTX's 2022 promises. CZ replied: \"bad time to troll. Please stop.\"",
+    assets: ["BNB", "BTC"],
+    hlCoin: "BNB",
+    reported: "Forbes did not attribute a price move to the post itself. Bitcoin had already fallen to about $76,000 after the hack, almost 10% below where it started the month.",
+    lesson: "Not every big post moves the price. In a market already reacting to real news, a post can add noise without changing the trend.",
+    sources: [{ name: "Forbes", url: "https://www.forbes.com/sites/digital-assets/2026/10/30/please-stop-binance-founder-begs-elon-musk-after-massive-hack-triggers-bitcoin-and-crypto-price-crash-fears/" }],
+  },
+  {
+    slug: "musk-interesting-hype-2026-10",
+    person: "musk",
+    platform: "X",
+    postedAt: "2026-10-29T15:08:10Z",
+    precision: "minute",
+    postUrl: "https://x.com/elonmusk/status/2115823011399938182",
+    summary: "Musk replied \"Interesting\" to an apparent Stanley Druckenmiller post saying he had invested in trade.xyz, which is partnering with ICE on Hyperliquid-style perps for the US.",
+    assets: ["HYPE"],
+    hlCoin: "HYPE",
+    reported: "HYPE rose about 20% within hours, according to Forbes.",
+    lesson: "A one-word reply was enough. The underlying news (ICE and trade.xyz) was real; the post put it in front of a much bigger audience.",
+    sources: [
+      { name: "Forbes", url: "https://www.forbes.com/sites/digital-assets/2026/10/29/interesting-elon-musk-sends-price-of-tiny-bitcoin-rival-soaring-on-big-day-for-crypto/" },
+    ],
+  },
+  {
+    slug: "trump-no-iran-strike-midterms-2026-10",
+    person: "trump",
+    platform: "Truth Social",
+    postedAt: "2026-10-08T00:00:00Z",
+    precision: "day",
+    summary: "Trump posted that the US would not attack Iran before the 3 November midterm elections.",
+    assets: ["BTC"],
+    hlCoin: "BTC",
+    reported: "Bitcoin recovered to around $82,500 from a low near $80,300, though it was still about 4% down on the week. Brent crude slipped about 1% to around $103.",
+    sources: [{ name: "CoinDesk", url: "https://www.coindesk.com/markets/2026/10/09/bitcoin-steadies-near-usd82-500-after-trump-rules-out-iran-strike-before-midterms" }],
+  },
+  {
+    slug: "trump-banks-genius-act-2026-03",
+    person: "trump",
+    platform: "Truth Social",
+    postedAt: "2026-03-03T00:00:00Z",
+    precision: "day",
+    summary: "Trump accused big US banks of trying to undermine the GENIUS Act and warned them not to hold the pending CLARITY Act hostage, calling it part of his crypto agenda.",
+    assets: ["BTC", "ETH", "XRP"],
+    hlCoin: "BTC",
+    reported: "By the next day bitcoin was up 4.4% to $70,896, ether 3.1% to $2,050 and XRP 2.3% to $1.39. Fast Company noted the post was likely not the only factor.",
+    sources: [{ name: "Fast Company", url: "https://www.fastcompany.com/91502477/bitcoin-xrp-price-rising-today-trump-boost-crypto-digital-assets" }],
+  },
   {
     slug: "cz-riddle-final-form-bull-2026-07",
     person: "cz",

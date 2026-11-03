@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import type { MoverEvent, PersonId } from "@/content/movers";
+import type { MoverEvent, Person, PersonId } from "@/content/movers";
 import type { Reaction } from "@/lib/movers-calc";
+import { XPostEmbed } from "@/components/XPostEmbed";
 
-type Person = { name: string; role: string; color: string; initials: string };
-type Labels = { all: string; reported: string; measured: string; lesson: string; sources: string; original: string };
+type Labels = { all: string; reported: string; measured: string; lesson: string; sources: string; original: string; showPost: string; embedNote: string };
 
 function MiniReaction({ r, t0, color }: { r: Reaction; t0: number; color: string }) {
   const W = 320;
@@ -55,7 +55,7 @@ export function MoversTimeline({
         <button type="button" className="chip-btn" aria-pressed={who === "all"} onClick={() => setWho("all")}>
           {labels.all} · {events.length}
         </button>
-        {(Object.keys(people) as PersonId[]).map((id) => (
+        {(Object.keys(people) as PersonId[]).filter((id) => counts(id) > 0).map((id) => (
           <button key={id} type="button" className="chip-btn" aria-pressed={who === id} onClick={() => setWho(id)} style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
             <span className="mover-avatar" style={{ background: people[id].color, width: 22, height: 22, fontSize: 10 }}>{people[id].initials}</span>
             {people[id].name} · {counts(id)}
@@ -92,7 +92,7 @@ export function MoversTimeline({
                 </div>
                 {r && (
                   <div className="stack" style={{ gap: 6 }}>
-                    <span className="cat" style={{ color: "#0A5C46" }}>{labels.measured}{e.hlCoin ? ` · ${e.hlCoin}` : ""}</span>
+                    <span className="cat" style={{ color: "var(--mint-ink)" }}>{labels.measured}{e.hlCoin ? ` · ${e.hlCoin}` : ""}</span>
                     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                       {r.after.map((a) => (
                         <span key={a.label} className="mover-chip" style={{ color: a.pct >= 0 ? "var(--up)" : "var(--down)" }}>
@@ -106,12 +106,15 @@ export function MoversTimeline({
                   </div>
                 )}
                 {e.lesson && (
-                  <p className="small" style={{ margin: 0, padding: "10px 12px", background: "#fffbeb", borderRadius: 10, color: "#78350f" }}>
+                  <p className="small" style={{ margin: 0, padding: "10px 12px", background: "var(--warn-bg)", border: "1px solid var(--warn-line)", borderRadius: 10, color: "var(--ink-2)" }}>
                     <strong>{labels.lesson}:</strong> {e.lesson}
                   </p>
                 )}
+                {e.postUrl && /^https:\/\/(x|twitter)\.com\//.test(e.postUrl) && (
+                  <XPostEmbed url={e.postUrl} labels={{ show: labels.showPost, note: labels.embedNote, open: labels.original }} />
+                )}
                 <footer className="tiny muted" style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                  {e.postUrl && (
+                  {e.postUrl && !/^https:\/\/(x|twitter)\.com\//.test(e.postUrl) && (
                     <a href={e.postUrl} rel="nofollow noopener" target="_blank">{labels.original} ↗</a>
                   )}
                   <span>

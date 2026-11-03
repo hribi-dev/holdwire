@@ -5,7 +5,7 @@ A scheduled task runs this every morning (06:40 Europe/Ljubljana). It drafts the
 Why drafts: our rule 5 (no publishing without a named human reviewer) and Google's scaled-content policy. A daily AI post that goes straight into the index is the fastest way to get the whole domain demoted.
 
 ## 1. Gather (15–25 searches)
-- Last 24 hours of crypto, fintech and hard-asset news. Start broad ("crypto news today", "bitcoin price today"), then check: exchanges and hacks, regulation (EU/MiCA, US), ETFs and institutions, Hyperliquid, stablecoins, big token moves, market-moving posts by Musk, Trump, CZ and similar.
+- Last 24 hours of crypto, fintech, gold and hard-asset news. Start broad ("crypto news today", "bitcoin price today"), then check: exchanges and hacks, regulation (EU/MiCA, US), ETFs and institutions, Hyperliquid, stablecoins, big token moves, market-moving posts by Musk, Trump, CZ and similar.
 - Prefer original or top-tier sources: CoinDesk, The Block, Reuters, Bloomberg (via secondary reports), Cointelegraph, DL News, regulators' own sites. Avoid price-prediction sites and press-release mirrors as sole sources.
 - Check what we already covered: list `content/blog/` and `content/news/`. Don't repeat a story unless there is a real development.
 
@@ -67,17 +67,27 @@ Each brief:
   | `Memes` | /memes | memecoins, launchpads (pump.fun etc.) |
   | `Markets` | /coins | prices, ETFs, institutions, macro |
   | `Security` | /coins | hacks, exploits, scams, withdrawals halted |
+  | `Gold` | /gold | gold and silver prices, central-bank buying, gold vs bitcoin, tokenized gold |
 - Length 150–300 words. Structure: one bold lead sentence with the key fact and number; 2–4 short paragraphs (what happened, context, what it means for EU readers); then one line linking the matching Tickora page, e.g. "More: [Hyperliquid hub](/hyperliquid)", "[MiCA explained](/learn/mica-explained)", "[Neobanks compared](/fintech)", "[Memecoins live](/memes)", "[Coin prices](/coins)" or a School lesson (`/school/spotting-scams`, `/school/exchanges-and-mica`, `/school/wallets-and-seed-phrases`) where it genuinely helps.
 - Same style, attribution, copyright and no-advice rules as blog posts. End with `*General information, not investment advice.*`
 - Conflicts: BalkanPay, HumidiFi or Harmonic in the story → disclosure line at the top.
 
-## 4. Market movers
-If a post by Musk, Trump, CZ or a similar figure moved a price, add an entry to `src/content/movers.ts` (follow the comment at the top of that file). Use precision "minute" and set `hlCoin` only if you have the exact time from a reliable source.
+## 4. Market movers (every run)
+The /movers page must stay current. Every run, check the last 24–48 hours for posts by the people in `PEOPLE` in `src/content/movers.ts` (Musk, Trump, CZ, Saylor, Schiff, Hayes, Tom Lee, Lyn Alden, Raoul Pal, Vitalik) and similar figures.
+
+**New event** when a credible outlet reports that a post moved a price. Add it to the top of `EVENTS` (follow the comment at the top of the file):
+- `postUrl`: the exact post on x.com (`https://x.com/<handle>/status/<id>`). The site shows it with a click-to-load embed, so always try to find it (outlets often link it).
+- Exact time: for X posts, compute it from the post ID: `new Date(Number((BigInt(id) >> 22n) + 1288834974657n)).toISOString()`. Then set `precision: "minute"` and `hlCoin` if Hyperliquid lists that coin: the site measures the reaction itself.
+- `summary` paraphrased (quote at most a few words), `reported` attributed to the outlet, `sources` with links. A post that got attention but did *not* move the price can be logged too, with `reported` saying so; that's useful context.
+
+**Updated take** when one of the voices says something notable about crypto, gold or macro (an essay, a big call, a purchase announcement): replace their `take` with the new one (date, one or two paraphrased sentences, source). Keep it neutral: what they said, never whether they're right.
+
+**New person**: only if they repeatedly move markets or are widely cited, and only with a verified profile URL. Give them a distinct colour and correct `focus` tags (`Gold` puts them on /gold).
 
 ## 5. Check and publish as draft
 1. `npm ci && npm test && npm run lint && npm run typecheck && npm run build` must pass.
 2. Commit to `main` with the message `content: <blog title> + N news briefs (draft)`, author `Matic Hriberšek <matic.hribersek@gmail.com>`, then push. Vercel deploys automatically.
-3. Report: the blog post title(s) and news brief titles with their categories, the cover photo used for each (photographer + link), one line on why each story was picked, how many major stories you counted, and the live URL(s) at `https://holdwire-eta.vercel.app/blog/<slug>` and `/news/<slug>`. Remind Hribi that the post is a draft until he approves it.
+3. Report: the blog post title(s) and news brief titles with their categories, any movers events or takes added, the cover photo used for each (photographer + link), one line on why each story was picked, how many major stories you counted, and the live URL(s) at `https://holdwire-eta.vercel.app/blog/<slug>` and `/news/<slug>`. Remind Hribi that the post is a draft until he approves it.
 
 ## If something fails
 If the build fails, fix it if it's your file; otherwise don't push and report the error. If there is truly no news worth a post (rare), write nothing and say why.

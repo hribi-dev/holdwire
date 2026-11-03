@@ -34,13 +34,13 @@ export const nav = [
   { key: "news", href: "/news" },
   { key: "blog", href: "/blog" },
   { key: "markets", href: "/coins" },
+  { key: "gold", href: "/gold" },
   { key: "movers", href: "/movers" },
   { key: "memes", href: "/memes" },
   { key: "fintech", href: "/fintech" },
   { key: "hyperliquid", href: "/hyperliquid" },
   { key: "school", href: "/school" },
   { key: "learn", href: "/learn" },
-  { key: "glossary", href: "/glossary" },
 ] as const;
 
 export function absoluteUrl(path = "/") {

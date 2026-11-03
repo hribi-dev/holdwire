@@ -8,6 +8,9 @@ const PALETTES: Record<string, [string, string, string]> = {
   Markets: ["#431407", "#f97316", "#fcd34d"],
   "Crypto basics": ["#172554", "#3b82f6", "#93c5fd"],
   Fintech: ["#500724", "#ec4899", "#f9a8d4"],
+  Gold: ["#2a1f0a", "#c9a227", "#f3d98b"],
+  Memes: ["#1a2e05", "#65a30d", "#bef264"],
+  Security: ["#2b0a0a", "#dc2626", "#fca5a5"],
 };
 const FALLBACK: [string, string, string] = ["#0c0a09", "#06b6d4", "#a78bfa"];
 

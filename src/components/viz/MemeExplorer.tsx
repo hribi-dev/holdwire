@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { formatAge, isPumpDex, type MemePool } from "@/lib/memes-parse";
+import { MemeBubbles, NET, NET_COLOR } from "./MemeBubbles";
 
 type Labels = {
   token: string;
@@ -25,8 +26,6 @@ type Labels = {
 type Filter = "all" | "solana" | "pump" | "base" | "bsc";
 type SortKey = "volume24hUsd" | "change24h" | "liquidityUsd" | "marketCapUsd" | "ageHours";
 
-const NET: Record<string, string> = { solana: "Solana", base: "Base", bsc: "BNB Chain" };
-const NET_COLOR: Record<string, string> = { solana: "#9945ff", base: "#0052ff", bsc: "#f0b90b" };
 
 const usd = (n: number | null) => {
   if (n === null) return "–";
@@ -68,20 +67,6 @@ export function MemeExplorer({ pools, labels }: { pools: MemePool[]; labels: Lab
     </th>
   );
 
-  // Bubble chart scales
-  const W = 800;
-  const H = 320;
-  const P = 36;
-  const vols = rows.map((r) => Math.log10(Math.max(1, r.volume24hUsd)));
-  const vMin = Math.min(...vols, 4);
-  const vMax = Math.max(...vols, 5);
-  const chgs = rows.map((r) => r.change24h ?? 0);
-  const cAbs = Math.max(10, ...chgs.map((c) => Math.abs(c)));
-  const liqMax = Math.max(1, ...rows.map((r) => r.liquidityUsd));
-  const bx = (r: MemePool) => P + ((Math.log10(Math.max(1, r.volume24hUsd)) - vMin) / (vMax - vMin || 1)) * (W - 2 * P);
-  const by = (r: MemePool) => H / 2 - ((r.change24h ?? 0) / cAbs) * (H / 2 - P);
-  const br = (r: MemePool) => 6 + Math.sqrt(r.liquidityUsd / liqMax) * 26;
-
   return (
     <div className="stack" style={{ gap: 18 }}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }} role="group" aria-label={labels.network}>
@@ -96,61 +81,7 @@ export function MemeExplorer({ pools, labels }: { pools: MemePool[]; labels: Lab
         </label>
       </div>
 
-      <section className="card stack" style={{ gap: 8 }}>
-        <strong>{labels.bubbles}</strong>
-        <span className="tiny muted">{labels.bubblesNote}</span>
-        <div style={{ position: "relative" }}>
-          <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={labels.bubbles} onMouseLeave={() => setHover(null)}>
-            <line x1={P} x2={W - P} y1={H / 2} y2={H / 2} stroke="var(--line-strong)" strokeDasharray="4 4" />
-            <text x={P} y={H / 2 - 6} fontSize={11} fill="var(--muted)">0%</text>
-            <text x={P} y={P - 12} fontSize={11} fill="var(--up)">+{cAbs.toFixed(0)}%</text>
-            <text x={P} y={H - P + 22} fontSize={11} fill="var(--down)">−{cAbs.toFixed(0)}%</text>
-            <text x={W - P} y={H - 8} fontSize={11} fill="var(--muted)" textAnchor="end">{labels.volume} →</text>
-            {rows.map((r) => (
-              <circle
-                key={r.id}
-                cx={bx(r)}
-                cy={by(r)}
-                r={br(r)}
-                fill={NET_COLOR[r.network] ?? "#64748b"}
-                fillOpacity={hover && hover.id !== r.id ? 0.25 : 0.7}
-                stroke="#fff"
-                strokeWidth={1.5}
-                style={{ transition: "fill-opacity .15s" }}
-                onMouseEnter={() => setHover(r)}
-                onClick={() => setHover(r)}
-              >
-                <title>{r.symbol}</title>
-              </circle>
-            ))}
-            {rows.slice(0, 8).map((r) => (
-              <text key={`t${r.id}`} x={bx(r)} y={by(r) + 4} fontSize={11} fontWeight={700} textAnchor="middle" fill="#fff" pointerEvents="none">
-                {r.symbol.slice(0, 7)}
-              </text>
-            ))}
-          </svg>
-          {hover && (
-            <div className="viz-tip" style={{ left: `${(bx(hover) / W) * 100}%`, top: `${((by(hover) - br(hover)) / H) * 100}%` }}>
-              <strong>{hover.symbol}</strong> <span style={{ opacity: 0.7 }}>{NET[hover.network]} · {hover.dex}</span>
-              <div style={{ display: "grid", gridTemplateColumns: "auto auto", gap: "2px 12px", marginTop: 4 }}>
-                <span style={{ opacity: 0.7 }}>{labels.change24h}</span>
-                <span className="mono">{hover.change24h == null ? "–" : `${hover.change24h.toFixed(1)}%`}</span>
-                <span style={{ opacity: 0.7 }}>{labels.volume}</span>
-                <span className="mono">{usd(hover.volume24hUsd)}</span>
-                <span style={{ opacity: 0.7 }}>{labels.liquidity}</span>
-                <span className="mono">{usd(hover.liquidityUsd)}</span>
-              </div>
-            </div>
-          )}
-        </div>
-        <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }} className="tiny">
-          {Object.entries(NET).map(([k, v]) => (
-            <span key={k} style={{ display: "inline-flex", gap: 6, alignItems: "center" }}>
-              <span style={{ width: 10, height: 10, borderRadius: 99, background: NET_COLOR[k] }} /> {v}
-            </span>
-          ))}
-        </div>
-      </section>
+      <MemeBubbles pools={rows} labels={labels} hover={hover} onHover={setHover} />
 
       {rows.length === 0 ? (
         <p className="small muted">{labels.noResults}</p>
@@ -184,7 +115,7 @@ export function MemeExplorer({ pools, labels }: { pools: MemePool[]; labels: Lab
                       <a href={p.url} rel="nofollow noopener" target="_blank" style={{ fontWeight: 700 }}>{p.symbol}</a>{" "}
                       <span className="tiny muted">{NET[p.network] ?? p.network} · {p.dex}</span>
                       {young && (
-                        <span className="tiny" style={{ marginLeft: 6, padding: "2px 6px", borderRadius: 6, background: "#fef3c7", color: "#92400e", fontWeight: 700 }}>
+                        <span className="tiny" style={{ marginLeft: 6, padding: "2px 6px", borderRadius: 6, background: "var(--new-bg)", color: "var(--new-ink)", fontWeight: 700 }}>
                           {labels.newBadge}
                         </span>
                       )}
@@ -198,8 +129,8 @@ export function MemeExplorer({ pools, labels }: { pools: MemePool[]; labels: Lab
                     <td style={{ padding: "10px 6px" }}>{usd(p.marketCapUsd)}</td>
                     <td style={{ padding: "10px 6px" }}>{formatAge(p.ageHours)}</td>
                     <td style={{ padding: "10px 6px", minWidth: 110 }}>
-                      <div title={`${p.buys24h} / ${p.sells24h}`} style={{ display: "flex", height: 8, borderRadius: 99, overflow: "hidden", background: "#fecaca" }}>
-                        <span style={{ width: `${buyShare * 100}%`, background: "#4ade80" }} />
+                      <div title={`${p.buys24h} / ${p.sells24h}`} style={{ display: "flex", height: 6, borderRadius: 99, overflow: "hidden", background: "color-mix(in srgb, var(--down) 28%, transparent)" }}>
+                        <span style={{ width: `${buyShare * 100}%`, background: "color-mix(in srgb, var(--up) 80%, transparent)", borderRadius: 99 }} />
                       </div>
                       <span className="tiny muted">{p.buys24h.toLocaleString("en-US")} / {p.sells24h.toLocaleString("en-US")}</span>
                     </td>

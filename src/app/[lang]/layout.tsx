@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/inter-tight";
 import "@fontsource-variable/jetbrains-mono";
@@ -10,7 +9,6 @@ import { LOCALES, LOCALE_INFO, hasLocale } from "@/i18n/config";
 import { DICTIONARIES, fmt } from "@/i18n/dictionaries";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Ticker, TickerFallback } from "@/components/Ticker";
 import { themeInitScript } from "@/components/ThemeToggle";
 
 export async function generateStaticParams() {
@@ -50,9 +48,6 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <a href="#content" className="skip">
           {t.header.skip}
         </a>
-        <Suspense fallback={<TickerFallback />}>
-          <Ticker />
-        </Suspense>
         <SiteHeader />
         {lang !== "en" && (
           <div className="lang-banner">

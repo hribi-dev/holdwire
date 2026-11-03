@@ -36,7 +36,7 @@ export const sv: Dict = {
     allGuides: "Alla guider →",
     allCoins: "Alla mynt →",
     pricesNote: "Priser i EUR. Data: CoinGecko.",
-    englishOnly: "Du läser Holdwire på {language}. Menyer och viktiga sidor är översatta; de flesta artiklar är fortfarande på engelska medan redaktionen översätter dem.",
+    englishOnly: "Du läser Tickora på {language}. Menyer och viktiga sidor är översatta; de flesta artiklar är fortfarande på engelska medan redaktionen översätter dem.",
   },
   home: {
     badge: "Marknader live · Krypto, fintech och reala tillgångar för Europa",
@@ -66,7 +66,7 @@ export const sv: Dict = {
     heatmap: "Marknadskarta",
     heatmapNote: "Rutans storlek = börsvärde, färg = förändring 24 h.",
     beyond: "Bortom krypto",
-    newsletterTag: "Holdwire Brief",
+    newsletterTag: "Tickora Brief",
     newsletterTitle: "Fem minuter. Varje vardag. Kl. 7.00 CET.",
     newsletterBody: "Marknader, krypto och reala tillgångar, med Hyperliquid-siffrorna som spelar roll.",
     email: "E-postadress",

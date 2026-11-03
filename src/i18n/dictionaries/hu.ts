@@ -36,7 +36,7 @@ export const hu: Dict = {
     allGuides: "Összes útmutató →",
     allCoins: "Összes coin →",
     pricesNote: "Árak EUR-ban. Adatok: CoinGecko.",
-    englishOnly: "A Holdwire-t ezen a nyelven olvassa: {language}. A menük és a fő oldalak le vannak fordítva; a cikkek többsége még angol, amíg szerkesztőink le nem fordítják őket.",
+    englishOnly: "A Tickora-t ezen a nyelven olvassa: {language}. A menük és a fő oldalak le vannak fordítva; a cikkek többsége még angol, amíg szerkesztőink le nem fordítják őket.",
   },
   home: {
     badge: "Élő piacok · Kripto, fintech és reáleszközök Európának",
@@ -66,7 +66,7 @@ export const hu: Dict = {
     heatmap: "Piactérkép",
     heatmapNote: "Csempeméret = piaci kapitalizáció, szín = 24 órás változás.",
     beyond: "A kriptón túl",
-    newsletterTag: "Holdwire Brief",
+    newsletterTag: "Tickora Brief",
     newsletterTitle: "Öt perc. Minden hétköznap. 7:00-kor.",
     newsletterBody: "Piacok, kripto és reáleszközök, a fontos Hyperliquid-számokkal.",
     email: "E-mail-cím",

@@ -1,4 +1,4 @@
-# Holdwire
+# Tickora
 
 Finance and hard assets, with an EU lens: crypto prices, fintech, watches and collectibles. Working name; see `docs/plan/` for the full business and SEO plan.
 

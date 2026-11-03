@@ -1,5 +1,5 @@
 ---
-title: "[Example] How a press release looks on Holdwire"
+title: "[Example] How a press release looks on Tickora"
 description: "Template entry. Press releases are labelled, carry rel=sponsored links and are never indexed."
 published: 2026-11-02
 template: true

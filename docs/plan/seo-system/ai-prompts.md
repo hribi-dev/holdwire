@@ -1,6 +1,6 @@
 # AI-search target prompts (check bi-weekly with prompt 11)
 
-Track whether ChatGPT, Perplexity and Google AI answers cite Holdwire.
+Track whether ChatGPT, Perplexity and Google AI answers cite Tickora.
 
 ## Hyperliquid
 - what is hyperliquid

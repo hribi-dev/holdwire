@@ -94,7 +94,7 @@ export default async function Memes() {
         </section>
 
         <p className="notice" style={{ margin: 0 }}>
-          Disclosure: Holdwire&apos;s founder works with Solana projects HumidiFi and Harmonic. Pools on those venues can appear in this data;
+          Disclosure: Tickora&apos;s founder works with Solana projects HumidiFi and Harmonic. Pools on those venues can appear in this data;
           they are ranked the same way as everything else. Not investment advice.
         </p>
       </div>

@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# Holdwire — working rules
+# Tickora — working rules
 
 Full plan: `docs/plan/` (start with `docs/plan/CLAUDE.md` and `docs/plan/08-ROADMAP.md`).
 

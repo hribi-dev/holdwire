@@ -7,5 +7,5 @@
 Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Output goes to `/seo-system/reports/YYYY-MM-DD-<task>.md`.
 
 ## Steps
-1. For each prompt, check whether ChatGPT / Perplexity / Google AI answers cite Holdwire and who they cite instead.
+1. For each prompt, check whether ChatGPT / Perplexity / Google AI answers cite Tickora and who they cite instead.
 2. For gaps: identify the cited page's advantage (original data? clear answer block? entity consistency?) and propose a fix.

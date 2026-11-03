@@ -6,7 +6,7 @@ status: draft — lawyer review required
 
 # Financial disclaimer
 
-Holdwire publishes general information and journalism. **Nothing on this site is investment, financial, legal or tax advice**, and none of it is a recommendation to buy, sell or hold any asset.
+Tickora publishes general information and journalism. **Nothing on this site is investment, financial, legal or tax advice**, and none of it is a recommendation to buy, sell or hold any asset.
 
 - **Risk.** Crypto-assets are highly volatile and largely unprotected; you can lose all the money you put in. Watches, collectibles and other alternative assets can be illiquid and hard to value.
 - **Data.** Prices and figures come from third-party sources, may be delayed, and may contain errors. Check them with the provider before you act.

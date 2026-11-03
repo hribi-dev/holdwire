@@ -98,7 +98,7 @@ export default async function HyperliquidHub() {
         <div className="row" style={{ gap: 28, alignItems: "flex-end" }}>
           <div className="stack" style={{ flex: "2 1 480px", gap: 12 }}>
             <span className="eyebrow" style={{ color: "#7EE8C9" }}>
-              Holdwire spotlight
+              Tickora spotlight
             </span>
             <h1 style={{ margin: 0, fontSize: "clamp(34px, 5vw, 52px)", lineHeight: 1.05 }}>Hyperliquid, explained and tracked</h1>
             <p style={{ margin: 0, fontSize: 18, color: "var(--night-text)", maxWidth: 620 }}>

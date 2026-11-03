@@ -15,10 +15,10 @@ Our writers and editors may own crypto-assets or have business ties in the indus
 
 ## Current disclosures
 **Matic Hriberšek, editor-in-chief**
-- Co-founder and CEO of BalkanPay, a crypto on/off-ramp and remittance service. Holdwire coverage of remittances and on-ramps discloses this.
+- Co-founder and CEO of BalkanPay, a crypto on/off-ramp and remittance service. Tickora coverage of remittances and on-ramps discloses this.
 - Manages social media and community for HumidiFi and Harmonic (Solana ecosystem). Coverage of these projects, and of Solana block building and DEXs, discloses this.
 - Holdings: [list or "holds crypto-assets including …"; Hribi to complete].
-- Hyperliquid: [Hribi to state any HYPE holdings or trading activity on Hyperliquid, since Holdwire features it prominently].
+- Hyperliquid: [Hribi to state any HYPE holdings or trading activity on Hyperliquid, since Tickora features it prominently].
 
 **[Contributor name]**: [disclosures]
 

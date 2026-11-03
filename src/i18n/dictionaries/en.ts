@@ -34,7 +34,7 @@ export const en = {
     allGuides: "All guides →",
     allCoins: "All coins →",
     pricesNote: "Prices in EUR. Data: CoinGecko.",
-    englishOnly: "You're reading Holdwire in {language}. Menus and key pages are translated; most articles are still in English while our editors translate them.",
+    englishOnly: "You're reading Tickora in {language}. Menus and key pages are translated; most articles are still in English while our editors translate them.",
   },
   home: {
     badge: "Live markets · Crypto, fintech & hard assets for Europe",
@@ -64,7 +64,7 @@ export const en = {
     heatmap: "Market map",
     heatmapNote: "Tile size = market cap, colour = 24h change.",
     beyond: "Beyond crypto",
-    newsletterTag: "The Holdwire Brief",
+    newsletterTag: "The Tickora Brief",
     newsletterTitle: "Five minutes. Every weekday. 7:00 CET.",
     newsletterBody: "Markets, crypto and hard assets, with the Hyperliquid numbers that matter.",
     email: "Email address",

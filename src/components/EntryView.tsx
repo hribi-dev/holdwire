@@ -40,19 +40,19 @@ export function EntryView({ entry, crumbs }: { entry: Entry; crumbs: { name: str
         <h1 style={{ marginTop: 8 }}>{entry.title}</h1>
         {entry.description && <p style={{ fontSize: 19, color: "#374151", marginTop: 0 }}>{entry.description}</p>}
         <p className="small muted" style={{ marginTop: 0 }}>
-          {entry.author ? `By ${entry.author}` : "Holdwire"}
+          {entry.author ? `By ${entry.author}` : "Tickora"}
           {entry.reviewedBy ? ` · Reviewed by ${entry.reviewedBy}` : ""}
           {entry.updated ? ` · Updated ${entry.updated}` : ""}
         </p>
         {entry.kind === "sponsored" && (
           <p className="notice" style={{ margin: "0 0 8px" }}>
-            This article was paid for by {entry.sponsor}. Holdwire&apos;s newsroom did not write it and does not endorse the products mentioned.{" "}
+            This article was paid for by {entry.sponsor}. Tickora&apos;s newsroom did not write it and does not endorse the products mentioned.{" "}
             <Link href="/advertising-policy">How we label sponsored content</Link>
           </p>
         )}
         {entry.kind === "press-release" && (
           <p className="notice" style={{ margin: "0 0 8px" }}>
-            Supplied by the company named. Published as received after a basic check; not written or verified by Holdwire&apos;s newsroom.
+            Supplied by the company named. Published as received after a basic check; not written or verified by Tickora&apos;s newsroom.
           </p>
         )}
         {entry.disclosure && (

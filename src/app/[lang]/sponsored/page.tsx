@@ -4,7 +4,7 @@ import { listEntries } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Sponsored",
-  description: "Paid and company-supplied content on Holdwire, always labelled and kept separate from our newsroom.",
+  description: "Paid and company-supplied content on Tickora, always labelled and kept separate from our newsroom.",
   robots: { index: false, follow: true },
 };
 

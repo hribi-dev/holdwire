@@ -1,5 +1,5 @@
 /**
- * Enforces Holdwire's paid-link rule in code, not by editor discipline:
+ * Enforces Tickora's paid-link rule in code, not by editor discipline:
  * every outbound link inside sponsored content, press releases or affiliate
  * blocks gets rel="sponsored noopener" (Google's required attribute for paid links).
  *

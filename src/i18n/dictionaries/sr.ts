@@ -36,7 +36,7 @@ export const sr: Dict = {
     allGuides: "Svi vodiči →",
     allCoins: "Svi koini →",
     pricesNote: "Cene u EUR. Podaci: CoinGecko.",
-    englishOnly: "Holdwire čitate na jeziku: {language}. Meniji i ključne stranice su prevedeni, a većina članaka je još na engleskom dok ih naši urednici ne prevedu.",
+    englishOnly: "Tickora čitate na jeziku: {language}. Meniji i ključne stranice su prevedeni, a većina članaka je još na engleskom dok ih naši urednici ne prevedu.",
   },
   home: {
     badge: "Tržišta uživo · Kripto, fintek i realna imovina za Evropu",
@@ -66,7 +66,7 @@ export const sr: Dict = {
     heatmap: "Mapa tržišta",
     heatmapNote: "Veličina pločice = tržišna kapitalizacija, boja = promena za 24 h.",
     beyond: "Van kripta",
-    newsletterTag: "Holdwire Brief",
+    newsletterTag: "Tickora Brief",
     newsletterTitle: "Pet minuta. Svakog radnog dana. U 7:00.",
     newsletterBody: "Tržišta, kripto i realna imovina, uz brojke sa Hyperliquida koje su bitne.",
     email: "Imejl adresa",

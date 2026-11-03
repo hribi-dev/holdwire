@@ -1,5 +1,5 @@
 export const site = {
-  name: "Holdwire",
+  name: "Tickora",
   tagline: "Finance and hard assets, with an EU lens.",
   description:
     "Crypto prices, fintech and hard assets for readers in Europe: live data, honest comparisons, MiCA licensing and plain-English guides.",

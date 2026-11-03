@@ -2,7 +2,7 @@
 title: "What is Bitcoin? A plain-English guide for Europe"
 description: "How Bitcoin works, why people hold it, the real risks, and how to buy and store it safely in the EU."
 category: Crypto basics
-author: Holdwire
+author: Tickora
 reviewedBy:
 published: 2026-11-02
 updated: 2026-11-02

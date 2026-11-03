@@ -36,7 +36,7 @@ export const ru: Dict = {
     allGuides: "Все гайды →",
     allCoins: "Все монеты →",
     pricesNote: "Цены в EUR. Данные: CoinGecko.",
-    englishOnly: "Вы читаете Holdwire на языке: {language}. Меню и основные страницы переведены; большинство статей пока на английском, пока редакция их переводит.",
+    englishOnly: "Вы читаете Tickora на языке: {language}. Меню и основные страницы переведены; большинство статей пока на английском, пока редакция их переводит.",
   },
   home: {
     badge: "Рынки онлайн · Крипто, финтех и реальные активы для Европы",
@@ -66,7 +66,7 @@ export const ru: Dict = {
     heatmap: "Карта рынка",
     heatmapNote: "Размер плитки = капитализация, цвет = изменение за 24 ч.",
     beyond: "Не только крипто",
-    newsletterTag: "Holdwire Brief",
+    newsletterTag: "Tickora Brief",
     newsletterTitle: "Пять минут. Каждый будний день. В 7:00 CET.",
     newsletterBody: "Рынки, крипто и реальные активы, с важными цифрами Hyperliquid.",
     email: "Электронная почта",

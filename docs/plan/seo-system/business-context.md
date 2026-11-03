@@ -1,6 +1,6 @@
 # Business context — load before every SEO task
 
-- **Brand:** Holdwire (working name, not final). Domain: TBD.
+- **Brand:** Tickora (working name, not final). Domain: TBD.
 - **What:** English-language finance media + data platform. Verticals: Crypto, Fintech (launch); Watches, Collectibles (phase 3); Markets, Personal finance (later).
 - **Audience:** EU-based retail crypto/fintech users and investors; secondary: industry professionals (fintech, crypto projects); later: alternative-asset collectors.
 - **Positioning:** "Finance and hard assets, with an EU lens." Data pages + honest comparisons + original reports + timely news.

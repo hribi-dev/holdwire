@@ -56,7 +56,7 @@ Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Outp
 Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Output goes to `/seo-system/reports/YYYY-MM-DD-<task>.md`.
 
 ## Steps
-1. List topics/entities competitors rank for that Holdwire has no page for, by vertical.
+1. List topics/entities competitors rank for that Tickora has no page for, by vertical.
 2. Remove anything off-strategy or thin. Prioritise EU angle, Hyperliquid pillar, data/utility pages.
 3. Produce briefs for the top 10 using `06-content-brief.md`.
 
@@ -142,7 +142,7 @@ Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Outp
 Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Output goes to `/seo-system/reports/YYYY-MM-DD-<task>.md`.
 
 ## Steps
-1. Shortlist 5–8 stories from the last 24h. For each: what happened, why it matters to EU readers, primary source link, suggested Holdwire angle (data, context, EU impact), related entity pages.
+1. Shortlist 5–8 stories from the last 24h. For each: what happened, why it matters to EU readers, primary source link, suggested Tickora angle (data, context, EU impact), related entity pages.
 2. Hyperliquid stories first where newsworthy, but keep the coverage balance.
 3. Never present rumours as fact; label unconfirmed items.
 
@@ -157,7 +157,7 @@ Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Outp
 Load `/seo-system/business-context.md` and the rules in `/CLAUDE.md` first. Output goes to `/seo-system/reports/YYYY-MM-DD-<task>.md`.
 
 ## Steps
-1. For each prompt, check whether ChatGPT / Perplexity / Google AI answers cite Holdwire and who they cite instead.
+1. For each prompt, check whether ChatGPT / Perplexity / Google AI answers cite Tickora and who they cite instead.
 2. For gaps: identify the cited page's advantage (original data? clear answer block? entity consistency?) and propose a fix.
 
 ---

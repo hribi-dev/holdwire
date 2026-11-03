@@ -36,7 +36,7 @@ export const it: Dict = {
     allGuides: "Tutte le guide →",
     allCoins: "Tutte le coin →",
     pricesNote: "Prezzi in EUR. Dati: CoinGecko.",
-    englishOnly: "Stai leggendo Holdwire in {language}. Menu e pagine principali sono tradotti; la maggior parte degli articoli è ancora in inglese finché la redazione non li traduce.",
+    englishOnly: "Stai leggendo Tickora in {language}. Menu e pagine principali sono tradotti; la maggior parte degli articoli è ancora in inglese finché la redazione non li traduce.",
   },
   home: {
     badge: "Mercati in tempo reale · Crypto, fintech e beni reali per l'Europa",
@@ -66,7 +66,7 @@ export const it: Dict = {
     heatmap: "Mappa del mercato",
     heatmapNote: "Dimensione = capitalizzazione, colore = variazione 24h.",
     beyond: "Oltre le crypto",
-    newsletterTag: "Il Brief di Holdwire",
+    newsletterTag: "Il Brief di Tickora",
     newsletterTitle: "Cinque minuti. Ogni giorno feriale. Ore 7:00.",
     newsletterBody: "Mercati, crypto e beni reali, con i numeri di Hyperliquid che contano.",
     email: "Indirizzo email",

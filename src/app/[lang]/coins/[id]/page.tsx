@@ -103,7 +103,7 @@ export default async function CoinPage({ params }: PageProps<"/[lang]/coins/[id]
 
       {id === "hyperliquid" && (
         <Link href="/hyperliquid" className="card" style={{ background: "#E4F7F1", borderColor: "#9EE6CF", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-          <strong style={{ color: "#0A5C46" }}>Go deeper: the Holdwire Hyperliquid hub</strong>
+          <strong style={{ color: "#0A5C46" }}>Go deeper: the Tickora Hyperliquid hub</strong>
           <span className="small" style={{ color: "#0A5C46" }}>How it works, HIP-3, risks and guides →</span>
         </Link>
       )}

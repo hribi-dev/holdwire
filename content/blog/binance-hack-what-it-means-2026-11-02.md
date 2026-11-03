@@ -2,7 +2,7 @@
 title: "Binance after the $6.3 billion hack: what happened, and what it means if you keep crypto on an exchange"
 description: "The largest crypto theft on record, a three-day withdrawal pause and $3.64 billion of net outflows in a day. What we know, what we don't, and the checks worth making this week."
 category: Markets
-author: Holdwire
+author: Tickora
 reviewedBy:
 published: 2026-11-02
 updated: 2026-11-02

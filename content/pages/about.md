@@ -1,12 +1,12 @@
 ---
-title: About Holdwire
+title: About Tickora
 slug: /about
 status: draft — needs lawyer review of company details
 ---
 
-# About Holdwire
+# About Tickora
 
-Holdwire covers money in all its forms: crypto, markets, fintech, watches and collectibles. We write for people in Europe who want to understand what they own, what they might buy, and what the rules are where they live.
+Tickora covers money in all its forms: crypto, markets, fintech, watches and collectibles. We write for people in Europe who want to understand what they own, what they might buy, and what the rules are where they live.
 
 ## What we do
 - **Data you can check.** Live prices, converters and trackers, with the source named on every figure.
@@ -15,7 +15,7 @@ Holdwire covers money in all its forms: crypto, markets, fintech, watches and co
 - **Original research.** Our own trackers and reports, such as the MiCA licence tracker, built from public registers and updated on a schedule.
 
 ## Who we are
-Holdwire is published by **[Company legal name]**, registered in Slovenia (registration no. [number], VAT ID [number]), [registered address].
+Tickora is published by **[Company legal name]**, registered in Slovenia (registration no. [number], VAT ID [number]), [registered address].
 
 **Editor-in-chief:** Matic Hriberšek. [Two-line bio: background in crypto infrastructure and fintech; former Slovenian Armed Forces.] [Link to X / LinkedIn]
 

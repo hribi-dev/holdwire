@@ -6,7 +6,7 @@ status: draft
 
 # How we make money
 
-Holdwire is free to read. These are the ways we pay for it:
+Tickora is free to read. These are the ways we pay for it:
 
 1. **Sponsored content and press releases.** Companies pay to publish labelled pieces in separate sections. [Policy](/advertising-policy)
 2. **Advertising.** Display ads on some pages, always labelled.

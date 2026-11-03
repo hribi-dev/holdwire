@@ -11,7 +11,7 @@ Queries are seeds. Volumes and difficulty are to be filled from Ahrefs/Semrush o
 ### ★ Pillar 0: Hyperliquid (top priority, set by Hribi 2026-11-02)
 Hub: `/hyperliquid` (live). Gets the homepage lead slot and first position in ticker and nav.
 
-**Coverage balance (Hribi, 2026-11-02):** Holdwire stays a finance-wide site. Hyperliquid is the single biggest topic, not the only one: it holds the homepage lead and first nav slot, and gets roughly a quarter to a third of crypto output (guides, news, data). Everything else in the plan (markets, MiCA, fintech, watches, collectibles) continues at full priority. Report US institutional interest factually (ETFs, ICE/trade.xyz, CFTC process); never claim official endorsement, and note that Hyperliquid's own app is closed to US users.
+**Coverage balance (Hribi, 2026-11-02):** Tickora stays a finance-wide site. Hyperliquid is the single biggest topic, not the only one: it holds the homepage lead and first nav slot, and gets roughly a quarter to a third of crypto output (guides, news, data). Everything else in the plan (markets, MiCA, fintech, watches, collectibles) continues at full priority. Report US institutional interest factually (ETFs, ICE/trade.xyz, CFTC process); never claim official endorsement, and note that Hyperliquid's own app is closed to US users.
 
 | Cluster | Pages | Type | Prio |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Disclosure: Hribi's own Hyperliquid holdings/trading must be listed on /disclosu
 | Converters | top 100 coins × EUR, USD, GBP, CHF `/convert/{coin}-to-{fiat}` | T/E | P1 | "btc to eur", "sol to usd" |
 | Market overview | `/crypto/markets`, gainers/losers, trending, categories (DeFi, L1, memecoins, RWA, AI) | H/E | P1 | "crypto market today", "top gainers crypto" |
 | Exchanges | 100 exchanges `/exchanges/{x}` with volume, fees, **EU/MiCA status** | E | P2 | "{exchange} review", "is {exchange} safe", "{exchange} fees" |
-| Indices | Holdwire Crypto 20 index, BTC dominance, fear/greed-style sentiment | T/R | P3 | "crypto index", "btc dominance" |
+| Indices | Tickora Crypto 20 index, BTC dominance, fear/greed-style sentiment | T/R | P3 | "crypto index", "btc dominance" |
 
 ### Pillar B — Buying, holding & using crypto (EU-first)
 | Cluster | Pages | Type | Prio | Seed queries |

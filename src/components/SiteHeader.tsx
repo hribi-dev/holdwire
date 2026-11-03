@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 import { nav, site } from "@/lib/site";
 import { getDict } from "@/i18n/server";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { LogoMark } from "./Logo";
+import { LOGO_VARIANT, LogoMark } from "./Logo";
 import { NavLinks } from "./NavLinks";
 
 export async function SiteHeader() {
@@ -21,7 +21,7 @@ export async function SiteHeader() {
       <div className="wrap bar">
         <Link href="/" className="logo" aria-label={`${site.name} ${t.header.home}`}>
           <LogoMark />
-          <span className="logo-word">{site.name}</span>
+          <span className={`logo-word logo-${LOGO_VARIANT}`}>{LOGO_VARIANT === "pulse" ? site.name.toUpperCase() : site.name.toLowerCase()}</span>
         </Link>
         <NavLinks items={nav.map((n) => ({ key: n.key, href: n.href, label: t.nav[n.key] }))} />
         <div className="header-actions">

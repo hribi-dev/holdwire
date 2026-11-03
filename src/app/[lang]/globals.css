@@ -350,3 +350,5 @@ summary { font-weight: 600; cursor: pointer; }
 @keyframes rotator-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .rotator-slide { transition: none; filter: none; transform: none; } .spotlight { display: none; } .nav-hl-dot { animation: none; } }
 @media (max-width: 560px) { .header-actions .btn-glow { display: none; } .site-header .bar { flex-wrap: wrap; } .header-actions { margin-left: auto; } .logo { font-size: 21px; } }
+.logo-pulse { letter-spacing: 0.09em; font-weight: 700; font-size: 21px; background: linear-gradient(100deg, var(--ink) 55%, #0d9488 80%, #65a30d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo-mono { letter-spacing: -0.03em; font-weight: 650; }

@@ -2,7 +2,7 @@
 title: "HIP-3 explained: how anyone can launch markets on Hyperliquid"
 description: "Builder-deployed perpetuals in plain English: how HIP-3 works, the 500,000 HYPE stake, trade.xyz and stock perps, and the risks."
 category: Hyperliquid
-author: Holdwire
+author: Tickora
 reviewedBy:
 published: 2026-11-02
 updated: 2026-11-02

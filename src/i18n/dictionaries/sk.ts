@@ -36,7 +36,7 @@ export const sk: Dict = {
     allGuides: "Všetky návody →",
     allCoins: "Všetky coiny →",
     pricesNote: "Ceny v EUR. Dáta: CoinGecko.",
-    englishOnly: "Holdwire čítate v jazyku: {language}. Menu a hlavné stránky sú preložené; väčšina článkov je zatiaľ v angličtine, kým ich naša redakcia nepreloží.",
+    englishOnly: "Tickora čítate v jazyku: {language}. Menu a hlavné stránky sú preložené; väčšina článkov je zatiaľ v angličtine, kým ich naša redakcia nepreloží.",
   },
   home: {
     badge: "Trhy naživo · Krypto, fintech a reálne aktíva pre Európu",
@@ -66,7 +66,7 @@ export const sk: Dict = {
     heatmap: "Mapa trhu",
     heatmapNote: "Veľkosť dlaždice = trhová kapitalizácia, farba = zmena za 24 h.",
     beyond: "Mimo krypta",
-    newsletterTag: "Holdwire Brief",
+    newsletterTag: "Tickora Brief",
     newsletterTitle: "Päť minút. Každý pracovný deň. O 7:00.",
     newsletterBody: "Trhy, krypto a reálne aktíva s číslami z Hyperliquidu, na ktorých záleží.",
     email: "E-mailová adresa",

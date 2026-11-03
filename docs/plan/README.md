@@ -1,4 +1,4 @@
-# Holdwire (working name) — Finance Media Platform: Execution Pack
+# Tickora (working name) — Finance Media Platform: Execution Pack
 
 Working codename: **[BRAND]** (placeholder until the name/domain is chosen — see `01-STRATEGY.md` → Open decisions).
 

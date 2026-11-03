@@ -25,7 +25,7 @@ Count **major stories** from the last 24 hours. A story is major if any of these
 | 4 or more | 3 (maximum) |
 
 ## 3. Write each post
-- File: `content/blog/<slug>-<YYYY-MM-DD>.md`. Frontmatter exactly like `content/blog/binance-hack-what-it-means-2026-11-02.md`: title, description (≤160 chars), category (Markets, Regulation, Hyperliquid, Fintech, Memes or Security), `author: Holdwire`, `reviewedBy:` **left empty**, published/updated = today, and 3–6 `sources` with title + URL.
+- File: `content/blog/<slug>-<YYYY-MM-DD>.md`. Frontmatter exactly like `content/blog/binance-hack-what-it-means-2026-11-02.md`: title, description (≤160 chars), category (Markets, Regulation, Hyperliquid, Fintech, Memes or Security), `author: Tickora`, `reviewedBy:` **left empty**, published/updated = today, and 3–6 `sources` with title + URL.
 - Structure: a bold **Short version** first (2–3 sentences), then `## What happened`, `## Why it matters` (or similar), `## What this means for you` (practical, EU reader), `## What to watch`. 500–900 words.
 - Style: plain English, short sentences, numbers exactly as the source gives them, attribute every claim ("according to TRM Labs"). No investment advice, no price predictions, no "buy" language. End with: `*This article is general information, not investment advice.*`
 - Copyright: paraphrase. At most one short quote (under 15 words) per source.

@@ -26,6 +26,7 @@ export const en = {
     readDisclaimer: "Read the disclaimer",
     labelled: "Sponsored content is always labelled.",
   },
+  sponsor: { tab: "Sponsor", title: "Sponsor Tickora", brandsTitle: "For brands", brandsBody: "Sponsored articles, press releases and newsletter spots, always clearly labelled.", brandsCta: "See options", readersTitle: "For readers", readersBody: "Like what we do? A tip keeps the site independent and ad-light.", copy: "Copy", copied: "Copied", close: "Close", hide: "Hide for a week" },
   common: {
     latestNews: "Latest news",
     sample: "Sample data: live prices unavailable",

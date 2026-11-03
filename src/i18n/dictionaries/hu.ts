@@ -28,6 +28,7 @@ export const hu: Dict = {
     readDisclaimer: "Olvassa el a jognyilatkozatot",
     labelled: "A szponzorált tartalom mindig jelölve van.",
   },
+  sponsor: { tab: "Szponzor", title: "Támogasd a Tickorát", brandsTitle: "Márkáknak", brandsBody: "Szponzorált cikkek, sajtóközlemények és hírlevél-helyek, mindig egyértelműen jelölve.", brandsCta: "Lehetőségek", readersTitle: "Olvasóknak", readersBody: "Tetszik a munkánk? Egy borravaló függetlenül és kevés reklámmal tartja az oldalt.", copy: "Másolás", copied: "Másolva", close: "Bezárás", hide: "Elrejtés egy hétre" },
   common: {
     latestNews: "Legfrissebb hírek",
     sample: "Mintaadatok: élő árfolyamok nem érhetők el",

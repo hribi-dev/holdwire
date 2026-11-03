@@ -37,4 +37,4 @@ We edit sponsored content for clarity, accuracy and compliance. We may add risk 
 Buying sponsored content or advertising does not buy editorial coverage, favourable or otherwise.
 
 ## Contact
-[ads@domain]
+[Advertise on Tickora](/advertise)

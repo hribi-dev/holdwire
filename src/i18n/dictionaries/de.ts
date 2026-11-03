@@ -28,6 +28,7 @@ export const de: Dict = {
     readDisclaimer: "Haftungsausschluss lesen",
     labelled: "Gesponserte Inhalte sind immer gekennzeichnet.",
   },
+  sponsor: { tab: "Sponsern", title: "Tickora sponsern", brandsTitle: "Für Marken", brandsBody: "Gesponserte Artikel, Pressemitteilungen und Newsletter-Plätze, immer klar gekennzeichnet.", brandsCta: "Optionen ansehen", readersTitle: "Für Leser", readersBody: "Gefällt Ihnen unsere Arbeit? Ein Trinkgeld hält die Seite unabhängig und werbearm.", copy: "Kopieren", copied: "Kopiert", close: "Schließen", hide: "Eine Woche ausblenden" },
   common: {
     latestNews: "Neueste Nachrichten",
     sample: "Beispieldaten: Live-Kurse nicht verfügbar",

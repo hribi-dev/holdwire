@@ -17,6 +17,19 @@ export const site = {
   copyrightYear: 2026,
 };
 
+/**
+ * Sponsor sticker + /advertise page. Leave a value empty to hide that option.
+ * - email: where brands send sponsorship enquiries (shown on /advertise and in the sticker).
+ * - tips: reader tip addresses; each shows with a copy button in the sticker's "Support us" card.
+ */
+export const sponsor = {
+  email: process.env.NEXT_PUBLIC_SPONSOR_EMAIL || "",
+  tips: [
+    { label: "Solana (SOL, USDC)", address: process.env.NEXT_PUBLIC_TIP_SOLANA || "" },
+    { label: "Ethereum / Base (ETH, USDC)", address: process.env.NEXT_PUBLIC_TIP_EVM || "" },
+  ].filter((t) => t.address),
+};
+
 export const nav = [
   { key: "news", href: "/news" },
   { key: "blog", href: "/blog" },

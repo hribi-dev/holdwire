@@ -28,6 +28,7 @@ export const pt: Dict = {
     readDisclaimer: "Leia o aviso legal",
     labelled: "O conteúdo patrocinado é sempre identificado.",
   },
+  sponsor: { tab: "Patrocinar", title: "Patrocine a Tickora", brandsTitle: "Para marcas", brandsBody: "Artigos patrocinados, comunicados de imprensa e espaços na newsletter, sempre claramente identificados.", brandsCta: "Ver opções", readersTitle: "Para leitores", readersBody: "Gosta do nosso trabalho? Uma gorjeta mantém o site independente e com pouca publicidade.", copy: "Copiar", copied: "Copiado", close: "Fechar", hide: "Ocultar durante uma semana" },
   common: {
     latestNews: "Últimas notícias",
     sample: "Dados de exemplo: preços em tempo real indisponíveis",

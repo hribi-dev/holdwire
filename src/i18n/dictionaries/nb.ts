@@ -28,6 +28,7 @@ export const nb: Dict = {
     readDisclaimer: "Les ansvarsfraskrivelsen",
     labelled: "Sponset innhold er alltid merket.",
   },
+  sponsor: { tab: "Sponse", title: "Spons Tickora", brandsTitle: "For merkevarer", brandsBody: "Sponsede artikler, pressemeldinger og plasser i nyhetsbrevet, alltid tydelig merket.", brandsCta: "Se alternativer", readersTitle: "For lesere", readersBody: "Liker du det vi gjør? Et tips holder siden uavhengig og med lite reklame.", copy: "Kopier", copied: "Kopiert", close: "Lukk", hide: "Skjul i en uke" },
   common: {
     latestNews: "Siste nytt",
     sample: "Eksempeldata: sanntidskurser er utilgjengelige",

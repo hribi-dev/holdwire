@@ -35,6 +35,7 @@ export async function SiteFooter() {
           <Link href="/editorial-policy">{f.editorial}</Link>
           <Link href="/how-we-make-money">{f.money}</Link>
           <Link href="/advertising-policy">{f.advertising}</Link>
+          <Link href="/advertise">{t.sponsor.title}</Link>
           <Link href="/corrections">{f.corrections}</Link>
           <Link href="/disclosures">{f.disclosures}</Link>
         </nav>

@@ -28,6 +28,7 @@ export const hr: Dict = {
     readDisclaimer: "Pročitajte odricanje odgovornosti",
     labelled: "Sponzorirani sadržaj uvijek je označen.",
   },
+  sponsor: { tab: "Sponzor", title: "Sponzorirajte Tickoru", brandsTitle: "Za tvrtke", brandsBody: "Sponzorirani članci, priopćenja i mjesta u newsletteru, uvijek jasno označeni.", brandsCta: "Pogledajte opcije", readersTitle: "Za čitatelje", readersBody: "Sviđa vam se naš rad? Napojnica čuva stranicu neovisnom i s malo oglasa.", copy: "Kopiraj", copied: "Kopirano", close: "Zatvori", hide: "Sakrij na tjedan dana" },
   common: {
     latestNews: "Najnovije vijesti",
     sample: "Ogledni podaci: cijene uživo nisu dostupne",

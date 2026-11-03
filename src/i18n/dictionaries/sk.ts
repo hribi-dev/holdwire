@@ -28,6 +28,7 @@ export const sk: Dict = {
     readDisclaimer: "Prečítajte si upozornenie",
     labelled: "Sponzorovaný obsah je vždy označený.",
   },
+  sponsor: { tab: "Sponzor", title: "Sponzorujte Tickoru", brandsTitle: "Pre značky", brandsBody: "Sponzorované články, tlačové správy a miesta v newsletteri, vždy jasne označené.", brandsCta: "Pozrieť možnosti", readersTitle: "Pre čitateľov", readersBody: "Páči sa vám naša práca? Prepitné udrží stránku nezávislú a s malým množstvom reklám.", copy: "Kopírovať", copied: "Skopírované", close: "Zavrieť", hide: "Skryť na týždeň" },
   common: {
     latestNews: "Najnovšie správy",
     sample: "Vzorové dáta: ceny naživo nie sú dostupné",

@@ -71,8 +71,8 @@ img, svg { max-width: 100%; }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { color: #fff; filter: brightness(1.08); }
 .btn-ghost { background: var(--card); border-color: var(--line-strong); color: var(--ink); }
-.btn-signal { background: var(--signal); color: var(--ink); font-weight: 700; }
-.btn-signal:hover { color: var(--ink); }
+.btn-signal { background: var(--signal); color: #0e1116; font-weight: 700; }
+.btn-signal:hover { color: #0e1116; }
 
 /* Ticker */
 .ticker { background: var(--night); color: #e6eaf0; font-family: var(--font-mono); font-size: 13px; }
@@ -351,8 +351,8 @@ summary { font-weight: 600; cursor: pointer; }
 .rotator-title { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(36px, 5.6vw, 68px); line-height: 1.03; letter-spacing: -0.03em; color: #fff; text-wrap: balance; }
 .rotator-slide:not(:first-child) .rotator-title { font-size: clamp(30px, 4.4vw, 54px); }
 .rotator-body { margin: 0; font-size: 18px; color: #cbd5e1; max-width: 580px; }
-.rotator-cta { background: #fff; color: var(--ink); min-height: 50px; padding: 0 22px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.rotator-cta:hover { color: var(--ink); transform: translateY(-1px); box-shadow: 0 10px 30px color-mix(in srgb, var(--slide) 45%, transparent); }
+.rotator-cta { background: #fff; color: #0b0e13; font-weight: 700; min-height: 50px; padding: 0 22px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.rotator-cta:hover { color: #0b0e13; transform: translateY(-1px); box-shadow: 0 10px 30px color-mix(in srgb, var(--slide) 45%, transparent); }
 .rotator-controls { display: flex; align-items: center; gap: 12px; margin-top: 26px; }
 .rotator-arrow { width: 36px; height: 36px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.06); color: #fff; cursor: pointer; font-size: 15px; }
 .rotator-arrow:hover { background: rgba(255, 255, 255, 0.16); }
@@ -531,3 +531,34 @@ summary { font-weight: 600; cursor: pointer; }
 .bubbles-legend button[aria-pressed="false"] .sw { background: transparent; box-shadow: inset 0 0 0 1.5px var(--c); }
 [data-theme="dark"] .bx-dot { filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5)); }
 @media (prefers-reduced-motion: reduce) { .bx-node { transition: none; animation: none; } }
+
+/* ── Sponsor sticker ── */
+.sponsor-sticker { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.sponsor-tab { position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 9px 15px 9px 12px; border-radius: 99px; border: 0; cursor: pointer; font: 700 13.5px var(--font-sans); color: #fff; background: linear-gradient(120deg, #0f766e, #14b8a6 50%, #65a30d); box-shadow: 0 10px 28px -8px rgba(20, 184, 166, 0.65); transition: transform 0.2s ease, box-shadow 0.2s ease; animation: sponsor-in 0.6s cubic-bezier(.2,.9,.3,1.3) 1.2s both; }
+.sponsor-tab::before { content: ""; position: absolute; inset: -3px; border-radius: 99px; border: 2px solid rgba(20, 184, 166, 0.45); animation: sponsor-ring 2.8s ease-out 2s infinite; pointer-events: none; }
+.sponsor-tab:hover { transform: translateY(-2px) rotate(-2deg); box-shadow: 0 14px 32px -8px rgba(20, 184, 166, 0.8); }
+.sponsor-tab.is-open::before { animation: none; opacity: 0; }
+.sponsor-star { display: inline-block; font-size: 15px; animation: sponsor-spin 6s linear infinite; }
+@keyframes sponsor-in { from { opacity: 0; transform: translateY(16px) scale(0.9); } to { opacity: 1; transform: none; } }
+@keyframes sponsor-ring { 0% { opacity: 0.9; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.35); } }
+@keyframes sponsor-spin { to { transform: rotate(360deg); } }
+.sponsor-panel { width: min(340px, calc(100vw - 32px)); padding: 14px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 24px 60px -18px rgba(15, 23, 42, 0.45); display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; animation: pop 0.18s ease-out; }
+.sponsor-panel > *, .sponsor-card > *, .sponsor-tip > * { min-width: 0; }
+.sponsor-card { grid-template-columns: minmax(0, 1fr); }
+.sponsor-head { display: flex; align-items: center; justify-content: space-between; }
+.sponsor-head strong { font: 800 17px var(--font-display); }
+.sponsor-x { width: 30px; height: 30px; border-radius: 99px; border: 1px solid var(--line); background: transparent; color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; }
+.sponsor-x:hover { color: var(--ink); border-color: var(--line-strong); }
+.sponsor-card { border-radius: 14px; padding: 12px 14px; display: grid; gap: 6px; }
+.sponsor-card p { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.45; }
+.sponsor-card.is-brands { background: linear-gradient(140deg, color-mix(in srgb, #14b8a6 12%, var(--card)), color-mix(in srgb, #a3e635 10%, var(--card))); }
+.sponsor-card.is-readers { background: linear-gradient(140deg, color-mix(in srgb, #a78bfa 12%, var(--card)), color-mix(in srgb, #22d3ee 10%, var(--card))); }
+.sponsor-kicker { font: 700 11px var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sponsor-cta { justify-self: start; min-height: 38px; font-size: 14px; border-radius: 10px; margin-top: 2px; }
+.sponsor-tip { display: grid; gap: 3px; }
+.sponsor-addr { display: flex; gap: 6px; align-items: center; }
+.sponsor-addr code { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 500 12px var(--font-mono); padding: 6px 8px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); }
+.sponsor-addr button { flex: none; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line-strong); background: var(--card); color: var(--ink); font: 600 12px var(--font-sans); cursor: pointer; }
+.sponsor-hide { justify-self: center; border: 0; background: none; color: var(--muted); font: 500 12px var(--font-sans); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 560px) { .sponsor-tab { padding: 8px 12px 8px 10px; font-size: 12.5px; } }
+@media (prefers-reduced-motion: reduce) { .sponsor-tab, .sponsor-tab::before, .sponsor-star { animation: none; } }

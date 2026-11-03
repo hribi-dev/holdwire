@@ -9,6 +9,8 @@ import { LOCALES, LOCALE_INFO, hasLocale } from "@/i18n/config";
 import { DICTIONARIES, fmt } from "@/i18n/dictionaries";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SponsorSticker } from "@/components/SponsorSticker";
+import { sponsor } from "@/lib/site";
 import { themeInitScript } from "@/components/ThemeToggle";
 
 export async function generateStaticParams() {
@@ -56,6 +58,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         )}
         <div id="content">{children}</div>
         <SiteFooter />
+        <SponsorSticker labels={t.sponsor} tips={sponsor.tips} />
       </body>
     </html>
   );

@@ -28,6 +28,7 @@ export const sv: Dict = {
     readDisclaimer: "Läs ansvarsfriskrivningen",
     labelled: "Sponsrat innehåll är alltid märkt.",
   },
+  sponsor: { tab: "Sponsra", title: "Sponsra Tickora", brandsTitle: "För varumärken", brandsBody: "Sponsrade artiklar, pressmeddelanden och nyhetsbrevsplatser, alltid tydligt märkta.", brandsCta: "Se alternativ", readersTitle: "För läsare", readersBody: "Gillar du vad vi gör? Ett tips håller sajten oberoende och med lite reklam.", copy: "Kopiera", copied: "Kopierat", close: "Stäng", hide: "Dölj i en vecka" },
   common: {
     latestNews: "Senaste nytt",
     sample: "Exempeldata: realtidskurser saknas",

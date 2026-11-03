@@ -28,6 +28,7 @@ export const fr: Dict = {
     readDisclaimer: "Lire l'avertissement",
     labelled: "Le contenu sponsorisé est toujours signalé.",
   },
+  sponsor: { tab: "Sponsoriser", title: "Sponsoriser Tickora", brandsTitle: "Pour les marques", brandsBody: "Articles sponsorisés, communiqués de presse et emplacements newsletter, toujours clairement signalés.", brandsCta: "Voir les offres", readersTitle: "Pour les lecteurs", readersBody: "Vous aimez notre travail ? Un pourboire garde le site indépendant et peu chargé en publicité.", copy: "Copier", copied: "Copié", close: "Fermer", hide: "Masquer une semaine" },
   common: {
     latestNews: "Dernières actualités",
     sample: "Données d'exemple : cours en direct indisponibles",

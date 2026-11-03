@@ -7,15 +7,6 @@ import { NavLinks } from "./NavLinks";
 
 export async function SiteHeader() {
   const { t, locale } = await getDict();
-  const chips = [
-    { href: "/hyperliquid", label: "Hyperliquid", dot: "#14b8a6" },
-    { href: "/movers", label: t.nav.movers, dot: "#ef4444" },
-    { href: "/memes", label: t.nav.memes, dot: "#84cc16" },
-    { href: "/coins/bitcoin", label: "Bitcoin", dot: "#f7931a" },
-    { href: "/coins/solana", label: "Solana", dot: "#9945ff" },
-    { href: "/coins/ethereum", label: "Ethereum", dot: "#627eea" },
-    { href: "/coins", label: t.header.allCoins, dot: null },
-  ];
   return (
     <header className="site-header">
       <div className="wrap bar">
@@ -29,17 +20,6 @@ export async function SiteHeader() {
           <Link href="/#newsletter" className="btn btn-primary btn-glow">
             {t.header.subscribe}
           </Link>
-        </div>
-      </div>
-      <div className="trend-row">
-        <div className="wrap chips">
-          <span className="trend-label">{t.header.trending}</span>
-          {chips.map((c) => (
-            <Link key={c.href} className="chip chip-dot" href={c.href}>
-              {c.dot && <span className="dot" style={{ background: c.dot }} aria-hidden="true" />}
-              {c.label}
-            </Link>
-          ))}
         </div>
       </div>
     </header>

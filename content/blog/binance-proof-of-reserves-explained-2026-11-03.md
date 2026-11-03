@@ -64,7 +64,7 @@ None of this means the numbers are wrong. It means a proof of reserves answers o
 - **The 4 November snapshot** and its proof, due roughly two days later, and whether it covers more assets.
 - **Which coins reopen for withdrawal**, and whether the last 5% of stolen assets is replaced.
 - **Binance's technical report** on how the attacker got in.
-- **US midterm results** this week, which could shape crypto rules in Congress.
+- **US midterm results** this week, which could shape crypto rules in Congress. We cover [what the vote means for the market](/blog/election-day-crypto-nerves-2026-11-03).
 - Separately, Brazil's largest exchange [Mercado Bitcoin paused withdrawals after its own breach](/blog/mercado-bitcoin-hack-2026-11-03) on Monday.
 
 *This article is general information, not investment advice.*

@@ -79,9 +79,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-10-26",
-      text: "Strategy bought no bitcoin from 19 to 25 October and spent $204.9 million buying back its own preferred stock instead. Holdings stayed at 848,517 BTC. Saylor usually hints at purchases with a chart on Sundays.",
-      source: { name: "CoinGabbar, citing Strategy's 8-K", url: "https://www.coingabbar.com/en/saylor-bitcoin-purchase-oct-26-2026-strategy-8k-btc-price" },
+      date: "2026-11-02",
+      text: "Hinted at a new purchase on Sunday with a post saying Strategy had found room for even more orange. Monday's filing showed 811 BTC bought for about $65.5 million, taking holdings to 849,327 BTC. He says bitcoin is at the beginning of its next bull market.",
+      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-02-we-found-room-for-even-more-orange-michael-saylor-strategy-bitcoin-btc-432275" },
     },
   },
   schiff: {
@@ -120,6 +120,11 @@ export const PEOPLE: Record<PersonId, Person> = {
     handle: "@fundstrat",
     profileUrl: "https://x.com/fundstrat",
     focus: ["Bitcoin", "Gold", "Ethereum"],
+    take: {
+      date: "2026-11-02",
+      text: "Called the Binance hack a terrible development but said the muted market reaction was constructive: ether fell about 4% after it was disclosed, against 8% after the 2025 Bybit theft. BitMine added 8,573 ETH that week, bringing its holdings to about 6.06 million ETH.",
+      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-02-bitmine-adds-8573-eth-tom-lee-flags-muted-binance-hack-reaction-432307" },
+    },
   },
   alden: {
     name: "Lyn Alden",

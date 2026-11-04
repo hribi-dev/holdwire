@@ -3,7 +3,7 @@ title: "US exchanges can now list perpetual futures on single stocks, and Cboe a
 description: "The CFTC let stock perps trade on regulated US exchanges. A Cboe and Citadel-backed group sued within hours. What it means for Hyperliquid and EU traders."
 category: Regulation
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-04
 updated: 2026-11-04
 sources:

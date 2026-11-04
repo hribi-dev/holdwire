@@ -3,7 +3,7 @@ title: "New in the Binance hack: Binance says it began with a fake job interview
 description: "Binance's first investigation report says attackers spent months inside, starting with a trojanised Homebrew installer and a fake recruiter, before the $6.3 billion theft."
 category: Security
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-04
 updated: 2026-11-04
 sources:

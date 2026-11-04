@@ -3,7 +3,7 @@ title: "South Korea tells crypto exchanges to keep more coins offline after the 
 description: "At an emergency meeting, South Korea's financial regulator asked exchanges to move more customer assets to cold wallets. A 99% offline rule is being discussed."
 category: Regulation
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-04
 updated: 2026-11-04
 sources:

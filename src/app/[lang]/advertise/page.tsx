@@ -3,7 +3,7 @@ import Link from "@/components/Link";
 import { sponsor } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Advertise on Tickora: sponsored articles, press releases, newsletter",
+  title: { absolute: "Advertise on Tickora: sponsored articles and newsletter" },
   description: "Reach crypto, fintech and hard-asset readers across Europe. Clearly labelled sponsored articles, press releases and newsletter placements.",
   alternates: { canonical: "/advertise" },
 };

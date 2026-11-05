@@ -1,5 +1,6 @@
 ---
 title: "South Korea's ruling party backs delaying its 22% crypto tax again, to 2029"
+seoTitle: "South Korea may delay its 22% crypto tax to 2029"
 description: "Democratic Party lawmakers recommended pushing South Korea's crypto income tax back two years. It would be the fourth delay since the tax became law in 2020."
 category: Regulation
 author: Tickora

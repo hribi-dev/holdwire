@@ -8,6 +8,8 @@ export const ru: Dict = {
   nav: { gold: "Золото", news: "Новости", blog: "Блог", school: "Школа", hyperliquid: "Hyperliquid", markets: "Рынки", memes: "Мемы", movers: "Движущие силы", fintech: "Финтех", learn: "Обучение", glossary: "Глоссарий" },
   header: { subscribe: "Подписаться", trending: "В тренде:", allCoins: "Все монеты", language: "Язык", skip: "К содержанию", home: "главная", live: "Онлайн", darkTheme: "Тёмная тема" },
   footer: {
+    dataBy: "Данные о ценах:",
+    privacy: "Конфиденциальность",
     tagline: "Финансы и реальные активы с европейским взглядом.",
     dataTools: "Данные и инструменты",
     hlHub: "Хаб Hyperliquid",

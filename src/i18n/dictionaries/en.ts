@@ -6,6 +6,8 @@ export const en = {
   nav: { gold: "Gold", news: "News", blog: "Blog", school: "School", hyperliquid: "Hyperliquid", markets: "Markets", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Learn", glossary: "Glossary" },
   header: { subscribe: "Subscribe", trending: "Trending:", allCoins: "All coins", language: "Language", skip: "Skip to content", home: "home", live: "Live", darkTheme: "Dark theme" },
   footer: {
+    dataBy: "Price data by",
+    privacy: "Privacy",
     tagline: "Finance and hard assets, with an EU lens.",
     dataTools: "Data & tools",
     hlHub: "Hyperliquid hub",

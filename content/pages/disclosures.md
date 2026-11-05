@@ -17,9 +17,8 @@ Our writers and editors may own crypto-assets or have business ties in the indus
 **Matic Hriberšek, editor-in-chief**
 - Co-founder and CEO of BalkanPay, a crypto on/off-ramp and remittance service. Tickora coverage of remittances and on-ramps discloses this.
 - Manages social media and community for HumidiFi and Harmonic (Solana ecosystem). Coverage of these projects, and of Solana block building and DEXs, discloses this.
-- Holdings: [list or "holds crypto-assets including …"; Hribi to complete].
-- Hyperliquid: [Hribi to state any HYPE holdings or trading activity on Hyperliquid, since Tickora features it prominently].
+- Personal crypto holdings, including any HYPE or trading on Hyperliquid (which Tickora covers prominently): to be listed here before launch.
 
-**[Contributor name]**: [disclosures]
+Contributors will be listed here as they join.
 
-Last reviewed: [date]
+Last reviewed: 5 November 2026

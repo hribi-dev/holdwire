@@ -1,5 +1,6 @@
 ---
 title: "A French bank lost over $133 million to a crypto cash-out scheme: what the Crédit Mutuel Arkéa attack means"
+seoTitle: "Crédit Mutuel Arkéa's $133M crypto theft explained"
 description: "Attackers sent money from Crédit Mutuel Arkéa's own account and cashed it out through crypto exchanges. What happened, and what it means for EU customers."
 category: Security
 author: Tickora

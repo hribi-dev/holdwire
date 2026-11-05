@@ -1,6 +1,7 @@
 ---
 title: "NYSE owner ICE moves to bring Hyperliquid-style perpetuals to the US"
-description: "Intercontinental Exchange is taking a stake in trade.xyz, the biggest market builder on Hyperliquid, and plans a regulated US market. Here is what it means and what it doesn't."
+seoTitle: "ICE moves to bring Hyperliquid-style perps to the US"
+description: "ICE is taking a stake in trade.xyz, the biggest market builder on Hyperliquid, and plans a regulated US market. What it means, and what it doesn't."
 category: Hyperliquid
 author: Tickora
 reviewedBy:

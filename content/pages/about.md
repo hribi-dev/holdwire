@@ -12,14 +12,13 @@ Tickora covers money in all its forms: crypto, markets, fintech, watches and col
 - **Data you can check.** Live prices, converters and trackers, with the source named on every figure.
 - **Guides that answer the question first.** No filler, no hype, no price predictions.
 - **News with context.** What happened, why it matters, and what it means if you're in the EU.
-- **Original research.** Our own trackers and reports, such as the MiCA licence tracker, built from public registers and updated on a schedule.
+- **Original tracking.** Our own logs and data pages, such as the market movers record and live Hyperliquid stats, with every figure sourced.
 
 ## Who we are
-Tickora is published by **[Company legal name]**, registered in Slovenia (registration no. [number], VAT ID [number]), [registered address].
+Tickora is published by [publisher].
 
-**Editor-in-chief:** Matic Hriberšek. [Two-line bio: background in crypto infrastructure and fintech; former Slovenian Armed Forces.] [Link to X / LinkedIn]
+**Editor-in-chief:** Matic Hriberšek, co-founder of BalkanPay, a crypto on/off-ramp and remittance service for the Balkans. He also works with the Solana projects HumidiFi and Harmonic ([see disclosures](/disclosures)) and served in the Slovenian Armed Forces.
 
-**Contributors:** [Names, roles and short bios once recruited.]
 
 ## How we're funded
 We earn money from clearly labelled sponsored content, advertising, newsletter sponsorships and, on some comparison pages, affiliate links. Sponsors never decide what our newsroom covers or concludes. Read [How we make money](/how-we-make-money).

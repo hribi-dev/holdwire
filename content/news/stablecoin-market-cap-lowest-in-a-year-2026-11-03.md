@@ -1,5 +1,6 @@
 ---
 title: "Stablecoin market value falls to about $263 billion, its lowest in over a year"
+seoTitle: "Stablecoin market value falls to a one-year low"
 description: "Total stablecoin supply has shrunk by about $17 billion since April, according to analyst Darkfost, a sign that little new money is entering crypto."
 category: Markets
 author: Tickora

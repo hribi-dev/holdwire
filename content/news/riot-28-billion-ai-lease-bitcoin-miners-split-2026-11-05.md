@@ -1,5 +1,6 @@
 ---
 title: "Riot Platforms signs a $28 billion AI data-centre lease as other bitcoin miners slide"
+seoTitle: "Riot signs $28B AI data-centre lease; miners split"
 description: "Riot leased its whole Corsicana, Texas campus to an AI lab for 15 years. Its shares rose 14% while miners such as Hut 8 and Cipher fell more than 20%."
 category: Markets
 author: Tickora

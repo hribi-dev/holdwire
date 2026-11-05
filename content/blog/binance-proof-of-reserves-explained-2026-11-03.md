@@ -1,5 +1,6 @@
 ---
 title: "Binance's new proof of reserves: what it shows, and what it doesn't"
+seoTitle: "Binance proof of reserves: what it shows and doesn't"
 description: "Binance published a zero-knowledge reserve proof for 10 coins after its $6.3 billion hack. Here is what the proof can tell you, its limits, and what comes next."
 category: Markets
 author: Tickora

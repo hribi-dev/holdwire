@@ -9,9 +9,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { SchoolMap } from "@/components/school/SchoolMap";
 
 export const metadata: Metadata = {
-  title: "Tickora School: learn money and crypto from zero, with quizzes",
+  title: { absolute: "Tickora School: learn money and crypto, with quizzes" },
   description:
-    "A free beginner course on money and crypto for Europe: short lessons, a quiz after each one and a final exam per level. From inflation and scams to wallets, Bitcoin and MiCA.",
+    "A free beginner course on money and crypto: short lessons, a quiz after each and a final exam per level. From inflation and scams to wallets and MiCA.",
   alternates: { canonical: "/school" },
 };
 

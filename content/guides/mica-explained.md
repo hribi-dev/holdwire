@@ -1,5 +1,6 @@
 ---
 title: "MiCA explained: what the EU's crypto rules mean for you"
+seoTitle: "MiCA explained: EU crypto rules and what they mean for you"
 description: "What MiCA covers, what changed on 1 July 2026, how to check whether your exchange is authorised, and what protection you actually get."
 category: Regulation
 author: Tickora

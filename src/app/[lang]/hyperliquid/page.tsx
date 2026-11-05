@@ -12,9 +12,9 @@ import { Suspense } from "react";
 import { RelatedNews } from "@/components/RelatedNews";
 
 export const metadata: Metadata = {
-  title: "Hyperliquid hub: HYPE price, how it works, HIP-3 and guides",
+  title: "Hyperliquid hub: HYPE price, HIP-3 and guides",
   description:
-    "Everything on Hyperliquid in one place: live HYPE price in euros, how HyperCore and HyperEVM work, HIP-3 and HIP-4 markets, staking, risks and plain-English guides for EU readers.",
+    "Hyperliquid in one place: live HYPE price in euros, how HyperCore and HyperEVM work, HIP-3 markets, staking, risks and plain-English guides.",
   alternates: { canonical: "/hyperliquid" },
 };
 

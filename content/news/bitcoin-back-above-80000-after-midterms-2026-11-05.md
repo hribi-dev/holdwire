@@ -1,5 +1,6 @@
 ---
 title: "Bitcoin recovers above $80,000 a day after the US midterms; ether up about 6%"
+seoTitle: "Bitcoin back above $80,000 after the US midterms"
 description: "Bitcoin climbed back above $80,000 and touched $81,000 after falling below $76,000 on election night. Ether led the large coins with a gain of about 6%."
 category: Markets
 author: Tickora

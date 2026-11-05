@@ -1,5 +1,6 @@
 ---
 title: "Circle's third-quarter profit beats forecasts, helped by a one-off token sale; USDC supply up 8%"
+seoTitle: "Circle Q3 profit beats forecasts; USDC supply up 8%"
 description: "USDC issuer Circle reported $865 million in revenue and $226 million in net income for Q3, well above estimates, partly thanks to a $182 million ARC token presale."
 category: Fintech
 author: Tickora

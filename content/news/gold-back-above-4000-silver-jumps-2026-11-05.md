@@ -1,5 +1,6 @@
 ---
 title: "Gold jumps back above $4,000 and silver gains over 5% as the dollar slides after the midterms"
+seoTitle: "Gold back above $4,000 as silver gains over 5%"
 description: "Gold rose about 3.5% to around $4,066 an ounce and silver over 5% to about $52.28 as the dollar, Treasury yields and oil fell after Democrats won Congress."
 category: Gold
 author: Tickora

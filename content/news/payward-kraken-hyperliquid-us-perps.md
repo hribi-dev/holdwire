@@ -1,5 +1,6 @@
 ---
 title: "Kraken's parent plans the first regulated US markets on Hyperliquid"
+seoTitle: "Kraken's parent plans regulated US markets on Hyperliquid"
 description: "Payward wants to deploy CFTC-regulated perpetual futures on Hyperliquid through Bitnomial and NinjaTrader Clearing. How the structure works, step by step."
 category: Hyperliquid
 author: Tickora

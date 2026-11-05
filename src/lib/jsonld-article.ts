@@ -31,7 +31,7 @@ export function definedTermJsonLd(e: Entry, path: string) {
 
 /** Open Graph / social preview image for an entry with a cover photo. */
 export function coverOgImages(e: Entry) {
-  if (!e.cover) return undefined;
+  if (!e.cover) return [{ url: absoluteUrl("/og.jpg"), width: 1200, height: 630, alt: site.name }];
   const url = e.cover.src.startsWith("/") ? absoluteUrl(e.cover.src) : sizedCover(e.cover.src, 1200);
   return [{ url, alt: e.cover.alt }];
 }

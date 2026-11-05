@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/coins/[id]
   const profile = COIN_PROFILES[id];
   const sym = coin.symbol.toUpperCase();
   return {
-    title: `${coin.name} price today (${sym} to EUR): chart, market cap and news`,
+    title: `${coin.name} (${sym}) price in EUR: chart and market cap`,
     description: `Live ${coin.name} (${sym}) price in euros, market cap, supply, 7-day chart and a ${sym} to EUR converter. Plain-English guide and FAQs for EU readers.`,
     alternates: { canonical: `/coins/${id}` },
     // Quality gate: only coins with a human-written profile may be indexed.

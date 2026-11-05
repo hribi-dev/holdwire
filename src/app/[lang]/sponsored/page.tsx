@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Sponsored",
   description: "Paid and company-supplied content on Tickora, always labelled and kept separate from our newsroom.",
   robots: { index: false, follow: true },
+  alternates: { canonical: "/sponsored" },
 };
 
 export default async function Index() {

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { AssetHub } from "@/components/AssetHub";
 import { getDict } from "@/i18n/server";
+import { PAGE_REVIEWS } from "@/content/reviews";
 
-const REVIEWED_BY: string | null = null;
+const REVIEWED_BY = PAGE_REVIEWS.collectibles;
 
 export const metadata: Metadata = {
-  title: "Collectibles and hard assets beyond crypto: cards, wine, art, cars",
+  title: "Collectibles beyond crypto: cards, wine, art, cars",
   description:
     "Trading cards, fine wine, art and classic cars as assets, explained for European readers: what the indices track, the costs, and the risks.",
   alternates: { canonical: "/collectibles" },

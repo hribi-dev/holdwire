@@ -1,5 +1,6 @@
 ---
 title: "Polymarket's US broker unit gets NFA approval; margin trading still needs the CFTC"
+seoTitle: "Polymarket's US broker unit gets NFA approval"
 description: "PM Derivatives, a Polymarket affiliate, can now act as a US futures broker on a fully funded basis. Margin trading needs further regulatory approval."
 category: Markets
 author: Tickora

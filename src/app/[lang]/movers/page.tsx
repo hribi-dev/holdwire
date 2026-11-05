@@ -11,7 +11,7 @@ import { VoicesGrid } from "@/components/viz/VoicesGrid";
 import { AdSlot } from "@/components/AdSlot";
 
 export const metadata: Metadata = {
-  title: "Market movers: posts by Musk, Trump and CZ that moved crypto prices",
+  title: "Market movers: posts that moved crypto prices",
   description:
     "A sourced timeline of posts by Elon Musk, Donald Trump, CZ and others that moved crypto markets, with the reported price reaction and what happened next.",
   alternates: { canonical: "/movers" },

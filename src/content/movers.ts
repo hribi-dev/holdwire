@@ -1,3 +1,4 @@
+import { PAGE_REVIEWS } from "./reviews";
 /**
  * Market movers: posts by influential people that moved prices.
  *
@@ -170,7 +171,7 @@ export type MoverEvent = {
   sources: { name: string; url: string }[];
 };
 
-export const MOVERS_REVIEWED_BY: string | null = null;
+export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
   {

@@ -1,5 +1,6 @@
 ---
 title: "Ethereum researcher hopes to finish the network's post-quantum upgrade by December 2028"
+seoTitle: "Ethereum eyes post-quantum upgrade by December 2028"
 description: "At Devcon 8 in Mumbai, Justin Drake set out a 2028 hope, a year ahead of the Foundation's 2029 target, while Vitalik Buterin warned AI could find new attacks."
 category: Security
 author: Tickora

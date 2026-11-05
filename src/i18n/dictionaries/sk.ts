@@ -8,6 +8,8 @@ export const sk: Dict = {
   nav: { gold: "Zlato", news: "Správy", blog: "Blog", school: "Škola", hyperliquid: "Hyperliquid", markets: "Trhy", memes: "Mémy", movers: "Hýbatelia", fintech: "Fintech", learn: "Vzdelávanie", glossary: "Slovník" },
   header: { subscribe: "Odoberať", trending: "Trendy:", allCoins: "Všetky coiny", language: "Jazyk", skip: "Na obsah", home: "domov", live: "Naživo", darkTheme: "Tmavý motív" },
   footer: {
+    dataBy: "Údaje o cenách:",
+    privacy: "Ochrana súkromia",
     tagline: "Financie a reálne aktíva z európskeho pohľadu.",
     dataTools: "Dáta a nástroje",
     hlHub: "Centrum Hyperliquid",

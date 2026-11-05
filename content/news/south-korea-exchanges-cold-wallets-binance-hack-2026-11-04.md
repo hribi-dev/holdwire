@@ -1,5 +1,6 @@
 ---
 title: "South Korea tells crypto exchanges to keep more coins offline after the Binance hack"
+seoTitle: "South Korea orders exchanges to hold more coins offline"
 description: "At an emergency meeting, South Korea's financial regulator asked exchanges to move more customer assets to cold wallets. A 99% offline rule is being discussed."
 category: Regulation
 author: Tickora

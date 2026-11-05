@@ -29,8 +29,13 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     description: t.meta.description,
     applicationName: site.name,
     robots: indexable ? { index: true, follow: true, "max-image-preview": "large" } : { index: false, follow: l !== "en" && site.indexable },
-    openGraph: { type: "website", siteName: site.name, locale: LOCALE_INFO[l].intl.replace("-", "_") },
-    twitter: { card: "summary_large_image" },
+    openGraph: {
+      type: "website",
+      siteName: site.name,
+      locale: LOCALE_INFO[l].intl.replace("-", "_"),
+      images: [{ url: "/og.jpg", width: 1200, height: 630, alt: `${site.name}: ${t.meta.title}` }],
+    },
+    twitter: { card: "summary_large_image", images: ["/og.jpg"] },
   };
 }
 

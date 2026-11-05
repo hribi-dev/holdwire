@@ -22,6 +22,8 @@ export type Entry = {
   collection: Collection;
   slug: string;
   title: string;
+  /** Optional shorter title for search results and social cards (≤ 60 characters). */
+  seoTitle: string | null;
   description: string;
   category: string | null;
   author: string | null;
@@ -85,6 +87,7 @@ async function parse(collection: Collection, slug: string): Promise<Entry | null
     collection,
     slug,
     title: String(data.title ?? slug),
+    seoTitle: str(data.seoTitle),
     description: String(data.description ?? ""),
     category: str(data.category),
     author: str(data.author),

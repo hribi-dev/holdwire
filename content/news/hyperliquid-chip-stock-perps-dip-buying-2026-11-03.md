@@ -1,5 +1,6 @@
 ---
 title: "Hyperliquid traders add $43.8 million of stock longs as chip shares slide; $30.4 million liquidated overnight"
+seoTitle: "Hyperliquid traders buy the chip-stock dip with $43.8M"
 description: "Large Hyperliquid accounts bought into falling chip and storage stock perps on HIP-3 markets, while about $30.4 million of positions were liquidated."
 category: Hyperliquid
 author: Tickora

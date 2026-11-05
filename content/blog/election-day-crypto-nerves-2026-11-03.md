@@ -1,5 +1,6 @@
 ---
 title: "Election day nerves: why Bitcoin slipped under $77,000 and what this week could bring"
+seoTitle: "Election day: why Bitcoin slipped under $77,000"
 description: "US midterms, $1 billion of ETF outflows in two sessions and a fear index at 26. What's moving crypto today, and the dates to watch before Friday."
 category: Markets
 author: Tickora

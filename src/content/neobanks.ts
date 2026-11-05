@@ -1,3 +1,4 @@
+import { PAGE_REVIEWS } from "./reviews";
 /**
  * Crypto-friendly neobanks and card programmes we compare on /fintech.
  *
@@ -30,7 +31,7 @@ export type Neobank = {
   checked: string;
 };
 
-export const NEOBANKS_REVIEWED_BY: string | null = null;
+export const NEOBANKS_REVIEWED_BY: string | null = PAGE_REVIEWS.fintech;
 export const NEOBANKS_UPDATED = "2026-11-02";
 
 export const CRITERIA = [

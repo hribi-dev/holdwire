@@ -8,11 +8,12 @@ import { MemeExplorer } from "@/components/viz/MemeExplorer";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedNews } from "@/components/RelatedNews";
+import { PAGE_REVIEWS } from "@/content/reviews";
 
-const REVIEWED_BY: string | null = null;
+const REVIEWED_BY = PAGE_REVIEWS.memes;
 
 export const metadata: Metadata = {
-  title: "Memecoins: trending on Solana, Base and BNB Chain, plus pump.fun graduates",
+  title: "Trending memecoins on Solana, Base and BNB Chain",
   description:
     "Live trending memecoin pools across Solana, Base and BNB Chain, pump.fun tokens trading on PumpSwap, and plain-English explainers on launchpads, apps and the risks.",
   alternates: { canonical: "/memes" },

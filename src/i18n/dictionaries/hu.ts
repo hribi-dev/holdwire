@@ -8,6 +8,8 @@ export const hu: Dict = {
   nav: { gold: "Arany", news: "Hírek", blog: "Blog", school: "Iskola", hyperliquid: "Hyperliquid", markets: "Piacok", memes: "Mémek", movers: "Piacmozgatók", fintech: "Fintech", learn: "Tudástár", glossary: "Szótár" },
   header: { subscribe: "Feliratkozás", trending: "Felkapott:", allCoins: "Összes coin", language: "Nyelv", skip: "Ugrás a tartalomra", home: "kezdőlap", live: "Élő", darkTheme: "Sötét téma" },
   footer: {
+    dataBy: "Árfolyamadatok:",
+    privacy: "Adatvédelem",
     tagline: "Pénzügyek és reáleszközök európai szemmel.",
     dataTools: "Adatok és eszközök",
     hlHub: "Hyperliquid központ",

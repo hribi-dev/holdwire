@@ -1,5 +1,6 @@
 ---
 title: "Liquid Network says LBTC is fully backed again, two months after its $320 million exploit"
+seoTitle: "Liquid says LBTC is fully backed again after exploit"
 description: "The Liquid Federation says every LBTC is backed 1:1 by bitcoin again after about 600 missing BTC were replaced. Direct federation peg-outs remain restricted."
 category: Security
 author: Tickora

@@ -21,7 +21,7 @@ const DURATION = 6500;
  * no-JS readers see; the rest rotate in on the client. Pauses on hover/focus and
  * never autoplays for readers who prefer reduced motion.
  */
-export function HeroRotator({ slides, labels }: { slides: HeroSlide[]; labels: { prev: string; next: string } }) {
+export function HeroRotator({ slides, labels, heading = true }: { slides: HeroSlide[]; labels: { prev: string; next: string }; /** false for loading placeholders, so the page has one <h1> */ heading?: boolean }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
@@ -65,7 +65,7 @@ export function HeroRotator({ slides, labels }: { slides: HeroSlide[]; labels: {
       <div className="rotator-stage">
         {slides.map((s, k) => {
           const active = k === i;
-          const Title = k === 0 ? "h1" : "p";
+          const Title = k === 0 && heading ? "h1" : "p";
           return (
             <div
               key={s.key}

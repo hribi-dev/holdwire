@@ -1,3 +1,4 @@
+import { metaTitle } from "@/lib/site";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/school/[sl
   const l = await getLesson(slug);
   if (!l) return {};
   return {
-    title: `${l.title} | Tickora School`,
+    title: metaTitle(l.title),
     description: l.description,
     alternates: { canonical: `/school/${slug}` },
     robots: l.indexable ? undefined : { index: false, follow: true },

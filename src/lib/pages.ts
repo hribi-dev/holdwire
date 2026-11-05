@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { marked } from "marked";
 import { cacheLife } from "next/cache";
+import { contact } from "./site";
 
 export const TRUST_PAGES = [
   "about",
@@ -11,7 +12,18 @@ export const TRUST_PAGES = [
   "disclaimer",
   "corrections",
   "disclosures",
+  "privacy",
 ] as const;
+
+/** Swap [role@domain] and [publisher …] placeholders for configured details, or a neutral note. */
+export function fillPlaceholders(md: string): string {
+  return md
+    .replace(/\[([a-z]+)@domain\]/g, (_, role: string) => {
+      const email = (contact as Record<string, string>)[role] || contact.general;
+      return email ? `[${email}](mailto:${email})` : "our contact email (coming soon)";
+    })
+    .replace(/\[publisher[^\]]*\]/g, contact.publisher || "the publisher (company details coming soon)");
+}
 
 export type TrustPage = { slug: string; title: string; html: string; draft: boolean };
 
@@ -33,7 +45,7 @@ export async function getTrustPage(slug: string): Promise<TrustPage | null> {
   const file = path.join(process.cwd(), "content", "pages", `${slug}.md`);
   const src = await readFile(file, "utf8");
   const { data, body } = parseFrontmatter(src);
-  const html = await marked.parse(body, { async: true });
+  const html = await marked.parse(fillPlaceholders(body), { async: true });
   return {
     slug,
     title: data.title ?? slug,

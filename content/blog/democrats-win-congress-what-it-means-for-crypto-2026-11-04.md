@@ -1,5 +1,6 @@
 ---
 title: "Democrats win both houses of Congress: what it means for crypto, and why Bitcoin hit a two-month low"
+seoTitle: "Democrats win Congress: what it means for crypto"
 description: "Bitcoin fell to about $75,700 as Democrats won the US House and Senate. What a divided government means for the CLARITY Act, stablecoins and EU readers."
 category: Regulation
 author: Tickora

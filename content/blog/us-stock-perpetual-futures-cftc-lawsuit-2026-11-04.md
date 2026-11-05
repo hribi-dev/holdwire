@@ -1,5 +1,6 @@
 ---
 title: "US exchanges can now list perpetual futures on single stocks, and Cboe and Citadel are suing to stop it"
+seoTitle: "US single-stock perps approved; Cboe and Citadel sue"
 description: "The CFTC let stock perps trade on regulated US exchanges. A Cboe and Citadel-backed group sued within hours. What it means for Hyperliquid and EU traders."
 category: Regulation
 author: Tickora

@@ -8,6 +8,8 @@ export const fr: Dict = {
   nav: { gold: "Or", news: "Actualités", blog: "Blog", school: "École", hyperliquid: "Hyperliquid", markets: "Marchés", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Apprendre", glossary: "Glossaire" },
   header: { subscribe: "S'abonner", trending: "Tendances :", allCoins: "Toutes les cryptos", language: "Langue", skip: "Aller au contenu", home: "accueil", live: "En direct", darkTheme: "Thème sombre" },
   footer: {
+    dataBy: "Données de prix :",
+    privacy: "Confidentialité",
     tagline: "Finance et actifs réels, avec un regard européen.",
     dataTools: "Données et outils",
     hlHub: "Hub Hyperliquid",

@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import { nav, site } from "@/lib/site";
+import { contact, nav, site } from "@/lib/site";
 import { getDict } from "@/i18n/server";
 import { HeaderIsland } from "./HeaderIsland";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -26,9 +26,15 @@ export async function SiteHeader() {
             </Link>
             <LanguageSwitcher current={locale} label={t.header.language} />
             <ThemeToggle label={t.header.darkTheme} />
-            <Link href="/#newsletter" className="btn btn-primary btn-glow">
-              {t.header.subscribe}
-            </Link>
+            {contact.newsletterUrl ? (
+              <a href={contact.newsletterUrl} target="_blank" rel="noopener" className="btn btn-primary btn-glow">
+                {t.header.subscribe}
+              </a>
+            ) : (
+              <Link href="/#newsletter" className="btn btn-primary btn-glow">
+                {t.header.subscribe}
+              </Link>
+            )}
           </div>
         </HeaderIsland>
       </div>

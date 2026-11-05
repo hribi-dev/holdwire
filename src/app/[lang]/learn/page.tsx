@@ -4,7 +4,7 @@ import { listEntries } from "@/lib/content";
 import { getDict } from "@/i18n/server";
 
 export const metadata: Metadata = {
-  title: "Learn: plain-English guides to crypto, Hyperliquid and EU rules",
+  title: "Crypto guides in plain English",
   description: "Guides to crypto, Hyperliquid, MiCA and money in Europe. Answer first, sources cited, reviewed by an editor.",
   alternates: { canonical: "/learn" },
 };

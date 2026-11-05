@@ -18,6 +18,8 @@ export async function SiteFooter() {
           <Link href="/hyperliquid">{f.hlHub}</Link>
           <Link href="/coins">{f.coinPrices}</Link>
           <Link href="/memes">{f.memes}</Link>
+          <Link href="/gold">{t.nav.gold}</Link>
+          <Link href="/movers">{t.nav.movers}</Link>
           <Link href="/coins/bitcoin">Bitcoin</Link>
           <Link href="/coins/ethereum">Ethereum</Link>
         </nav>
@@ -36,12 +38,27 @@ export async function SiteFooter() {
           <Link href="/how-we-make-money">{f.money}</Link>
           <Link href="/advertising-policy">{f.advertising}</Link>
           <Link href="/advertise">{t.sponsor.title}</Link>
+          <Link href="/privacy">{f.privacy}</Link>
           <Link href="/corrections">{f.corrections}</Link>
           <Link href="/disclosures">{f.disclosures}</Link>
         </nav>
       </div>
       <div className="wrap legal">
         {fmt(f.notAdvice, { site: site.name })} <Link href="/disclaimer">{f.readDisclaimer}</Link>. {f.labelled} © {site.copyrightYear} {site.name}
+        <div style={{ marginTop: 8 }}>
+          {f.dataBy}{" "}
+          <a href="https://www.coingecko.com" rel="noopener" target="_blank">
+            CoinGecko
+          </a>
+          {" · "}
+          <a href="https://hyperliquid.xyz" rel="noopener" target="_blank">
+            Hyperliquid
+          </a>
+          {" · "}
+          <a href="https://www.geckoterminal.com" rel="noopener" target="_blank">
+            GeckoTerminal
+          </a>
+        </div>
       </div>
     </footer>
   );

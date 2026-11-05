@@ -1,5 +1,6 @@
 ---
 title: "Four months after MiCA's deadline: the checks every EU crypto user should make"
+seoTitle: "MiCA four months on: checks every EU crypto user should make"
 description: "Since 1 July 2026, only authorised firms may serve EU customers. Hundreds are now licensed, and some well-known names took time to get there. A practical checklist."
 category: Regulation
 author: Tickora

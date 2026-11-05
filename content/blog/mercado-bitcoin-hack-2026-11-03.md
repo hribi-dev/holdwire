@@ -1,5 +1,6 @@
 ---
 title: "Mercado Bitcoin hacked: Brazil's biggest exchange pauses deposits and withdrawals after a $40m+ breach"
+seoTitle: "Mercado Bitcoin hacked: $40M+ breach pauses withdrawals"
 description: "Days after Binance, Latin America's largest exchange lost an estimated $40-48.5 million from hot wallets and froze withdrawals. What we know and what to check."
 category: Security
 author: Tickora

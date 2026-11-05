@@ -1,5 +1,6 @@
 ---
 title: "Gold slips to about $3,924 as strong US data lifts yields; Hong Kong eyes a tokenised gold ETF"
+seoTitle: "Gold slips to about $3,924 as US yields rise"
 description: "Gold fell 0.55% and silver more than 2% on election day as US job openings beat forecasts. Hong Kong's SFC says a tokenised gold ETF could be its next pilot."
 category: Gold
 author: Tickora

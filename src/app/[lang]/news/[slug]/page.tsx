@@ -5,6 +5,7 @@ import { articleJsonLd, coverOgImages } from "@/lib/jsonld-article";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { EntryView } from "@/components/EntryView";
 import { JsonLd } from "@/components/JsonLd";
+import { metaTitle } from "@/lib/site";
 
 export async function generateStaticParams() {
   const entries = await listEntries("news");
@@ -16,11 +17,11 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/news/[slug
   const e = await getEntry("news", slug);
   if (!e) return {};
   return {
-    title: e.title,
+    title: metaTitle(e.title, e.seoTitle),
     description: e.description,
     alternates: { canonical: `/news/${slug}` },
     robots: e.indexable ? { index: true, follow: true, "max-image-preview": "large" } : { index: false, follow: true },
-    openGraph: { type: "article", title: e.title, description: e.description, modifiedTime: e.updated ?? undefined, images: coverOgImages(e) },
+    openGraph: { type: "article", title: e.seoTitle ?? e.title, description: e.description, modifiedTime: e.updated ?? undefined, images: coverOgImages(e) },
   };
 }
 

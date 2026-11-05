@@ -21,6 +21,13 @@ import { HeroSpotlight } from "@/components/HeroSpotlight";
 import { getMemeFeed } from "@/lib/memes";
 import { EVENTS, PEOPLE } from "@/content/movers";
 import { AdSlot } from "@/components/AdSlot";
+import type { Metadata } from "next";
+import { contact } from "@/lib/site";
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  return { alternates: { canonical: lang === "en" ? "/" : `/${lang}` } };
+}
 
 const usdCompact = (v: number) =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "USD", notation: "compact", minimumFractionDigits: 0, maximumFractionDigits: 1 }).format(v);
@@ -287,7 +294,7 @@ export default async function Home() {
         <div className="grid-lines" aria-hidden="true" />
         <div className="wrap row" style={{ padding: "64px 24px 72px", alignItems: "center", gap: 48 }}>
           <div className="stack" style={{ flex: "3 1 480px", gap: 20, minWidth: 0 }}>
-            <Suspense fallback={<HeroRotator slides={[brandSlide(h)]} labels={{ prev: h.slides.prev, next: h.slides.next }} />}>
+            <Suspense fallback={<HeroRotator slides={[brandSlide(h)]} labels={{ prev: h.slides.prev, next: h.slides.next }} heading={false} />}>
               <HeroSlides />
             </Suspense>
           </div>
@@ -420,6 +427,13 @@ export default async function Home() {
                 {h.newsletterBody}
               </p>
             </div>
+            {contact.newsletterUrl ? (
+              <div className="stack" style={{ flex: "1 1 360px", gap: 8, alignItems: "flex-start" }}>
+                <a href={contact.newsletterUrl} target="_blank" rel="noopener" className="btn btn-primary btn-glow">
+                  {t.header.subscribe} →
+                </a>
+              </div>
+            ) : (
             <div className="stack" style={{ flex: "1 1 360px", gap: 8 }}>
               <label htmlFor="nl-email">{h.email}</label>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
@@ -430,6 +444,7 @@ export default async function Home() {
               </div>
               <span className="tiny muted">{h.signupsOpen}</span>
             </div>
+            )}
           </form>
         </section>
       </main>

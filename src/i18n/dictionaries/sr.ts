@@ -8,6 +8,8 @@ export const sr: Dict = {
   nav: { gold: "Zlato", news: "Vesti", blog: "Blog", school: "Škola", hyperliquid: "Hyperliquid", markets: "Tržišta", memes: "Memovi", movers: "Pokretači", fintech: "Fintek", learn: "Učenje", glossary: "Rečnik" },
   header: { subscribe: "Pretplati se", trending: "U trendu:", allCoins: "Svi koini", language: "Jezik", skip: "Na sadržaj", home: "početna", live: "Uživo", darkTheme: "Tamna tema" },
   footer: {
+    dataBy: "Podaci o cenama:",
+    privacy: "Privatnost",
     tagline: "Finansije i realna imovina iz evropske perspektive.",
     dataTools: "Podaci i alati",
     hlHub: "Hyperliquid centar",

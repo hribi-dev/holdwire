@@ -1,5 +1,6 @@
 ---
 title: "Crypto's November 2026 calendar: the dates that could move markets"
+seoTitle: "Crypto calendar November 2026: dates that move markets"
 description: "US midterms, jobs and inflation data, Solana Breakpoint in London and a large token unlock. What's scheduled this month and why each one matters."
 category: Markets
 author: Tickora

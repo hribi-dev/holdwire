@@ -1,0 +1,88 @@
+{
+ "news": [
+  "binance-hack-fake-job-interview-post-mortem-2026-11-04",
+  "bitcoin-back-above-80000-after-midterms-2026-11-05",
+  "circle-q3-2026-results-usdc-2026-11-05",
+  "crypto-calendar-november-2026",
+  "ethereum-post-quantum-2028-devcon-2026-11-03",
+  "gold-back-above-4000-silver-jumps-2026-11-05",
+  "gold-slips-below-3930-yields-rise-2026-11-04",
+  "hyperliquid-chip-stock-perps-dip-buying-2026-11-03",
+  "ice-trade-xyz-hyperliquid-us",
+  "liquid-network-lbtc-fully-backed-2026-11-03",
+  "mica-four-months-on",
+  "payward-kraken-hyperliquid-us-perps",
+  "polymarket-pm-derivatives-nfa-approval-2026-11-04",
+  "riot-28-billion-ai-lease-bitcoin-miners-split-2026-11-05",
+  "south-korea-crypto-tax-delay-2029-2026-11-03",
+  "south-korea-exchanges-cold-wallets-binance-hack-2026-11-04",
+  "stablecoin-market-cap-lowest-in-a-year-2026-11-03"
+ ],
+ "blog": [
+  "binance-hack-what-it-means-2026-11-02",
+  "binance-proof-of-reserves-explained-2026-11-03",
+  "credit-mutuel-arkea-crypto-theft-what-it-means-2026-11-05",
+  "democrats-win-congress-what-it-means-for-crypto-2026-11-04",
+  "election-day-crypto-nerves-2026-11-03",
+  "example",
+  "mercado-bitcoin-hack-2026-11-03",
+  "us-stock-perpetual-futures-cftc-lawsuit-2026-11-04"
+ ],
+ "learn": [
+  "hyperliquid-hip-3-explained",
+  "mica-explained",
+  "what-is-bitcoin"
+ ],
+ "glossary": [
+  "airdrop",
+  "apy",
+  "blockchain",
+  "casp",
+  "cold-wallet",
+  "custody",
+  "defi",
+  "dex",
+  "emt",
+  "funding-rate",
+  "gas",
+  "halving",
+  "hardware-wallet",
+  "hip-3",
+  "hypercore",
+  "hyperevm",
+  "kyc",
+  "leverage",
+  "liquidation",
+  "market-cap",
+  "mica",
+  "open-interest",
+  "order-book",
+  "perpetual-futures",
+  "proof-of-stake",
+  "proof-of-work",
+  "seed-phrase",
+  "slippage",
+  "spread",
+  "stablecoin",
+  "staking",
+  "validator",
+  "vault"
+ ],
+ "school": [
+  "exam",
+  "exchanges-and-mica",
+  "risk-and-return",
+  "saving-vs-investing",
+  "spotting-scams",
+  "wallets-and-seed-phrases",
+  "what-is-a-blockchain",
+  "what-is-bitcoin",
+  "what-is-money"
+ ],
+ "sponsored": [
+  "example"
+ ],
+ "press-releases": [
+  "example"
+ ]
+}

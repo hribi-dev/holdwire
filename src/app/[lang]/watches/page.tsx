@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { AssetHub } from "@/components/AssetHub";
 import { getDict } from "@/i18n/server";
+import { PAGE_REVIEWS } from "@/content/reviews";
 
-const REVIEWED_BY: string | null = null;
+const REVIEWED_BY = PAGE_REVIEWS.watches;
 
 export const metadata: Metadata = {
-  title: "Watches as assets: what holds value and how the market moves",
+  title: "Watches as assets: what holds value",
   description:
     "A plain-English guide to watches as an asset for European readers: what drives value, the real costs, where secondary-market prices come from and the risks.",
   alternates: { canonical: "/watches" },

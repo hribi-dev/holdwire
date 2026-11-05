@@ -8,6 +8,8 @@ export const sv: Dict = {
   nav: { gold: "Guld", news: "Nyheter", blog: "Blogg", school: "Skola", hyperliquid: "Hyperliquid", markets: "Marknader", memes: "Memes", movers: "Movers", fintech: "Fintech", learn: "Lär dig", glossary: "Ordlista" },
   header: { subscribe: "Prenumerera", trending: "Trendar:", allCoins: "Alla mynt", language: "Språk", skip: "Hoppa till innehåll", home: "startsida", live: "Live", darkTheme: "Mörkt tema" },
   footer: {
+    dataBy: "Prisdata från",
+    privacy: "Integritet",
     tagline: "Finans och reala tillgångar med europeiskt perspektiv.",
     dataTools: "Data och verktyg",
     hlHub: "Hyperliquid-hubb",

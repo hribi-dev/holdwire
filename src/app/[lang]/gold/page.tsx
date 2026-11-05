@@ -6,6 +6,7 @@ import { direction, formatChange, formatPrice } from "@/lib/format";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { getDict } from "@/i18n/server";
 import { PEOPLE } from "@/content/movers";
+import { PAGE_REVIEWS } from "@/content/reviews";
 import { JsonLd } from "@/components/JsonLd";
 import { AdSlot } from "@/components/AdSlot";
 import { RelatedNews } from "@/components/RelatedNews";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   description:
     "Live tokenized gold prices (PAXG, XAUT) in euros, gold against bitcoin over the past week, the ways to own gold in the EU, and the voices worth following.",
   alternates: { canonical: "/gold" },
+  robots: PAGE_REVIEWS.gold ? undefined : { index: false, follow: true },
 };
 
 const GOLD = "#c9a227";
@@ -144,7 +146,7 @@ export default async function GoldPage() {
         <div className="gold-hero-shine" aria-hidden="true" />
         <div className="wrap stack" style={{ gap: 14, padding: "56px 24px 48px", position: "relative" }}>
           <span className="cat" style={{ color: "#f3d98b" }}>
-            Gold · Live
+            Gold · Live{PAGE_REVIEWS.gold ? "" : " · Draft, awaiting editor review"}
           </span>
           <h1 style={{ margin: 0, fontSize: "clamp(34px, 5.4vw, 60px)", lineHeight: 1.03, letterSpacing: "-0.03em", color: "#fff" }}>
             Gold, live in euros, next to bitcoin

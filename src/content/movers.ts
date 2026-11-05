@@ -79,9 +79,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-02",
-      text: "Hinted at a new purchase on Sunday with a post saying Strategy had found room for even more orange. Monday's filing showed 811 BTC bought for about $65.5 million, taking holdings to 849,327 BTC. He says bitcoin is at the beginning of its next bull market.",
-      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-02-we-found-room-for-even-more-orange-michael-saylor-strategy-bitcoin-btc-432275" },
+      date: "2026-11-04",
+      text: "After the midterms, pointed out on X that Florida elected a Republican governor who backed a US bitcoin reserve while Texas elected a Democratic senator who voted for a state one, and said the case for holding bitcoin crosses party lines.",
+      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/saylor-links-republican-and-democratic-wins-to-bitcoin-reserves/" },
     },
   },
   schiff: {
@@ -93,9 +93,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/PeterSchiff",
     focus: ["Gold", "Macro", "Bitcoin"],
     take: {
-      date: "2026-04-13",
-      text: "Told followers to swap bitcoin for gold and silver as bitcoin neared $75,000, close to Strategy's average purchase price.",
-      source: { name: "Benzinga", url: "https://cdn6.benzinga.com/crypto/cryptocurrency/26/04/51795812/peter-schiff-ditch-bitcoin-buy-gold-silver-rally" },
+      date: "2026-11-04",
+      text: "Said a Democratic takeover of Congress could be bullish for gold and silver, expecting more spending and bigger deficits that could push the Fed back towards quantitative easing to contain bond yields. Gold rose back above $4,000 the same day.",
+      source: { name: "Investing News Network", url: "https://investingnews.com/gold-climbs-after-democratic-win/" },
     },
   },
   hayes: {

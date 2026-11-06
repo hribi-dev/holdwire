@@ -4,7 +4,7 @@ seoTitle: "Hyperliquid Strategies files to become a US futures broker"
 description: "The Nasdaq-listed HYPE treasury company asked the CFTC to register a unit as a futures commission merchant, which could carry US accounts for HIP-3 markets."
 category: Hyperliquid
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

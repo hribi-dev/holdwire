@@ -4,7 +4,7 @@ seoTitle: "Canary's staked INJ ETF (INJC) debuts on Nasdaq"
 description: "Canary's Staked INJ ETF (INJC) began trading on 5 November. It plans to stake at least 90% of its INJ and charges 1.10% a year. First-day volume was small."
 category: Markets
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

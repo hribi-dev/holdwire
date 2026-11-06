@@ -4,7 +4,7 @@ seoTitle: "Bitcoin back at $76,000 as AI stock rout hits crypto"
 description: "Bitcoin fell about 5.5% and ether 7.5% as US tech stocks had their worst day since April 2025. Over $1 billion in crypto bets were liquidated."
 category: Markets
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

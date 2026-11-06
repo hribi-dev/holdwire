@@ -4,7 +4,7 @@ seoTitle: "Greece's 10% crypto tax explained for EU investors"
 description: "Greece's parliament approved a 10% tax on crypto gains, with the first €500 a year tax-free. What the law covers, what's still unclear, and how it compares."
 category: Regulation
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

@@ -4,7 +4,7 @@ seoTitle: "France shelves stablecoin tax and wallet reporting rule"
 description: "France's National Assembly rejected the 2027 budget's revenue section 458–0, dropping crypto amendments for now. The Senate could bring them back from 23 November."
 category: Regulation
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

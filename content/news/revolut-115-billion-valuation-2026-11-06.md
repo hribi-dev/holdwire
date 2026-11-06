@@ -4,7 +4,7 @@ seoTitle: "Revolut valued at $115 billion after new funding round"
 description: "Revolut says its latest round values it at $115 billion. It reports over 80 million customers and new bank launches in the UK, Mexico, Australia and New Zealand."
 category: Fintech
 author: Tickora
-reviewedBy:
+reviewedBy: Matic Hriberšek
 published: 2026-11-06
 updated: 2026-11-06
 sources:

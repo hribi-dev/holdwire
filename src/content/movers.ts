@@ -108,9 +108,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/CryptoHayes",
     focus: ["Macro", "Bitcoin", "Ethereum"],
     take: {
-      date: "2026-09-02",
-      text: "Said bitcoin should grind higher from here but named Ethereum as his top pick, arguing it could rise three to five times relatively quickly.",
-      source: { name: "Cointelegraph Magazine", url: "https://cointelegraph.com/magazine/btc-will-hit-1m-by-2030-but-arthur-hayes-is-buying-eth-instead" },
+      date: "2026-11-02",
+      text: "Posted on X that dollar liquidity is \"recharging\" and that he expects bitcoin to stay weak until the Fed or commercial banks start growing their balance sheets again.",
+      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/market-updates/arthur-hayes-says-bitcoin-rally-may-depend-on-banks-not-just-fed/" },
     },
   },
   lee: {
@@ -174,6 +174,21 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "musk-cz-meme-green-morning-2026-11",
+    person: "musk",
+    platform: "X",
+    postedAt: "2026-11-06T00:00:00Z",
+    precision: "day",
+    summary: "During the crypto sell-off, Musk replied to a \"good morning from Japan, let's check the market\" post by Dogecoin co-creator Billy Markus with a meme image of CZ. CZ answered with a video-game meme of his own.",
+    assets: ["GM (Green Morning)", "BTC"],
+    reported: "A tiny BNB Chain memecoin linked to an earlier CZ selfie, Green Morning (GM), jumped more than 259% to a market cap above $3 million, according to Bloomingbit citing GMGN data; The Coin Republic reported gains of over 900% at the peak after Binance co-CEO He Yi also reposted, citing CoinGecko. None of the outlets tied bitcoin's move to the post: it was already down about 6%, near $75,600, after the AI-led stock rout.",
+    lesson: "A joke image can send a microcap worth a few million dollars up several times over in a short time. The big coins ignored it; the moves happened where there was almost no liquidity.",
+    sources: [
+      { name: "Bloomingbit", url: "https://en.bloomingbit.io/feed/news/123804" },
+      { name: "The Coin Republic", url: "https://www.thecoinrepublic.com/2026/11/06/elon-musk-shares-cz-meme-as-crypto-market-selloff-hits-bitcoin/" },
+    ],
+  },
   {
     slug: "musk-binance-ftx-emoji-2026-10",
     person: "musk",

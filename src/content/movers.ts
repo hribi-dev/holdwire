@@ -108,9 +108,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/CryptoHayes",
     focus: ["Macro", "Bitcoin", "Ethereum"],
     take: {
-      date: "2026-11-02",
-      text: "Posted on X that dollar liquidity is \"recharging\" and that he expects bitcoin to stay weak until the Fed or commercial banks start growing their balance sheets again.",
-      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/market-updates/arthur-hayes-says-bitcoin-rally-may-depend-on-banks-not-just-fed/" },
+      date: "2026-11-05",
+      text: "In his essay \"D is for Dilution\", argued that share unlocks after huge AI listings such as SpaceX, Anthropic and OpenAI could soak up investor money and tighten bank lending, a near-term headwind for bitcoin, and said his fund Maelstrom will stay on the sidelines until dollar liquidity improves. He expects central banks to ease eventually if an AI financing crunch develops.",
+      source: { name: "crypto.news", url: "https://crypto.news/arthur-hayes-ai-ipo-dilution-bitcoin-liquidity/" },
     },
   },
   lee: {

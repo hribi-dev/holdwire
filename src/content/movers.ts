@@ -66,9 +66,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/cz_binance",
     focus: ["Bitcoin", "Memecoins"],
     take: {
-      date: "2026-09-01",
-      text: "Said growth in his own X follower count has been a consistent early signal of new market cycles, and that the harshest crypto winter is behind us.",
-      source: { name: "Coin Alert News", url: "https://coinalertnews.com/news/2026/09/01/cz-crypto-winter-over" },
+      date: "2026-11-09",
+      text: "Urged the crypto industry to drop its infighting, arguing that most crypto prices move together so damage to one project spreads to all, and summed it up as \"decentralized but united\".",
+      source: { name: "TokenPost", url: "https://www.tokenpost.com/news/insights/52247" },
     },
   },
   saylor: {
@@ -80,9 +80,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-04",
-      text: "After the midterms, pointed out on X that Florida elected a Republican governor who backed a US bitcoin reserve while Texas elected a Democratic senator who voted for a state one, and said the case for holding bitcoin crosses party lines.",
-      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/saylor-links-republican-and-democratic-wins-to-bitcoin-reserves/" },
+      date: "2026-11-09",
+      text: "Posted Strategy's purchase-tracker chart on X with the caption \"Connecting the dots\" the day before the company reported buying 1,036 bitcoin for about $82 million at an average of $79,012. Strategy now holds 850,364 BTC at an average cost of about $75,456, close to where bitcoin trades.",
+      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-09-connecting-the-dots-michael-saylor-strategy-bitcoin-436094" },
     },
   },
   schiff: {
@@ -94,9 +94,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/PeterSchiff",
     focus: ["Gold", "Macro", "Bitcoin"],
     take: {
-      date: "2026-11-04",
-      text: "Said a Democratic takeover of Congress could be bullish for gold and silver, expecting more spending and bigger deficits that could push the Fed back towards quantitative easing to contain bond yields. Gold rose back above $4,000 the same day.",
-      source: { name: "Investing News Network", url: "https://investingnews.com/gold-climbs-after-democratic-win/" },
+      date: "2026-11-07",
+      text: "Sarcastically congratulated bitcoin holders as Strategy marked six years of buying with bitcoin back near the company's average cost, arguing the strategy has not delivered the returns Saylor promised and that gold would have doubled the money over the same period.",
+      source: { name: "U.Today", url: "https://u.today/congratulations-peter-schiff-reacts-as-saylors-bitcoin-treasury-sits-at-cost-basis" },
     },
   },
   hayes: {
@@ -122,9 +122,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/fundstrat",
     focus: ["Bitcoin", "Gold", "Ethereum"],
     take: {
-      date: "2026-11-02",
-      text: "Called the Binance hack a terrible development but said the muted market reaction was constructive: ether fell about 4% after it was disclosed, against 8% after the 2025 Bybit theft. BitMine added 8,573 ETH that week, bringing its holdings to about 6.06 million ETH.",
-      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-02-bitmine-adds-8573-eth-tom-lee-flags-muted-binance-hack-reaction-432307" },
+      date: "2026-11-09",
+      text: "Said Vitalik Buterin's Devcon remark that ETH is a store of value and money marks a major shift, and argued ETH's value will come from serving as trusted collateral for tokenization and AI rather than from cash flows. BitMine added 9,587 ETH that week, taking its holdings to 6,070,092 ETH, about 4.97% of supply.",
+      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-09-tom-lee-bitmine-nears-ethereum-supply-target-20-million-eth-tokenization-ai-supercycle-436219" },
     },
   },
   alden: {

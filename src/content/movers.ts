@@ -94,9 +94,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/PeterSchiff",
     focus: ["Gold", "Macro", "Bitcoin"],
     take: {
-      date: "2026-11-07",
-      text: "Sarcastically congratulated bitcoin holders as Strategy marked six years of buying with bitcoin back near the company's average cost, arguing the strategy has not delivered the returns Saylor promised and that gold would have doubled the money over the same period.",
-      source: { name: "U.Today", url: "https://u.today/congratulations-peter-schiff-reacts-as-saylors-bitcoin-treasury-sits-at-cost-basis" },
+      date: "2026-11-10",
+      text: "As bitcoin fell after the hot US inflation data, pointed out that it is down about 16.5% in 2026 after a 6.34% loss in 2025, and said that if the year ends lower it would be bitcoin's first back-to-back annual losses in its history.",
+      source: { name: "TokenPost", url: "https://www.tokenpost.com/news/investing/53217" },
     },
   },
   hayes: {
@@ -153,6 +153,11 @@ export const PEOPLE: Record<PersonId, Person> = {
     handle: "@VitalikButerin",
     profileUrl: "https://x.com/VitalikButerin",
     focus: ["Ethereum"],
+    take: {
+      date: "2026-11-08",
+      text: "In an X thread, argued that ETH should be valued mainly as a store of value rather than on the fees it burns, saying the burn is fine to keep but holders should not depend on it, and that survival and stability, such as post-quantum security, matter most.",
+      source: { name: "The Block", url: "https://theblock.co/news/ecosystems/2026-11-08-vitalik-buterin-says-eth-should-be-valued-as-a-store-of-value-not-a-fee-burning-token-436022" },
+    },
   },
 };
 

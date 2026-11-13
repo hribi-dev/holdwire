@@ -180,6 +180,23 @@ export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
   {
+    slug: "cz-nvidia-huang-resign-mistake-2026-11",
+    person: "cz",
+    platform: "X",
+    postedAt: "2026-11-12T14:38:08Z",
+    precision: "minute",
+    postUrl: "https://x.com/cz_binance/status/2120888881717612576",
+    summary: "Hours after Jensen Huang resigned as Nvidia's chief executive, CZ posted that it was \"a mistake\" for Nvidia to let him go.",
+    assets: ["NVDA (Hyperliquid perp)", "BTC"],
+    hlCoin: "xyz:NVDA",
+    reported: "Crypto Economy, which embedded the post, did not tie any price move to it. Nvidia's perpetual on Hyperliquid had already traded a record $2.35 billion in 24 hours on the resignation news itself, according to CoinMarketCap, and bitcoin was sliding toward a 12-week low, The Block reported.",
+    lesson: "When the news itself is this big, a famous voice adds commentary rather than direction. The moves came from the resignation, not from reactions to it.",
+    sources: [
+      { name: "Crypto Economy", url: "https://crypto-economy.com/binance-founder-cz-criticizes-nvidia-over-jensen-huangs-departure/" },
+      { name: "CoinMarketCap Academy", url: "https://coinmarketcap.com/academy/article/nvidia-perps-outtrade-ethereum-hyperliquid" },
+    ],
+  },
+  {
     slug: "musk-cz-meme-green-morning-2026-11",
     person: "musk",
     platform: "X",

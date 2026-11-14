@@ -108,9 +108,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/CryptoHayes",
     focus: ["Macro", "Bitcoin", "Ethereum"],
     take: {
-      date: "2026-11-05",
-      text: "In his essay \"D is for Dilution\", argued that share unlocks after huge AI listings such as SpaceX, Anthropic and OpenAI could soak up investor money and tighten bank lending, a near-term headwind for bitcoin, and said his fund Maelstrom will stay on the sidelines until dollar liquidity improves. He expects central banks to ease eventually if an AI financing crunch develops.",
-      source: { name: "crypto.news", url: "https://crypto.news/arthur-hayes-ai-ipo-dilution-bitcoin-liquidity/" },
+      date: "2026-11-12",
+      text: "Posted on X that Anthropic's IPO \"is going to rip\" and that he was adding crypto risk until the Nasdaq listing the following week, keeping positions small to medium so he could exit fast. A week earlier, in his essay \"D is for Dilution\", he had said huge AI listings could soak up investor money and that his fund Maelstrom would stay on the sidelines.",
+      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/anthropic-ipo-rip-arthur-hayes-loads-crypto-ahead-debut/" },
     },
   },
   lee: {
@@ -179,6 +179,24 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "hayes-anthropic-ipo-crypto-risk-2026-11",
+    person: "hayes",
+    platform: "X",
+    postedAt: "2026-11-12T04:24:59Z",
+    precision: "minute",
+    postUrl: "https://x.com/CryptoHayes/status/2120734578369564842",
+    summary: "Hayes posted that Anthropic's coming IPO \"is going to rip\" and that he was loading up on crypto risk until the listing, while keeping position sizes moderate so he could get out quickly.",
+    assets: ["BTC"],
+    hlCoin: "BTC",
+    reported: "Bitcoin.com News and Cryptopolitan covered the post but did not tie a price move to it, and neither named what he bought. Bitcoin kept falling afterwards and dropped below $70,000 the next day, as US bond yields jumped and leveraged bets were liquidated, CoinDesk reported.",
+    lesson: "A well-known trader turning bullish is not a market signal on its own. Here the macro news, not the post, set the direction.",
+    sources: [
+      { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/anthropic-ipo-rip-arthur-hayes-loads-crypto-ahead-debut/" },
+      { name: "Cryptopolitan", url: "https://www.cryptopolitan.com/hayes-crypto-bets-exit-fast-anthropic-ipo/" },
+      { name: "CoinDesk", url: "https://www.coindesk.com/markets/2026/11/13/bitcoin-dips-below-usd70-000-as-selloff-gathers-pace" },
+    ],
+  },
   {
     slug: "cz-nvidia-huang-resign-mistake-2026-11",
     person: "cz",

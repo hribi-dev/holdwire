@@ -94,9 +94,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/PeterSchiff",
     focus: ["Gold", "Macro", "Bitcoin"],
     take: {
-      date: "2026-11-10",
-      text: "As bitcoin fell after the hot US inflation data, pointed out that it is down about 16.5% in 2026 after a 6.34% loss in 2025, and said that if the year ends lower it would be bitcoin's first back-to-back annual losses in its history.",
-      source: { name: "TokenPost", url: "https://www.tokenpost.com/news/investing/53217" },
+      date: "2026-11-14",
+      text: "As bitcoin slid toward $65,000, posted that its collapse was \"gathering steam\" and that he expected the decline to accelerate if it breaks $50,000, with a return to its 2022 bear-market low before the end of 2026.",
+      source: { name: "GNcrypto", url: "https://www.gncrypto.news/news/schiff-bitcoin-fall-16500-stablecoins-shrink/" },
     },
   },
   hayes: {
@@ -179,6 +179,23 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "schiff-bitcoin-collapse-gathering-steam-2026-11",
+    person: "schiff",
+    platform: "X",
+    postedAt: "2026-11-14T13:59:40Z",
+    precision: "minute",
+    postUrl: "https://x.com/PeterSchiff/status/2121603977125175360",
+    summary: "Schiff posted that bitcoin's \"collapse is gathering steam\", said he expected the fall to speed up once it breaks $50,000, and called that outcome \"curtains\" for Strategy (formerly MicroStrategy).",
+    assets: ["BTC"],
+    hlCoin: "BTC",
+    reported: "GNcrypto, which embedded the post, did not tie a price move to it; bitcoin was near $67,250 that day. It fell to about $62,000 later that night, with more than $2 billion of positions liquidated, as bets on US rate hikes and ETF outflows drove the selling, TokenPost reported.",
+    lesson: "A well-known bear calling a crash during a sell-off is commentary on a move already under way, not its cause.",
+    sources: [
+      { name: "GNcrypto", url: "https://www.gncrypto.news/news/schiff-bitcoin-fall-16500-stablecoins-shrink/" },
+      { name: "TokenPost", url: "https://www.tokenpost.com/news/investing/57662" },
+    ],
+  },
   {
     slug: "hayes-anthropic-ipo-crypto-risk-2026-11",
     person: "hayes",

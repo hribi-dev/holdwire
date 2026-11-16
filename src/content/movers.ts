@@ -80,9 +80,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-09",
-      text: "Posted Strategy's purchase-tracker chart on X with the caption \"Connecting the dots\" the day before the company reported buying 1,036 bitcoin for about $82 million at an average of $79,012. Strategy now holds 850,364 BTC at an average cost of about $75,456, close to where bitcoin trades.",
-      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-09-connecting-the-dots-michael-saylor-strategy-bitcoin-436094" },
+      date: "2026-11-15",
+      text: "As bitcoin fell to about $62,500, posted Strategy's purchase-tracker chart on X with the caption \"this dip may need a little more orange\", hinting at another purchase. At that price Strategy's 850,364 BTC, bought at an average of $75,456, showed an unrealised loss of about $8.46 billion, Bloomingbit calculated.",
+      source: { name: "Bloomingbit", url: "https://en.bloomingbit.io/feed/news/124489" },
     },
   },
   schiff: {
@@ -179,6 +179,23 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "cz-binance-did-not-sell-crypto-2026-11",
+    person: "cz",
+    platform: "X",
+    postedAt: "2026-11-15T16:13:22Z",
+    precision: "minute",
+    postUrl: "https://x.com/cz_binance/status/2122000010992824627",
+    summary: "Amid rumours that Binance was dumping crypto after its hack, CZ posted \"No, Binance did not sell crypto\", said he had bought some himself and listed possible causes of the slide.",
+    assets: ["BTC", "BNB"],
+    hlCoin: "BTC",
+    reported: "The Block reported the post as bitcoin bounced from a low near $62,000 to about $64,910 on Sunday afternoon, but did not say the post caused the rebound. TokenPost noted that CZ himself cautioned his list did not prove what caused the fall.",
+    lesson: "A denial from a big name can calm a rumour, but the selling pressures he listed (ETF outflows, rate-hike bets) were still there afterwards.",
+    sources: [
+      { name: "The Block", url: "https://www.theblock.co/news/markets/2026-11-15-cz-denies-binance-sold-crypto-as-bitcoin-bounces-from-four-month-low-near-62000-440807" },
+      { name: "TokenPost", url: "https://www.tokenpost.com/news/investing/58074" },
+    ],
+  },
   {
     slug: "schiff-bitcoin-collapse-gathering-steam-2026-11",
     person: "schiff",

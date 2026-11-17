@@ -108,9 +108,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/CryptoHayes",
     focus: ["Macro", "Bitcoin", "Ethereum"],
     take: {
-      date: "2026-11-12",
-      text: "Posted on X that Anthropic's IPO \"is going to rip\" and that he was adding crypto risk until the Nasdaq listing the following week, keeping positions small to medium so he could exit fast. A week earlier, in his essay \"D is for Dilution\", he had said huge AI listings could soak up investor money and that his fund Maelstrom would stay on the sidelines.",
-      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/anthropic-ipo-rip-arthur-hayes-loads-crypto-ahead-debut/" },
+      date: "2026-11-17",
+      text: "Posted on X that four tokens, ETH, ZEC, NEAR and Venice's VVV, which he called the \"Four Horsemen\", would rise before the AI bubble ends, and set price targets for each while calling his conviction limited and his positions small to medium. In earlier essays he has argued that an AI-bubble burst would lead central banks to print money, which he expects to lift bitcoin after an initial drop.",
+      source: { name: "BeInCrypto via Yahoo Finance", url: "https://finance.yahoo.com/markets/crypto/articles/arthur-hayes-says-4-crypto-022533613.html" },
     },
   },
   lee: {
@@ -122,9 +122,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/fundstrat",
     focus: ["Bitcoin", "Gold", "Ethereum"],
     take: {
-      date: "2026-11-09",
-      text: "Said Vitalik Buterin's Devcon remark that ETH is a store of value and money marks a major shift, and argued ETH's value will come from serving as trusted collateral for tokenization and AI rather than from cash flows. BitMine added 9,587 ETH that week, taking its holdings to 6,070,092 ETH, about 4.97% of supply.",
-      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-09-tom-lee-bitmine-nears-ethereum-supply-target-20-million-eth-tokenization-ai-supercycle-436219" },
+      date: "2026-11-16",
+      text: "Called ether's recent \"waterfall decline in price\" out of line with its fundamentals, pointing to banks building tokenization projects on Ethereum, and blamed part of the selling on Nvidia-linked margin selling in Asia and investors raising cash before Anthropic's IPO. BitMine added 7,653 ETH that week, taking it to 6,077,745 ETH, about 4.97% of supply.",
+      source: { name: "The Block", url: "https://www.theblock.co/news/business/2026-11-16-tom-lee-ethereum-waterfall-decline-price-defies-fundamentals-bitmine-adds-7653-eth-440904" },
     },
   },
   alden: {
@@ -179,6 +179,24 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "hayes-four-horsemen-ai-bubble-2026-11",
+    person: "hayes",
+    platform: "X",
+    postedAt: "2026-11-17T01:09:29Z",
+    precision: "minute",
+    postUrl: "https://x.com/CryptoHayes/status/2122497317857325068",
+    summary: "Hayes named ETH, ZEC, NEAR and VVV as \"Four Horsemen\" he expects to rise before the AI bubble ends, with price targets and small to medium positions.",
+    assets: ["ETH", "ZEC", "NEAR", "VVV"],
+    hlCoin: "ETH",
+    reported: "TokenPost and BeInCrypto covered the post but neither reported a price reaction to it. Ether was near $1,820 on Monday afternoon US time, a few hours before the post, according to CoinDesk.",
+    lesson: "A famous trader listing tokens he likes is a statement of his positions, not evidence about where prices go. He said himself his conviction was low.",
+    sources: [
+      { name: "TokenPost", url: "https://tokenpost.com/news/investing/58970" },
+      { name: "BeInCrypto via Yahoo Finance", url: "https://finance.yahoo.com/markets/crypto/articles/arthur-hayes-says-4-crypto-022533613.html" },
+      { name: "CoinDesk", url: "https://www.coindesk.com/tech/2026/11/16/live-news-bitcoin-posts-sixth-weekly-loss-as-tech-stocks-and-metals-slide" },
+    ],
+  },
   {
     slug: "cz-binance-did-not-sell-crypto-2026-11",
     person: "cz",

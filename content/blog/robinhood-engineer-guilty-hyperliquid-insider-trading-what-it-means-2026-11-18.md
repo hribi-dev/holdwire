@@ -49,7 +49,7 @@ A second former Robinhood engineer was charged in September over separate trades
 
 **The legal theory doesn't depend on the venue.** Prosecutors built this case around an employee misusing his employer's confidential information, so it did not matter where the trades took place. US Attorney Jamie McDonald said insiders will be held accountable "no matter the trading platform". Xiang pleaded to wire fraud, and the announcement did not report a plea to the commodities fraud charge first brought against him, Decrypt notes.
 
-**It is a different outcome from this week's other big crypto fraud case.** On the same Monday, a federal judge acquitted the Peraire-Bueno brothers in the [$25 million Ethereum bot case](/blog/peraire-bueno-acquitted-ethereum-mev-case-what-it-means-2026-11-17), ruling that prosecutors had not shown material misrepresentations. Xiang's case rested on a breach of duty to an employer, and he admitted the charge.
+**It is a different outcome from this week's other big crypto fraud case.** In a ruling reported on Monday, a federal judge acquitted the Peraire-Bueno brothers in the [$25 million Ethereum bot case](/blog/peraire-bueno-acquitted-ethereum-mev-case-what-it-means-2026-11-17), ruling that prosecutors had not shown material misrepresentations. Xiang's case rested on a breach of duty to an employer, and he admitted the charge.
 
 **Hyperliquid is the venue, not the accused.** The announcement alleges no wrongdoing by Hyperliquid, and neither The Block nor Decrypt carried a comment from it. Even so, the case adds to the attention on how large onchain perpetuals markets are used. For background, see our [Hyperliquid hub](/hyperliquid).
 

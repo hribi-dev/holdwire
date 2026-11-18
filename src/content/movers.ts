@@ -80,9 +80,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-15",
-      text: "As bitcoin fell to about $62,500, posted Strategy's purchase-tracker chart on X with the caption \"this dip may need a little more orange\", hinting at another purchase. At that price Strategy's 850,364 BTC, bought at an average of $75,456, showed an unrealised loss of about $8.46 billion, Bloomingbit calculated.",
-      source: { name: "Bloomingbit", url: "https://en.bloomingbit.io/feed/news/124489" },
+      date: "2026-11-16",
+      text: "After hinting at it on X during the weekend slide with the caption \"This dip could use a little orange\", disclosed that Strategy bought 485 BTC for about $33.4 million at an average of $68,887. That took its holdings to 850,849 BTC, bought at an average of $75,452.",
+      source: { name: "The Block", url: "https://theblock.co/news/business/2026-11-16-this-dip-could-use-a-little-orange-michael-saylor-strategy-bitcoin-tumbles-440886" },
     },
   },
   schiff: {

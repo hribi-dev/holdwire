@@ -94,9 +94,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/PeterSchiff",
     focus: ["Gold", "Macro", "Bitcoin"],
     take: {
-      date: "2026-11-14",
-      text: "As bitcoin slid toward $65,000, posted that its collapse was \"gathering steam\" and that he expected the decline to accelerate if it breaks $50,000, with a return to its 2022 bear-market low before the end of 2026.",
-      source: { name: "GNcrypto", url: "https://www.gncrypto.news/news/schiff-bitcoin-fall-16500-stablecoins-shrink/" },
+      date: "2026-11-18",
+      text: "As gold fell to a 14-month low, posted on X that gold traders are wrong to price in the Fed's biggest inflation fight since the Volcker era, warning that such a campaign would hit stocks, bonds and real estate and cause a financial crisis worse than 2008.",
+      source: { name: "BeInCrypto via Mitrade", url: "https://www.mitrade.com/au/insights/commodity-analysis/precious-metal/beincrypto-XAUUSD-202611191005" },
     },
   },
   hayes: {
@@ -179,6 +179,24 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "cz-tokenized-anthropic-bnb-chain-2026-11",
+    person: "cz",
+    platform: "X",
+    postedAt: "2026-11-18T21:57:37Z",
+    precision: "minute",
+    postUrl: "https://x.com/cz_binance/status/2123173810333421717",
+    summary: "Shortly after Anthropic priced its IPO at $83, CZ posted that tokenized Anthropic stock would be available on BNB Chain from the first trading day, via Binance's bStocks, xStocks and Ondo.",
+    assets: ["BNB", "ANT (tokenized)"],
+    hlCoin: "BNB",
+    reported: "CoinDesk and The Defiant reported the post but did not mention any BNB price reaction. BNB was near $583 the next morning, down about 2.35% in 24 hours, in line with bitcoin's fall, according to CoinGecko data cited by Blockchain Reporter.",
+    lesson: "An announcement about new products on a chain does not automatically move that chain's token. Here the wider sell-off set the direction.",
+    sources: [
+      { name: "CoinDesk", url: "https://www.coindesk.com/markets/2026/11/19/cz-says-tokenized-anthropic-is-coming-to-bnb-chain-on-ipo-day" },
+      { name: "The Defiant", url: "https://thedefiant.io/converge/tradfi-and-fintech/cz-says-anthropic-stock-tokens-will-reach-bnb-chain-on-ipo-day" },
+      { name: "Blockchain Reporter via Cryptonews.net", url: "https://cryptonews.net/news/market/33775377/" },
+    ],
+  },
   {
     slug: "hayes-four-horsemen-ai-bubble-2026-11",
     person: "hayes",

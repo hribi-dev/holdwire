@@ -80,9 +80,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-16",
-      text: "After hinting at it on X during the weekend slide with the caption \"This dip could use a little orange\", disclosed that Strategy bought 485 BTC for about $33.4 million at an average of $68,887. That took its holdings to 850,849 BTC, bought at an average of $75,452.",
-      source: { name: "The Block", url: "https://theblock.co/news/business/2026-11-16-this-dip-could-use-a-little-orange-michael-saylor-strategy-bitcoin-tumbles-440886" },
+      date: "2026-11-19",
+      text: "Posted on X that Strategy's STRC preferred stock traded more than $600 million on 18 November, which he said no other US-listed income preferred had done this year, and that Strategy intends to keep buying STRC back below its $100 stated amount to support liquidity and cut its dividend bill. STRC closed near $96 that day.",
+      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/bitcoin-giant-strategy-keep-buying-strc-below-100-600m-day-saylor/" },
     },
   },
   schiff: {

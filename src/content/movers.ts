@@ -80,9 +80,9 @@ export const PEOPLE: Record<PersonId, Person> = {
     profileUrl: "https://x.com/saylor",
     focus: ["Bitcoin"],
     take: {
-      date: "2026-11-19",
-      text: "Posted on X that Strategy's STRC preferred stock traded more than $600 million on 18 November, which he said no other US-listed income preferred had done this year, and that Strategy intends to keep buying STRC back below its $100 stated amount to support liquidity and cut its dividend bill. STRC closed near $96 that day.",
-      source: { name: "Bitcoin.com News", url: "https://news.bitcoin.com/featured/bitcoin-giant-strategy-keep-buying-strc-below-100-600m-day-saylor/" },
+      date: "2026-11-20",
+      text: "During the November sell-off, posted on X that bitcoin is the foundation of everything Strategy does, arguing that its supply does not grow with demand, so its long-run inflation rate is zero. Strategy shares were down about 1.9% that day, Crypto Economy reported, as critics questioned the company's finances.",
+      source: { name: "Crypto Economy", url: "https://crypto-economy.com/saylor-defends-bitcoins-value-as-strategy-shares-decline-and-criticism-grows/" },
     },
   },
   schiff: {
@@ -179,6 +179,24 @@ export type MoverEvent = {
 export const MOVERS_REVIEWED_BY: string | null = PAGE_REVIEWS.movers;
 
 export const EVENTS: MoverEvent[] = [
+  {
+    slug: "saylor-bitcoin-foundation-strategy-2026-11",
+    person: "saylor",
+    platform: "X",
+    postedAt: "2026-11-20T14:13:03Z",
+    precision: "minute",
+    postUrl: "https://x.com/saylor/status/2123781672705360055",
+    summary: "During the sell-off, Saylor posted that bitcoin is \"the foundation of everything we do at Strategy\", saying its supply does not respond to demand and its terminal inflation rate is zero.",
+    assets: ["BTC", "MSTR"],
+    hlCoin: "BTC",
+    reported: "TokenPost and Crypto Economy covered the post but neither reported a price reaction to it. Bitcoin kept falling and dropped below $57,000 that night, its lowest since September 2024, as tech stocks slid, CoinDesk reported.",
+    lesson: "A reassuring post from the biggest corporate holder does not change the flows behind a sell-off. Here ETF outflows and a stock-market rout set the direction.",
+    sources: [
+      { name: "Crypto Economy", url: "https://crypto-economy.com/saylor-defends-bitcoins-value-as-strategy-shares-decline-and-criticism-grows/" },
+      { name: "TokenPost", url: "https://www.tokenpost.com/news/people/62113" },
+      { name: "CoinDesk", url: "https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone" },
+    ],
+  },
   {
     slug: "cz-tokenized-anthropic-bnb-chain-2026-11",
     person: "cz",
